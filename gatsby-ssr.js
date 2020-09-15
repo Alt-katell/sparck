@@ -4,4 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+import React from 'react';
+import { PageContextProvider } from './src/context/pageContext';
+
+export const wrapPageElement = ({ element, props: { pageContext} }) => {
+  return <PageContextProvider value={pageContext}>{element}</PageContextProvider>
+};
