@@ -5,10 +5,25 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Header from "./header"
+import { createGlobalStyle } from 'styled-components';
+
+import Theme from './Theme';
+import Navbar from '../components/navigation/Navbar';
+
+const GlobalStyle = createGlobalStyle`
+  html {
+    margin: 0;
+  }
+
+  body {
+    background: ${props => props.theme.colors.grey};
+    margin: 0;
+    font-family: ${props => props.theme.fonts.roboto};
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,21 +38,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Theme>
+        <GlobalStyle/>
+        <Navbar />
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </Theme>
     </>
   )
 }
