@@ -6,14 +6,16 @@
  */
 
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+// import { useStaticQuery, graphql } from 'gatsby';
 
 import { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
 import { usePageContext } from '../context/pageContext';
 
 import Theme from './Theme';
 import Navbar from '../components/navigation/Navbar';
+import SideNavbar from './navigation/SideNavbar';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -27,30 +29,35 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Layout = ({ children }) => {
-  const { langKey } = usePageContext();
+const Container = styled.div`
+  margin: 0 60px;
+`
 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const Layout = ({ children }) => {
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
+
+  const path = usePageContext();
 
   return (
     <>
       <Theme>
         <GlobalStyle/>
+
         <Navbar />
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+
+        {path.slug.includes("contact") ? null : <SideNavbar />}
+
+        <Container>
+          <main>{children}</main>
+        </Container>
       </Theme>
     </>
   )

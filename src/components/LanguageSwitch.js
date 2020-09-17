@@ -5,10 +5,11 @@ import { usePageContext } from '../context/pageContext';
 
 import { navigateToPageByLanguage } from '../utils/navigateToPageByLanguage';
 
-const StyledLi = styled.li`
+const StyledLangSwitch = styled.p`
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
+  margin-right: 21px;
 
   :hover {
     cursor: pointer;
@@ -23,7 +24,7 @@ const LanguageSwitch = () => {
   }
 
   return (
-    <StyledLi onClick={languageChangerHandler}>{currentLang === "en" ? "FR" : "EN"}</StyledLi>
+    <StyledLangSwitch onClick={languageChangerHandler}>{currentLang === "en" ? "FR" : "EN"}</StyledLangSwitch>
   )
 }
 

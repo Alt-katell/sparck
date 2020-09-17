@@ -10,6 +10,7 @@ const theme = {
     black: "#000000",
     grey: "#EBEAEB",
     blue: "#0025E0",
+    white: "#ffffff"
   },
   fonts: {
     overpass: "Overpass",

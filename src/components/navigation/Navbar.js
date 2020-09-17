@@ -7,6 +7,7 @@ import logo from './sparck_logo.png';
 import NavigationItem from './NavigationItem';
 import LanguageSwitch from '../LanguageSwitch';
 
+
 const StyledNav = styled.nav`
   display: flex;
   align-items: center;
@@ -17,7 +18,7 @@ const StyledNav = styled.nav`
 const StyledUl = styled.ul`
   list-style: none;
   display: flex;
-  margin: 0 20px;
+  margin: 0 45px;
   padding: 0;
   height: 16px;
   width: 50%;
@@ -28,7 +29,6 @@ const StyledUl = styled.ul`
 
   &:last-of-type {
     justify-content: flex-end;
-    margin-right: 20px;
   }
 `
 
@@ -51,8 +51,9 @@ const Navbar = () => {
         <StyledLogo src={logo} alt="Spärck Logo"/>
         <StyledUl>
           <NavigationItem link="/contact">{t.contact[currentLang]}</NavigationItem>
-          <LanguageSwitch />
+
         </StyledUl>
+        <LanguageSwitch />
       </StyledNav>
     </header>
   )
