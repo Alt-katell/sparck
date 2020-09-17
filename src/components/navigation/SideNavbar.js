@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -35,10 +35,10 @@ const StyledLine = styled.div`
   margin: 10px 0;
 `
 
-const StyledWhiteRectangle = styled.div`
+const StyledRectangle = styled.div`
   width: 60px;
   height: 120px;
-  background: ${props => props.theme.colors.white};
+  background: ${props => props.theme.colors[props.color]};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,10 +49,57 @@ const StyledDot = styled.div`
   height: 7px;
   width: 7px;
   border-radius: 50%;
-  background: ${props => props.theme.colors.blue};
+  background: ${props => props.theme.colors[props.color]};
+`
+
+const StyledTeamDrawerOpen = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 230px;
+`
+
+const StyledTeamMembers = styled.div`
+  display: flex;
+  background: ${props => props.theme.colors.white};
+  height: 120px;
+`
+
+const StyledTeamMemberGroup = styled.div`
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
 const SideNavbar = () => {
+  const [teamDrawerOpen, setTeamDrawerOpen] = useState(true);
+
+  let teamDrawer = (
+    <StyledRectangle color="white">
+      <StyledDot color="blue" style={{marginBottom: "6px"}} />
+      <StyledDot color="blue" />
+    </StyledRectangle>
+  )
+
+  if (teamDrawerOpen) {
+    teamDrawer = (
+      <StyledTeamDrawerOpen>
+        <StyledRectangle color="blue"><StyledDot color="white" style={{marginBottom: "6px"}} /><StyledDot color="white" /></StyledRectangle>
+        <StyledTeamMembers>
+          <StyledTeamMemberGroup>
+            <p>Clémence</p>
+            <p>Nour</p>
+          </StyledTeamMemberGroup>
+          <StyledTeamMemberGroup>
+            <p>Katell</p>
+            <p>Vicky</p>
+          </StyledTeamMemberGroup>
+        </StyledTeamMembers>
+      </StyledTeamDrawerOpen>
+    )
+  }
+
   return (
     <StyledSideNavbar>
       <StyledSocialIcons>
@@ -60,10 +107,12 @@ const SideNavbar = () => {
         <FontAwesomeIcon icon={faLinkedin} style={{marginBottom: "16px"}} />
         <FontAwesomeIcon icon={faBehance} />
       </StyledSocialIcons>
-      <StyledTeamBlock>
+      <StyledTeamBlock
+        onMouseEnter={() => setTeamDrawerOpen(true)}
+        onMouseLeave={() => setTeamDrawerOpen(false)}>
         <p style={{writingMode: "vertical-rl"}}>Team</p>
         <StyledLine />
-        <StyledWhiteRectangle><StyledDot style={{marginBottom: "6px"}} /><StyledDot /></StyledWhiteRectangle>
+        {teamDrawer}
       </StyledTeamBlock>
     </StyledSideNavbar>
   )
