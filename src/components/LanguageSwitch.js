@@ -16,15 +16,14 @@ const StyledLi = styled.li`
 `
 
 const LanguageSwitch = () => {
-  const { langKey: currentLang, slug } = usePageContext()
-  console.log(currentLang, slug)
+  const {langKey: currentLang, slug} = usePageContext();
 
   const languageChangerHandler = (event) => {
     navigateToPageByLanguage(currentLang, event.target.innerHTML.toLowerCase(), slug)
   }
 
   return (
-    <StyledLi onClick={languageChangerHandler}>FR</StyledLi>
+    <StyledLi onClick={languageChangerHandler}>{currentLang === "en" ? "FR" : "EN"}</StyledLi>
   )
 }
 

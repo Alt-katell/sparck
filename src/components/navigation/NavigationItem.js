@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
+import Link from '../Link';
 
 
 const StyledLink = styled(Link)`
@@ -15,13 +15,12 @@ const StyledLink = styled(Link)`
   }
 `
 
-const NavigationItem = ({link, children, clicked}) => {
+const NavigationItem = ({link, children}) => {
   return (
     <li>
       <StyledLink
-        to={link}
-        activeClassName="active"
-        onClick={clicked}>
+        link={link}
+        activeClassName="active">
         {children}
       </StyledLink>
     </li>

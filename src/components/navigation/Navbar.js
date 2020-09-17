@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { usePageContext } from '../../context/pageContext';
+
 import logo from './sparck_logo.png';
 import NavigationItem from './NavigationItem';
 import LanguageSwitch from '../LanguageSwitch';
@@ -36,17 +38,19 @@ const StyledLogo = styled.img`
 `
 
 const Navbar = () => {
+  const {langKey: currentLang} = usePageContext();
+
   return (
     <header>
       <StyledNav>
         <StyledUl>
-          <NavigationItem link="/">About</NavigationItem>
-          <NavigationItem link="">Services</NavigationItem>
-          <NavigationItem link="">Work</NavigationItem>
+          <NavigationItem link="/">{t.about[currentLang]}</NavigationItem>
+          <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
+          <NavigationItem link="/work">{t.work[currentLang]}</NavigationItem>
         </StyledUl>
         <StyledLogo src={logo} alt="Spärck Logo"/>
         <StyledUl>
-          <NavigationItem link="">Contact</NavigationItem>
+          <NavigationItem link="/contact">{t.contact[currentLang]}</NavigationItem>
           <LanguageSwitch />
         </StyledUl>
       </StyledNav>
@@ -55,3 +59,22 @@ const Navbar = () => {
 }
 
 export default Navbar;
+
+const t = {
+  about: {
+    en: "About",
+    fr: "À propos"
+  },
+  services: {
+    en: "Services",
+    fr: "Services"
+  },
+  work: {
+    en: "Work",
+    fr: "Portfolio"
+  },
+  contact: {
+    en: "Contact",
+    fr: "Contact"
+  }
+}
