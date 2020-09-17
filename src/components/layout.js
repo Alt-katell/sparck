@@ -10,6 +10,8 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import { createGlobalStyle } from 'styled-components';
 
+import { usePageContext } from '../context/pageContext';
+
 import Theme from './Theme';
 import Navbar from '../components/navigation/Navbar';
 
@@ -26,6 +28,8 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Layout = ({ children }) => {
+  const { langKey } = usePageContext();
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

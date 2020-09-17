@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 import logo from './sparck_logo.png';
 import NavigationItem from './NavigationItem';
+import LanguageSwitch from '../LanguageSwitch';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -46,7 +47,7 @@ const Navbar = () => {
         <StyledLogo src={logo} alt="Spärck Logo"/>
         <StyledUl>
           <NavigationItem link="">Contact</NavigationItem>
-          <NavigationItem link="">FR</NavigationItem>
+          <LanguageSwitch />
         </StyledUl>
       </StyledNav>
     </header>
