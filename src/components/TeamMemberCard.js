@@ -55,9 +55,17 @@ const StyledDots = styled.div`
 const StyledDescription = styled.p`
   text-align: justify;
   text-justify: inter-word;
+  margin: 6px 0;
+
+  &:first-of-type {
+    margin-top: 18px;
+  }
+  &:last-of-type {
+    margin-bottom: 18px;
+  }
 `
 
-const TeamMemberCard = ({reverse, photo, name, role1, role2, description, portfolio}) => {
+const TeamMemberCard = ({reverse, photo, name, role1, role2, description1, description2, description3, portfolio}) => {
   return (
     <StyledRectangle reverse={reverse}>
       <StyledPhoto src={photo} alt={name} reverse={reverse} />
@@ -71,7 +79,9 @@ const TeamMemberCard = ({reverse, photo, name, role1, role2, description, portfo
           </StyledDots>
           <p>{role2}</p>
         </StyledRole>
-        <StyledDescription>{description}</StyledDescription>
+        <StyledDescription>{description1}</StyledDescription>
+        <StyledDescription>{description2}</StyledDescription>
+        <StyledDescription>{description3}</StyledDescription>
         <a href={portfolio}>See her portfolio</a>
       </StyledText>
     </StyledRectangle>
