@@ -12,7 +12,11 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 30px 0;
+  padding: 30px 0 10px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: ${props => props.theme.colors.grey};
 `
 
 const StyledUl = styled.ul`

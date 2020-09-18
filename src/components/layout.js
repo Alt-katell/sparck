@@ -35,7 +35,7 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Container = styled.div`
-  margin: 0 60px;
+  margin: 120px 60px 0 60px;
 `
 
 const Layout = ({ children }) => {
