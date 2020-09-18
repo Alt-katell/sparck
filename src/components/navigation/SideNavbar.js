@@ -55,7 +55,8 @@ const StyledDot = styled.div`
 const StyledTeamDrawerOpen = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 230px;
+  position: relative;
+  margin-right: 250px;
 `
 
 const StyledTeamMembers = styled.div`
@@ -70,10 +71,14 @@ const StyledTeamMemberGroup = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  & p {
+    text-transform: uppercase;
+  }
 `
 
 const SideNavbar = () => {
-  const [teamDrawerOpen, setTeamDrawerOpen] = useState(true);
+  const [teamDrawerOpen, setTeamDrawerOpen] = useState(false);
 
   let teamDrawer = (
     <StyledRectangle color="white">
@@ -85,7 +90,10 @@ const SideNavbar = () => {
   if (teamDrawerOpen) {
     teamDrawer = (
       <StyledTeamDrawerOpen>
-        <StyledRectangle color="blue"><StyledDot color="white" style={{marginBottom: "6px"}} /><StyledDot color="white" /></StyledRectangle>
+        <StyledRectangle color="blue">
+          <StyledDot color="white" style={{marginBottom: "6px"}} />
+          <StyledDot color="white" />
+        </StyledRectangle>
         <StyledTeamMembers>
           <StyledTeamMemberGroup>
             <p>Clémence</p>

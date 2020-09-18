@@ -8,8 +8,7 @@ import { navigateToPageByLanguage } from '../utils/navigateToPageByLanguage';
 const StyledLangSwitch = styled.p`
   font-size: 16px;
   font-weight: 300;
-  line-height: 19px;
-  margin-right: 21px;
+  margin: 0 21px 0 0;
 
   :hover {
     cursor: pointer;

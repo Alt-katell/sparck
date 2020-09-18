@@ -20,15 +20,19 @@ const StyledUl = styled.ul`
   display: flex;
   margin: 0 45px;
   padding: 0;
-  height: 16px;
   width: 50%;
 
   & > * {
     margin: 0 15px;
   }
 
+  &:first-of-type {
+    flex-basis: 30%;
+  }
+
   &:last-of-type {
     justify-content: flex-end;
+    flex-basis: 20%;
   }
 `
 
@@ -51,7 +55,6 @@ const Navbar = () => {
         <StyledLogo src={logo} alt="Spärck Logo"/>
         <StyledUl>
           <NavigationItem link="/contact">{t.contact[currentLang]}</NavigationItem>
-
         </StyledUl>
         <LanguageSwitch />
       </StyledNav>
