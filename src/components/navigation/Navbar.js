@@ -25,7 +25,7 @@ const StyledUl = styled.ul`
   margin: 0 45px;
   padding: 0;
   width: 50%;
-  z-index: 3;
+  z-index: 4;
 
   & > * {
     margin: 0 15px;
@@ -44,7 +44,7 @@ const StyledUl = styled.ul`
 const StyledLogo = styled.img`
   height: 40px;
   width: auto;
-  z-index: 3;
+  z-index: 4;
 `
 
 const StyledWhiteNavbarPortion = styled.div`
@@ -57,6 +57,25 @@ const StyledWhiteNavbarPortion = styled.div`
   z-index: 2;
 `
 
+const StyledLine1 = styled.div`
+  width: 1px;
+  height: 80px;
+  border-left: 1px solid ${props => props.theme.colors.white};
+  position: fixed;
+  top: 0;
+  left: 25%;
+`
+
+const StyledLine2 = styled.div`
+  width: 1px;
+  height: 80px;
+  border-left: 1px solid ${props => props.color == "black" ? props.theme.colors.black : props.theme.colors.white};
+  position: fixed;
+  top: 0;
+  right: 25%;
+  z-index: 3
+`
+
 const Navbar = () => {
   const {langKey: currentLang, slug} = usePageContext();
 
@@ -64,6 +83,8 @@ const Navbar = () => {
     <header>
       <StyledNav>
         {slug.includes("team") ? <StyledWhiteNavbarPortion /> : null}
+        {slug.includes("team") ? null : <StyledLine1 />}
+        {slug.includes("team") ? <StyledLine2 color="black"/> : <StyledLine2 />}
         <StyledUl>
           <NavigationItem link="/">{t.about[currentLang]}</NavigationItem>
           <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
