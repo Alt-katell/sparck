@@ -27,6 +27,11 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: ${props => props.theme.fonts.roboto};
   }
+
+  a {
+    text-decoration: none;
+    color: ${props => props.theme.colors.black};
+  }
 `
 
 const Container = styled.div`

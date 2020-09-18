@@ -5,7 +5,7 @@ import Link from '../Link';
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: black;
+  color: ${props => props.theme.colors.black};
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
