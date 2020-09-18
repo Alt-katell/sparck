@@ -40,6 +40,26 @@ const Container = styled.div`
   margin: 120px 60px 0 60px;
 `
 
+const StyledLine1 = styled.div`
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid ${props => props.theme.colors.white};
+  position: fixed;
+  top: 0;
+  left: 25%;
+  z-index: -1;
+`
+
+const StyledLine2 = styled.div`
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid ${props => props.color == "black" ? props.theme.colors.black : props.theme.colors.white};
+  position: fixed;
+  top: 0;
+  right: 25%;
+  z-index: -1;
+`
+
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
@@ -59,6 +79,8 @@ const Layout = ({ children }) => {
         <GlobalStyle/>
 
         <Navbar />
+        {path.slug.includes("team") ? null : <StyledLine1 />}
+        {path.slug.includes("team") ? <StyledLine2 color="black"/> : <StyledLine2 />}
 
         {path.slug.includes("contact") ? null : <SideNavbar />}
 
