@@ -20,12 +20,14 @@ import SideNavbar from './navigation/SideNavbar';
 const GlobalStyle = createGlobalStyle`
   html {
     margin: 0;
+    height: 100%;
   }
 
   body {
     background: ${props => props.theme.colors.grey};
     margin: 0;
     font-family: ${props => props.theme.fonts.roboto};
+    height: 100%;
   }
 
   a {

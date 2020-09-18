@@ -25,6 +25,7 @@ const StyledUl = styled.ul`
   margin: 0 45px;
   padding: 0;
   width: 50%;
+  z-index: 3;
 
   & > * {
     margin: 0 15px;
@@ -43,14 +44,26 @@ const StyledUl = styled.ul`
 const StyledLogo = styled.img`
   height: 40px;
   width: auto;
+  z-index: 3;
+`
+
+const StyledWhiteNavbarPortion = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 80px;
+  min-width: 850px;
+  background: ${props => props.theme.colors.white};
+  z-index: 2;
 `
 
 const Navbar = () => {
-  const {langKey: currentLang} = usePageContext();
+  const {langKey: currentLang, slug} = usePageContext();
 
   return (
     <header>
       <StyledNav>
+        {slug.includes("team") ? <StyledWhiteNavbarPortion /> : null}
         <StyledUl>
           <NavigationItem link="/">{t.about[currentLang]}</NavigationItem>
           <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>

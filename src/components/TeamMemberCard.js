@@ -5,10 +5,14 @@ const StyledRectangle = styled.div`
   width: 660px;
   height: 360px;
   background: ${props => props.theme.colors.white};
-  margin: 50px auto;
-  padding: 25px 30px;
+  margin: 100px auto;
+  padding: 25px 25px;
   display: flex;
   flex-direction: ${props => props.reverse ? "row-reverse" : null};
+
+  &:last-of-type {
+    margin-bottom: 50px;
+  }
 `
 
 const StyledPhoto = styled.img`
@@ -24,7 +28,7 @@ const StyledText = styled.div`
 
 const StyledName = styled.h2`
   font-family: ${props => props.theme.fonts.baskerville};
-  font-size: 55px;
+  font-size: 40px;
   color: ${props => props.theme.colors.blue};
   margin: 25px ${props => props.reverse ? "-60px" : "0"} 0 ${props => props.reverse ? "0" : "-60px"};
   text-align: ${props => props.reverse ? "right" : null};
@@ -35,7 +39,7 @@ const StyledRole = styled.div`
 
   & p {
     margin: 0 9px;
-    font-size: 20px;
+    font-size: 17px;
   }
 `
 
