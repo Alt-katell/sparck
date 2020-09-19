@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
+
+import Link from '../Link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -72,8 +75,9 @@ const StyledTeamMemberGroup = styled.div`
   justify-content: center;
   align-items: center;
 
-  & p {
+  & > * {
     text-transform: uppercase;
+    margin: 6px 0;
   }
 `
 
@@ -96,12 +100,12 @@ const SideNavbar = () => {
         </StyledRectangle>
         <StyledTeamMembers>
           <StyledTeamMemberGroup>
-            <p>Clémence</p>
-            <p>Nour</p>
+            <AnchorLink to="/team#clemence">Clémence</AnchorLink>
+            <AnchorLink to="/team#nour">Nour</AnchorLink>
           </StyledTeamMemberGroup>
           <StyledTeamMemberGroup>
-            <p>Katell</p>
-            <p>Vicky</p>
+            <AnchorLink to="/team#katell">Katell</AnchorLink>
+            <AnchorLink to="/team#vicky">Vicky</AnchorLink>
           </StyledTeamMemberGroup>
         </StyledTeamMembers>
       </StyledTeamDrawerOpen>

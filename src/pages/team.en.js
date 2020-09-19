@@ -18,6 +18,7 @@ const TeamPage = () => {
     <div>
     <StyledWhiteBackground />
       <TeamMemberCard
+        id="clemence"
         reverse={false}
         photo="/images/Photo-Vicky.png"
         name="Clémence Paiement"
@@ -29,6 +30,7 @@ const TeamPage = () => {
         portfolio="www.google.com" />
 
       <TeamMemberCard
+        id="nour"
         reverse={true}
         photo="/images/Photo-Katell.png"
         name="Nour Souid"
@@ -40,6 +42,7 @@ const TeamPage = () => {
         portfolio="www.google.com" />
 
       <TeamMemberCard
+        id="katell"
         reverse={false}
         photo="/images/Photo-Katell.png"
         name="Katell Goaër"
@@ -51,6 +54,7 @@ const TeamPage = () => {
         portfolio="www.google.com" />
 
       <TeamMemberCard
+        id="vicky"
         reverse={true}
         photo="/images/Photo-Vicky.png"
         name="Vicky André"

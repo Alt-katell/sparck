@@ -69,9 +69,9 @@ const StyledDescription = styled.p`
   }
 `
 
-const TeamMemberCard = ({reverse, photo, name, role1, role2, description1, description2, description3, portfolio}) => {
+const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, description2, description3, portfolio}) => {
   return (
-    <StyledRectangle reverse={reverse}>
+    <StyledRectangle id={id} reverse={reverse}>
       <StyledPhoto src={photo} alt={name} reverse={reverse} />
       <StyledText>
         <StyledName reverse={reverse}>{name}</StyledName>
