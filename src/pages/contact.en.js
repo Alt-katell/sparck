@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import LetsTalk from '../components/LetsTalk';
+import ContactForm from '../components/ContactForm';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -41,6 +42,8 @@ const ContactPage = () => {
       <StyledLine2 />
 
       <LetsTalk />
+
+      <ContactForm />
 
       <StyledSocialIcons>
         <FontAwesomeIcon icon={faInstagram} style={{marginRight: "16px"}} />

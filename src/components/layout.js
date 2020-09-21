@@ -27,6 +27,7 @@ const GlobalStyle = createGlobalStyle`
     background: ${props => props.theme.colors.grey};
     margin: 0;
     font-family: ${props => props.theme.fonts.roboto};
+    font-weight: 300;
     height: 100%;
   }
 
