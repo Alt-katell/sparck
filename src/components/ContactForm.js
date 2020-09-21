@@ -97,7 +97,7 @@ const ContactForm = ({inside, outside}) => {
         <StyledUnderline />
       </StyledItem>
 
-      <StyledSendButton>Send</StyledSendButton>
+      <StyledSendButton type="submit">Send</StyledSendButton>
 
     </StyledForm>
   );
