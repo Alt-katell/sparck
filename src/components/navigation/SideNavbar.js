@@ -92,7 +92,7 @@ const SideNavbar = () => {
   )
 
   if (teamDrawerOpen) {
-    teamDrawer = (
+   teamDrawer = (
       <StyledTeamDrawerOpen>
         <StyledRectangle color="blue">
           <StyledDot color="white" style={{marginBottom: "6px"}} />

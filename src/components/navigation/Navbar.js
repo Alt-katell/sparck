@@ -17,6 +17,7 @@ const StyledNav = styled.nav`
   top: 0;
   width: 100%;
   background: ${props => props.theme.colors.grey};
+  z-index: 4;
 `
 
 const StyledUl = styled.ul`
