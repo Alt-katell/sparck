@@ -80,12 +80,28 @@ const StyledLine2 = styled.div`
 const Navbar = () => {
   const {langKey: currentLang, slug} = usePageContext();
 
+  let line1 = null;
+  if (slug.includes("team") || slug.includes("contact")) {
+    line1 = null;
+  } else {
+    line1 = <StyledLine1 />;
+  }
+
+  let line2 = null;
+  if (slug.includes("team")) {
+    line2 = <StyledLine2 color="black"/>;
+  } else if (slug.includes("contact")) {
+    line2 = null
+  } else {
+    line2 = <StyledLine2 />;
+  }
+
   return (
     <header>
       <StyledNav>
         {slug.includes("team") ? <StyledWhiteNavbarPortion /> : null}
-        {slug.includes("team") ? null : <StyledLine1 />}
-        {slug.includes("team") ? <StyledLine2 color="black"/> : <StyledLine2 />}
+        {line1}
+        {line2}
         <StyledUl>
           <NavigationItem link="/">{t.about[currentLang]}</NavigationItem>
           <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>

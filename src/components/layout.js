@@ -73,14 +73,31 @@ const Layout = ({ children }) => {
 
   const path = usePageContext();
 
+  let line1 = null;
+  if (path.slug.includes("team") || path.slug.includes("contact")) {
+    line1 = null;
+  } else {
+    line1 = <StyledLine1 />;
+  }
+
+  let line2 = null;
+  if (path.slug.includes("team")) {
+    line2 = <StyledLine2 color="black"/>;
+  } else if (path.slug.includes("contact")) {
+    line2 = null
+  } else {
+    line2 = <StyledLine2 />;
+  }
+
   return (
     <>
       <Theme>
         <GlobalStyle/>
 
         <Navbar />
-        {path.slug.includes("team") ? null : <StyledLine1 />}
-        {path.slug.includes("team") ? <StyledLine2 color="black"/> : <StyledLine2 />}
+
+        {line1}
+        {line2}
 
         {path.slug.includes("contact") ? null : <SideNavbar />}
 
