@@ -27,13 +27,13 @@ const WorkPage = () => {
         reverse={false}
         photo="/images/client-website-1.png"
         link="www.google.com"
-        websiteName="First Client" />
+        websiteName="Third Client" />
 
       <PortfolioCard
         reverse={true}
         photo="/images/client-website-2.png"
         link="www.google.com"
-        websiteName="Second Client" />
+        websiteName="Fourth Client" />
     </StyledWorkPage>
   );
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { usePageContext } from '../context/pageContext';
+
 const StyledRectangle = styled.div`
   width: 650px;
   height: 400px;
@@ -33,12 +35,21 @@ const StyledA = styled.a`
 `
 
 const PortfolioCard = ({reverse, photo, link, websiteName}) => {
+  const {langKey: currentLang, slug} = usePageContext();
+
   return (
     <StyledRectangle reverse={reverse}>
       <StyledPhoto src={photo} alt={websiteName} reverse={reverse} />
-      <StyledA href={link} reverse={reverse}>Visit {websiteName}</StyledA>
+      <StyledA href={link} reverse={reverse}>{t.visit[currentLang]} {websiteName}</StyledA>
     </StyledRectangle>
   )
 }
 
 export default PortfolioCard;
+
+const t = {
+  visit: {
+    en: "Visit",
+    fr: "Visiter"
+  },
+}
