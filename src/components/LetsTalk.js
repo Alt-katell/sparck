@@ -11,13 +11,13 @@ const StyledText = styled.p`
   color: ${props => props.theme.colors.blue};
   position: fixed;
   bottom: calc((100vh - 92px) / 2);
-  right: -180px;
+  right: ${props => props.out ? "-120px" : "-180px"};
   z-index: 4;
 `
 
-const LetsTalk = () => {
+const LetsTalk = ({out}) => {
   return (
-    <StyledText>Let's talk</StyledText>
+    <StyledText out={out}>Let's talk</StyledText>
   );
 }
 

@@ -5,7 +5,7 @@ import { usePageContext } from '../context/pageContext';
 
 const StyledForm = styled.form`
   width: 350px;
-  margin: 130px auto 60px auto;
+  margin: 0 auto;
 `
 
 const StyledItem = styled.div`
@@ -64,11 +64,11 @@ const StyledSendButton = styled.button`
   }
 `
 
-const ContactForm = () => {
+const ContactForm = ({inside, outside}) => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-    <StyledForm autocomplete="off">
+    <StyledForm autoComplete="off" onMouseEnter={inside} onMouseLeave={outside}>
 
       <StyledNameGroup>
         <StyledItem>

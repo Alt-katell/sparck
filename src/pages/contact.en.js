@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import styled from 'styled-components';
 
 import LetsTalk from '../components/LetsTalk';
@@ -29,6 +29,22 @@ const StyledLine2 = styled.div`
   z-index: 4;
 `
 
+const StyledCurve1 = styled.img`
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 25%;
+  z-index: 4;
+`
+
+const StyledCurve2 = styled.img`
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 25%;
+  z-index: 4;
+`
+
 const StyledSocialIcons = styled.div`
   position: fixed;
   bottom: 20px;
@@ -36,21 +52,32 @@ const StyledSocialIcons = styled.div`
 `
 
 const ContactPage = () => {
+  const [contactFormHovered, setContactFormHovered] = useState(false);
+
+  console.log(contactFormHovered)
+
+  const hoveringHandler = () => {
+    setContactFormHovered(true)
+  }
+
+  const notHoveringHandler = () => {
+    setContactFormHovered(false)
+  }
+
   return (
     <div>
-      <StyledLine1 />
-      <StyledLine2 />
+      {contactFormHovered ? <StyledCurve1 src="/images/curve.png" /> : <StyledLine1 />}
+      {contactFormHovered ? <StyledCurve2 src="/images/curve.png" /> : <StyledLine2 />}
 
-      <LetsTalk />
+      <LetsTalk out={contactFormHovered} />
 
-      <ContactForm />
+      <ContactForm inside={hoveringHandler} outside={notHoveringHandler} />
 
       <StyledSocialIcons>
         <FontAwesomeIcon icon={faInstagram} style={{marginRight: "16px"}} />
         <FontAwesomeIcon icon={faLinkedin} style={{marginRight: "16px"}} />
         <FontAwesomeIcon icon={faBehance} />
       </StyledSocialIcons>
-
     </div>
   );
 }
