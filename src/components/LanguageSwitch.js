@@ -9,6 +9,7 @@ const StyledLangSwitch = styled.p`
   font-size: 16px;
   font-weight: 300;
   margin: 0 21px 0 0;
+  z-index: 4;
 
   :hover {
     cursor: pointer;
