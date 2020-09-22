@@ -38,12 +38,12 @@ const StyledTextLineBlack = styled.span`
 const HomePage = () => {
   setTimeout(function() {
       window.location='/about'
-  }, 4000);
+  }, 5000);
 
   return (
     <StyledBackground>
       <StyledText>
-        <Typing speed={80}>
+        <Typing speed={90}>
           <StyledTextLineWhite>We dream.</StyledTextLineWhite><br />
           <StyledTextLineWhite>We code.</StyledTextLineWhite><br />
           <StyledTextLineBlack>We spärck.</StyledTextLineBlack>
