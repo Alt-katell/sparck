@@ -54,8 +54,6 @@ const StyledSocialIcons = styled.div`
 const ContactPage = () => {
   const [contactFormHovered, setContactFormHovered] = useState(false);
 
-  console.log(contactFormHovered)
-
   const hoveringHandler = () => {
     setContactFormHovered(true)
   }

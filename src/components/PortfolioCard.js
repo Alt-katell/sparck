@@ -35,7 +35,7 @@ const StyledA = styled.a`
 `
 
 const PortfolioCard = ({reverse, photo, link, websiteName}) => {
-  const {langKey: currentLang, slug} = usePageContext();
+  const {langKey: currentLang} = usePageContext();
 
   return (
     <StyledRectangle reverse={reverse}>

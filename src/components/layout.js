@@ -54,7 +54,7 @@ const StyledLine1 = styled.div`
 const StyledLine2 = styled.div`
   width: 1px;
   height: 100%;
-  border-left: 1px solid ${props => props.color == "black" ? props.theme.colors.black : props.theme.colors.white};
+  border-left: 1px solid ${props => props.color === "black" ? props.theme.colors.black : props.theme.colors.white};
   position: fixed;
   top: 0;
   right: 25%;
@@ -74,14 +74,14 @@ const Layout = ({ children }) => {
 
   const path = usePageContext();
 
-  let line1 = null;
+  let line1;
   if (path.slug.includes("team") || path.slug.includes("contact")) {
     line1 = null;
   } else {
     line1 = <StyledLine1 />;
   }
 
-  let line2 = null;
+  let line2;
   if (path.slug.includes("team")) {
     line2 = <StyledLine2 color="black"/>;
   } else if (path.slug.includes("contact")) {
@@ -90,13 +90,11 @@ const Layout = ({ children }) => {
     line2 = <StyledLine2 />;
   }
 
-  return (
-    <>
-      <Theme>
-        <GlobalStyle/>
-
+  let content;
+  if (path.slug.includes("about") || path.slug.includes("services") || path.slug.includes("work") || path.slug.includes( "contact") || path.slug.includes("team")) {
+    content = (
+      <div>
         <Navbar />
-
         {line1}
         {line2}
 
@@ -105,6 +103,17 @@ const Layout = ({ children }) => {
         <Container>
           <main>{children}</main>
         </Container>
+      </div>
+    );
+  } else {
+    content = [children]
+  }
+
+  return (
+    <>
+      <Theme>
+        <GlobalStyle/>
+        {content}
       </Theme>
     </>
   )

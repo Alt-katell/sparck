@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 import { usePageContext } from '../../context/pageContext';
 
@@ -12,7 +13,7 @@ const StyledNav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0 10px 0;
+  padding: 30px 0 0 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -42,6 +43,10 @@ const StyledUl = styled.ul`
   }
 `
 
+const StyledLink = styled(Link)`
+  z-index: 4;
+`
+
 const StyledLogo = styled.img`
   height: 40px;
   width: auto;
@@ -52,7 +57,7 @@ const StyledWhiteNavbarPortion = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  height: 80px;
+  height: 74px;
   min-width: 850px;
   background: ${props => props.theme.colors.white};
   z-index: 2;
@@ -60,7 +65,7 @@ const StyledWhiteNavbarPortion = styled.div`
 
 const StyledLine1 = styled.div`
   width: 1px;
-  height: 80px;
+  height: 74px;
   border-left: 1px solid ${props => props.theme.colors.white};
   position: fixed;
   top: 0;
@@ -69,8 +74,8 @@ const StyledLine1 = styled.div`
 
 const StyledLine2 = styled.div`
   width: 1px;
-  height: 80px;
-  border-left: 1px solid ${props => props.color == "black" ? props.theme.colors.black : props.theme.colors.white};
+  height: 74px;
+  border-left: 1px solid ${props => props.color === "black" ? props.theme.colors.black : props.theme.colors.white};
   position: fixed;
   top: 0;
   right: 25%;
@@ -80,14 +85,14 @@ const StyledLine2 = styled.div`
 const Navbar = () => {
   const {langKey: currentLang, slug} = usePageContext();
 
-  let line1 = null;
+  let line1;
   if (slug.includes("team") || slug.includes("contact")) {
     line1 = null;
   } else {
     line1 = <StyledLine1 />;
   }
 
-  let line2 = null;
+  let line2;
   if (slug.includes("team")) {
     line2 = <StyledLine2 color="black"/>;
   } else if (slug.includes("contact")) {
@@ -103,11 +108,11 @@ const Navbar = () => {
         {line1}
         {line2}
         <StyledUl>
-          <NavigationItem link="/">{t.about[currentLang]}</NavigationItem>
+          <NavigationItem link="/about">{t.about[currentLang]}</NavigationItem>
           <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
           <NavigationItem link="/work">{t.work[currentLang]}</NavigationItem>
         </StyledUl>
-        <StyledLogo src={logo} alt="Spärck Logo"/>
+        <StyledLink to="/"><StyledLogo src={logo} alt="Spärck Logo"/></StyledLink>
         <StyledUl>
           <NavigationItem link="/contact">{t.contact[currentLang]}</NavigationItem>
         </StyledUl>
