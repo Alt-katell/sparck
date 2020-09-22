@@ -14,6 +14,7 @@ const StyledSideNavbar = styled.div`
   right: 0;
   display: flex;
   flex-direction: column;
+  z-index: 3;
 `
 
 const StyledSocialIcons = styled.div`
@@ -58,6 +59,7 @@ const StyledTeamDrawerOpen = styled.div`
   align-items: center;
   position: relative;
   margin-right: 250px;
+  z-index: 3;
 `
 
 const StyledTeamMembers = styled.div`
