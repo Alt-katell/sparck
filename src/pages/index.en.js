@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { navigate } from 'gatsby';
+
+import Typing from 'react-typing-animation';
 
 const StyledBackground = styled.div`
   width: 100vw;
@@ -11,14 +12,44 @@ const StyledBackground = styled.div`
   overflow: hidden;
 `
 
-const HomePage = () => {
-  useEffect(() => {
-    setTimeout(navigate("/about"), 7000);
-  }, []);
+const StyledText = styled.div`
+  width: 600px;
+  margin: 10%;
 
+  & > * {
+    margin-bottom: 50px;
+  }
+`
+
+const StyledTextLineWhite = styled.span`
+  color: ${props => props.theme.colors.white};
+  font-family: ${props => props.theme.fonts.baskerville};
+  font-weight: bold;
+  font-size: 85px;
+`
+
+const StyledTextLineBlack = styled.span`
+  color: ${props => props.theme.colors.black};
+  font-family: ${props => props.theme.fonts.baskerville};
+  font-weight: bold;
+  font-size: 85px;
+`
+
+const HomePage = () => {
+  setTimeout(function() {
+      window.location='/about'
+  }, 4000);
 
   return (
-    <StyledBackground />
+    <StyledBackground>
+      <StyledText>
+        <Typing speed={80}>
+          <StyledTextLineWhite>We dream.</StyledTextLineWhite><br />
+          <StyledTextLineWhite>We code.</StyledTextLineWhite><br />
+          <StyledTextLineBlack>We spärck.</StyledTextLineBlack>
+        </Typing>
+      </StyledText>
+    </StyledBackground>
   )
 }
 
