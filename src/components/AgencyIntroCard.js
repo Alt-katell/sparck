@@ -46,7 +46,7 @@ const AgencyIntroCard = () => {
         {t.sloganThird[currentLang]}.
       </StyledSlogan>
       <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
-      <StyledText>bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet</StyledText>
+      <StyledText>{t.text[currentLang]}</StyledText>
     </StyledAgencyIntroCard>
   )
 }
@@ -65,5 +65,9 @@ const t = {
   sloganThird: {
     en: "web agency",
     fr: "collaborative"
+  },
+  text: {
+    en: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
+    fr: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla"
   },
 }
