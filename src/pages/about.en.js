@@ -1,11 +1,13 @@
 import React from 'react';
 
-const IndexPage = () => {
+import AgencyIntroCard from '../components/AgencyIntroCard';
+
+const AboutPage = () => {
   return (
     <div>
-      <p>This is the English about page. This is the English about page</p>
+      <AgencyIntroCard />
     </div>
   )
 }
 
-export default IndexPage;
+export default AboutPage;

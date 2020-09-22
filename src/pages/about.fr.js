@@ -1,14 +1,13 @@
 import React from 'react';
 
-import SEO from '../components/seo';
+import AgencyIntroCard from '../components/AgencyIntroCard';
 
-const IndexPage = () => {
+const AboutPage = () => {
   return (
     <div>
-      <SEO title="Home" />
-      <p>C'est la page française À propos</p>
+      <AgencyIntroCard />
     </div>
   )
 }
 
-export default IndexPage;
+export default AboutPage;
