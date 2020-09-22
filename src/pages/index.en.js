@@ -33,7 +33,13 @@ const StyledTextLineBlack = styled.span`
   font-family: ${props => props.theme.fonts.baskerville};
   font-weight: bold;
   font-size: 85px;
+
+  & span {
+    font-family: ${props => props.theme.fonts.overpass};
+  }
 `
+
+
 
 const HomePage = () => {
   setTimeout(function() {
@@ -46,7 +52,7 @@ const HomePage = () => {
         <Typing speed={90}>
           <StyledTextLineWhite>We dream.</StyledTextLineWhite><br />
           <StyledTextLineWhite>We code.</StyledTextLineWhite><br />
-          <StyledTextLineBlack>We spärck.</StyledTextLineBlack>
+          <StyledTextLineBlack>We <span>spärck</span>.</StyledTextLineBlack>
         </Typing>
       </StyledText>
     </StyledBackground>
