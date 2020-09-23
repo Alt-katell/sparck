@@ -67,7 +67,7 @@ const t = {
     fr: "collaborative"
   },
   text: {
-    en: "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet",
-    fr: "bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla"
+    en: "spärck is an innovative web agency that places humans at the center of the digital experience. We connect talents to make the world wide web a better and more beautiful place.",
+    fr: "spärck est une agence web innovante qui place l'humain au centre de l'expérience numérique. Nous connectons les talents pour faire de la toile un lieu plus inspirant et plus beau."
   },
 }

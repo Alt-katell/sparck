@@ -56,9 +56,9 @@ const TeamPage = () => {
         name="Vicky André"
         role1="Front-End Developer"
         role2="Web Designer"
-        description1="Lorem ipsum dolor sit amet"
-        description2="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
-        description3="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
+        description1="Vicky est une designer multidisciplinaire passionnée."
+        description2="Du Design Textile à la conception Web, elle croit que chaque élément graphique se doit d’être utile et réfléchi. Elle imagine des sites Web pour créer des univers uniques et mettre en valeur chaque produit, avec une approche minimaliste et moderne."
+        description3="Enseignante et chef d'entreprise, elle a le sens du détail et est avide de défis créatifs et mémorables."
         portfolio="www.google.com" />
     </div>
   );
