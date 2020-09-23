@@ -48,7 +48,7 @@ const TeamPage = () => {
         description1="Katell est une développeuse web orientée projet."
         description2="Tout ce qu’elle fait est motivé par l’empathie. Elle est capable de se mettre à la place de n’importe qui. Pouvoir observer un projet du point de vue d’un designer, d’un techy, de vous ou mieux, de votre client, lui donne une perspective globale de la stratégie."
         description3="Katell a travaillé pendant plus de 5 ans dans le Marketing, à construire des produits, marques et packagings, avant de pivoter vers le web."
-        portfolio="www.google.com" />
+        portfolio="https://alt-katell.github.io/" />
 
       <TeamMemberCard
         reverse={true}
@@ -59,7 +59,7 @@ const TeamPage = () => {
         description1="Vicky est une designer multidisciplinaire passionnée."
         description2="Du Design Textile à la conception Web, elle croit que chaque élément graphique se doit d’être utile et réfléchi. Elle imagine des sites Web pour créer des univers uniques et mettre en valeur chaque produit, avec une approche minimaliste et moderne."
         description3="Enseignante et chef d'entreprise, Vicky a le sens du détail et est avide de défis créatifs et mémorables."
-        portfolio="www.google.com" />
+        portfolio="http://noir-de-mars.com/" />
     </div>
   );
 }
