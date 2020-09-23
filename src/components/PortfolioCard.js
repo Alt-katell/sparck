@@ -10,6 +10,11 @@ const StyledRectangle = styled.div`
   margin: 20px 40px 100px 40px;
   position: relative;
   align-self: ${props => props.reverse ? "flex-end" : "null"};
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    width: 550px;
+    height: 335px;
+  }
 `
 
 const StyledPhoto = styled.img`
@@ -19,6 +24,10 @@ const StyledPhoto = styled.img`
   top: 20px;
   left: ${props => props.reverse ? "null" : "20px"};
   right: ${props => props.reverse ? "20px" : "null"};
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    width: 450px;
+  }
 `
 const StyledA = styled.a`
   position: absolute;
