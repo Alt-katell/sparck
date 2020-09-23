@@ -99,7 +99,7 @@ const ContactForm = ({inside, outside, about}) => {
         <StyledUnderline />
       </StyledItem>
 
-      <StyledSendButton type="submit">Send</StyledSendButton>
+      <StyledSendButton type="submit">{t.send[currentLang]}</StyledSendButton>
 
     </StyledForm>
   );
@@ -123,5 +123,9 @@ const t = {
   message: {
     en: "Message",
     fr: "Message"
-  }
+  },
+  send: {
+    en: "Send",
+    fr: "Envoyer"
+  },
 }
