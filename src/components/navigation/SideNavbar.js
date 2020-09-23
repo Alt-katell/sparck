@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
+import { usePageContext } from '../../context/pageContext';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -83,6 +85,8 @@ const StyledTeamMemberGroup = styled.div`
 `
 
 const SideNavbar = ({position}) => {
+  const {langKey: currentLang} = usePageContext();
+
   const [teamDrawerOpen, setTeamDrawerOpen] = useState(false);
 
   let teamDrawer = (
@@ -123,7 +127,7 @@ const SideNavbar = ({position}) => {
       <StyledTeamBlock
         onMouseEnter={() => setTeamDrawerOpen(true)}
         onMouseLeave={() => setTeamDrawerOpen(false)}>
-        <p style={{writingMode: "vertical-rl"}}>Team</p>
+        <p style={{writingMode: "vertical-rl"}}>{t.team[currentLang]}</p>
         <StyledLine />
         {teamDrawer}
       </StyledTeamBlock>
@@ -132,3 +136,10 @@ const SideNavbar = ({position}) => {
 }
 
 export default SideNavbar;
+
+const t = {
+  team: {
+    en: "Team",
+    fr: "Équipe"
+  },
+}

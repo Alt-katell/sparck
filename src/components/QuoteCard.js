@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { usePageContext } from '../context/pageContext';
+
 const StyledBackground = styled.div`
   width: 100vw;
   height: 100vh;
-  margin: 428px 0 0 0;
+  margin: ${props => props.margin === "en" ? "428px" : "435px"} 0 0 0;
   padding: 0;
   background: ${props => props.theme.colors.blue};
   overflow: hidden;
@@ -63,8 +65,10 @@ const StyledAuthor = styled.p`
 `
 
 const AgencyIntroCard = () => {
+  const {langKey: currentLang} = usePageContext();
+
   return (
-    <StyledBackground>
+    <StyledBackground margin={currentLang}>
       <StyledText>
         <StyledQuoteGroup>
           <StyledQuoteSign>“</StyledQuoteSign>
