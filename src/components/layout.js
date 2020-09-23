@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 // import { useStaticQuery, graphql } from 'gatsby';
 
 import { createGlobalStyle } from 'styled-components';
@@ -18,6 +18,7 @@ import Navbar from '../components/navigation/Navbar';
 import SideNavbar from './navigation/SideNavbar';
 import QuoteCard from './QuoteCard';
 import ContactForm from './ContactForm';
+import LetsTalk from './LetsTalk';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -76,6 +77,14 @@ const Layout = ({ children }) => {
 
   const path = usePageContext();
 
+  const [contactFormHovered, setContactFormHovered] = useState(false);
+  const hoveringHandler = () => {
+    setContactFormHovered(true)
+  };
+  const notHoveringHandler = () => {
+    setContactFormHovered(false)
+  };
+
   let line1;
   if (path.slug.includes("team") || path.slug.includes("contact")) {
     line1 = null;
@@ -116,7 +125,8 @@ const Layout = ({ children }) => {
         </Container>
 
         {path.slug.includes("about") ? <QuoteCard /> : null}
-        {path.slug.includes("about") ? <ContactForm /> : null}
+        {path.slug.includes("about") ? <ContactForm about={true} inside={hoveringHandler} outside={notHoveringHandler} /> : null}
+        {path.slug.includes("about") ? <LetsTalk out={contactFormHovered} about={true} /> : null}
       </div>
     );
   } else {

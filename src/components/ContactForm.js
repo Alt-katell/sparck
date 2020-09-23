@@ -5,7 +5,7 @@ import { usePageContext } from '../context/pageContext';
 
 const StyledForm = styled.form`
   width: 350px;
-  margin: 0 auto;
+  margin: ${props => props.about ? "100px" : "0"} auto 30px auto;
 `
 
 const StyledItem = styled.div`
@@ -17,7 +17,6 @@ const StyledItem = styled.div`
 const StyledNameGroup = styled.div`
   display: flex;
   justify-content: space-between;
-
   & > * {
     width: 40%;
   }
@@ -58,17 +57,20 @@ const StyledSendButton = styled.button`
   font-family: ${props => props.theme.fonts.roboto};
   font-weight: 300;
   cursor: pointer;
-
   &:hover {
     font-weight: 700;
   }
 `
 
-const ContactForm = ({inside, outside}) => {
+const ContactForm = ({inside, outside, about}) => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-    <StyledForm autoComplete="off" onMouseEnter={inside} onMouseLeave={outside}>
+    <StyledForm
+      autoComplete="off"
+      onMouseEnter={inside}
+      onMouseLeave={outside}
+      about={about}>
 
       <StyledNameGroup>
         <StyledItem>

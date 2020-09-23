@@ -56,11 +56,11 @@ const ContactPage = () => {
 
   const hoveringHandler = () => {
     setContactFormHovered(true)
-  }
+  };
 
   const notHoveringHandler = () => {
     setContactFormHovered(false)
-  }
+  };
 
   return (
     <div>

@@ -8,15 +8,15 @@ const StyledText = styled.p`
   font-size: 75px;
   transform: rotate(-90deg);
   color: ${props => props.theme.colors.blue};
-  position: fixed;
-  bottom: calc((100vh - 92px) / 2);
+  position: ${props => props.about ? "absolute" : "fixed"};
+  bottom: ${props => props.about ? "-900px" : "calc((100vh - 92px) / 2)"};
   right: ${props => props.out ? "-120px" : "-175px"};
   z-index: 4;
 `
 
-const LetsTalk = ({out}) => {
+const LetsTalk = ({out, about}) => {
   return (
-    <StyledText out={out}>Let's Talk</StyledText>
+    <StyledText out={out} about={about}>Let's Talk</StyledText>
   );
 }
 
