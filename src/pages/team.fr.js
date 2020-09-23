@@ -47,7 +47,7 @@ const TeamPage = () => {
         role2="Brand Builder"
         description1="Katell est une développeuse web orientée projet."
         description2="Tout ce qu’elle fait est motivé par l’empathie. Elle est capable de se mettre à la place de n’importe qui. Pouvoir observer un projet du point de vue d’un designer, d’un techy, de vous ou mieux, de votre client, lui donne une perspective globale de la stratégie."
-        description3="Katell a travaillé pendant plus de 5 ans dans le Marketing, à construire des produits, des marques et des packagings, avant de pivoter vers le développement web."
+        description3="Katell a travaillé pendant plus de 5 ans dans le Marketing, à construire des produits, marques et packagings, avant de pivoter vers le web."
         portfolio="www.google.com" />
 
       <TeamMemberCard
