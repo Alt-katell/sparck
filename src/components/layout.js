@@ -16,6 +16,8 @@ import { usePageContext } from '../context/pageContext';
 import Theme from './Theme';
 import Navbar from '../components/navigation/Navbar';
 import SideNavbar from './navigation/SideNavbar';
+import QuoteCard from './QuoteCard';
+import ContactPageContent from './ContactPageContent';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -103,6 +105,9 @@ const Layout = ({ children }) => {
         <Container>
           <main>{children}</main>
         </Container>
+
+        {path.slug.includes("about") ? <QuoteCard /> : null}
+        {path.slug.includes("about") ? <ContactPageContent /> : null}
       </div>
     );
   } else {

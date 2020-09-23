@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { usePageContext } from '../context/pageContext';
 
 const StyledAgencyIntroCard = styled.div`
-  margin: 100px auto;
+  margin: 0 auto;
   width: 730px;
   position: relative;
 `
