@@ -24,6 +24,10 @@ const StyledPhoto = styled.img`
   position: absolute;
   right: 0;
   z-index: -1;
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    right: 60px;
+  }
 `
 
 const StyledText = styled.p`

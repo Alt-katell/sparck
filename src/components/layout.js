@@ -42,6 +42,10 @@ const GlobalStyle = createGlobalStyle`
 
 const Container = styled.div`
   margin: 120px 60px 0 60px;
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    margin: 120px 30px 0 30px;
+  }
 `
 
 const StyledLine1 = styled.div`

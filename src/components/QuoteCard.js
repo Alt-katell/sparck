@@ -12,6 +12,10 @@ const StyledBackground = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    height: 600px;
+  }
 `
 
 const StyledText = styled.p`

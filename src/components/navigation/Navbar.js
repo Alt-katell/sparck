@@ -29,6 +29,10 @@ const StyledUl = styled.ul`
   width: 50%;
   z-index: 4;
 
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    margin: 0 10px;
+  }
+
   & > * {
     margin: 0 15px;
   }

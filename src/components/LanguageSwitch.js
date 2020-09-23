@@ -11,6 +11,10 @@ const StyledLangSwitch = styled.p`
   margin: 0 21px 0 0;
   z-index: 4;
 
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    margin: 0 55px 0 0;
+  }
+
   :hover {
     cursor: pointer;
   }

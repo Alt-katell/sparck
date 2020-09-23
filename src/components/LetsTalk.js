@@ -12,6 +12,10 @@ const StyledText = styled.p`
   bottom: ${props => props.about ? "-900px" : "calc((100vh - 92px) / 2)"};
   right: ${props => props.out ? "-120px" : "-175px"};
   z-index: 4;
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    bottom: ${props => props.about ? "-450px" : "calc((100vh - 92px) / 2)"};
+  }
 `
 
 const LetsTalk = ({out, about}) => {
