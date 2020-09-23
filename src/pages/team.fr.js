@@ -19,7 +19,7 @@ const TeamPage = () => {
     <StyledWhiteBackground />
       <TeamMemberCard
         reverse={false}
-        photo="/images/Photo-Vicky.png"
+        photo="/images/Photo-Vicky.jpg"
         name="Clémence Paiement"
         role1="Full-Stack Developer"
         role2="UX Designer"
@@ -52,7 +52,7 @@ const TeamPage = () => {
 
       <TeamMemberCard
         reverse={true}
-        photo="/images/Photo-Vicky.png"
+        photo="/images/Photo-Vicky.jpg"
         name="Vicky André"
         role1="Front-End Developer"
         role2="Web Designer"
