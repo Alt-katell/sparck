@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledBackground = styled.div`
   width: 100vw;
   height: 100vh;
-  margin: 600px 0 0 0;
+  margin: 428px 0 0 0;
   padding: 0;
   background: ${props => props.theme.colors.blue};
   overflow: hidden;

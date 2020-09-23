@@ -17,7 +17,7 @@ import Theme from './Theme';
 import Navbar from '../components/navigation/Navbar';
 import SideNavbar from './navigation/SideNavbar';
 import QuoteCard from './QuoteCard';
-import ContactPageContent from './ContactPageContent';
+import ContactForm from './ContactForm';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -92,6 +92,15 @@ const Layout = ({ children }) => {
     line2 = <StyledLine2 />;
   }
 
+  let sidebar;
+  if (path.slug.includes("about")) {
+    sidebar = <SideNavbar position="sticky" />;
+  } else if (path.slug.includes("contact")) {
+    sidebar = null;
+  } else {
+    sidebar = <SideNavbar position="fixed" />
+  }
+
   let content;
   if (path.slug.includes("about") || path.slug.includes("services") || path.slug.includes("work") || path.slug.includes( "contact") || path.slug.includes("team")) {
     content = (
@@ -100,14 +109,14 @@ const Layout = ({ children }) => {
         {line1}
         {line2}
 
-        {path.slug.includes("contact") ? null : <SideNavbar />}
+        {sidebar}
 
         <Container>
           <main>{children}</main>
         </Container>
 
         {path.slug.includes("about") ? <QuoteCard /> : null}
-        {path.slug.includes("about") ? <ContactPageContent /> : null}
+        {path.slug.includes("about") ? <ContactForm /> : null}
       </div>
     );
   } else {

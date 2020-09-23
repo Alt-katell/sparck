@@ -9,8 +9,9 @@ import { faBehance } from '@fortawesome/free-brands-svg-icons';
 
 const StyledSideNavbar = styled.div`
   width: 60px;
-  position: fixed;
-  bottom: 0;
+  position: ${props => props.position === "fixed" ? "fixed" : "absolute"};
+  bottom: ${props => props.position === "fixed" ? "0" : null};
+  top: ${props => props.position === "fixed" ? null : "130px"};
   right: 0;
   display: flex;
   flex-direction: column;
@@ -81,7 +82,7 @@ const StyledTeamMemberGroup = styled.div`
   }
 `
 
-const SideNavbar = () => {
+const SideNavbar = ({position}) => {
   const [teamDrawerOpen, setTeamDrawerOpen] = useState(false);
 
   let teamDrawer = (
@@ -113,7 +114,7 @@ const SideNavbar = () => {
   }
 
   return (
-    <StyledSideNavbar>
+    <StyledSideNavbar position={position} >
       <StyledSocialIcons>
         <FontAwesomeIcon icon={faInstagram} style={{marginBottom: "16px"}} />
         <FontAwesomeIcon icon={faLinkedin} style={{marginBottom: "16px"}} />
