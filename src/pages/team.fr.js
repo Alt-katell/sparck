@@ -45,9 +45,9 @@ const TeamPage = () => {
         name="Katell Goaër"
         role1="Front-End Developer"
         role2="Brand Builder"
-        description1="Katell is a project oriented web developer."
-        description2="Everything she does is driven by empathy. She can stand in anyone’s shoes. Being able to look at a project from the point of view of a designer, a techy, you or better, your client, gives her a global perspective of a strategy."
-        description3="Katell worked in Marketing, building products, brands and packaging, for more than 5 years before pivoting to web development."
+        description1="Katell est une développeuse web orientée projet."
+        description2="Tout ce qu’elle fait est motivé par l’empathie. Elle est capable de se mettre à la place de n’importe qui. Pouvoir observer un projet du point de vue d’un designer, d’un techy, de vous ou mieux, de votre client, lui donne une perspective globale de la stratégie."
+        description3="Katell a travaillé pendant plus de 5 ans dans le Marketing, à construire des produits, des marques et des packagings, avant de pivoter vers le développement web."
         portfolio="www.google.com" />
 
       <TeamMemberCard
@@ -58,7 +58,7 @@ const TeamPage = () => {
         role2="Web Designer"
         description1="Vicky est une designer multidisciplinaire passionnée."
         description2="Du Design Textile à la conception Web, elle croit que chaque élément graphique se doit d’être utile et réfléchi. Elle imagine des sites Web pour créer des univers uniques et mettre en valeur chaque produit, avec une approche minimaliste et moderne."
-        description3="Enseignante et chef d'entreprise, elle a le sens du détail et est avide de défis créatifs et mémorables."
+        description3="Enseignante et chef d'entreprise, Vicky a le sens du détail et est avide de défis créatifs et mémorables."
         portfolio="www.google.com" />
     </div>
   );
