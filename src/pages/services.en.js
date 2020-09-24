@@ -1,8 +1,12 @@
 import React from 'react';
 
+import ServicesPhoto from '../components/ServicesPhoto';
+
 const ServicePage = () => {
   return (
-    <p>This is the English service page</p>
+    <div>
+      <ServicesPhoto />
+    </div>
   );
 }
 
