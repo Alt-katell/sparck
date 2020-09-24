@@ -15,6 +15,12 @@ const StyledRectangle = styled.div`
     width: 550px;
     height: 335px;
   }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    width: 335px;
+    height: 250px;
+    margin: 20px auto 80px auto;
+  }
 `
 
 const StyledPhoto = styled.img`
@@ -28,6 +34,10 @@ const StyledPhoto = styled.img`
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     width: 450px;
   }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    width: 295px;
+  }
 `
 const StyledA = styled.a`
   position: absolute;
@@ -40,6 +50,13 @@ const StyledA = styled.a`
 
   &:hover {
     color: ${props => props.theme.colors.black};
+  }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    right: ${props => props.reverse ? "null" : "4px"};
+    left: ${props => props.reverse ? "4px" : "null"};
+    bottom: -12px;
+    font-size: 24px;
   }
 `
 
