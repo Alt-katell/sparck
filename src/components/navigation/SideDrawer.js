@@ -7,7 +7,6 @@ import { usePageContext } from '../../context/pageContext';
 import logo from './sparck_logo.png';
 import NavigationItem from './NavigationItem';
 import LanguageSwitch from '../LanguageSwitch';
-import SocialIconsHorizontal from '../SocialIconsHorizontal';
 import Backdrop from './Backdrop';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
