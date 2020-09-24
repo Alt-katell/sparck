@@ -18,6 +18,10 @@ const StyledSideNavbar = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 3;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const StyledSocialIcons = styled.div`
