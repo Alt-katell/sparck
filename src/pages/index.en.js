@@ -16,6 +16,10 @@ const StyledText = styled.div`
   width: 600px;
   margin: 10%;
 
+  @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
+    margin-top: 200px;
+  }
+
   & > * {
     margin-bottom: 50px;
   }
@@ -26,6 +30,10 @@ const StyledTextLineWhite = styled.span`
   font-family: ${props => props.theme.fonts.baskerville};
   font-weight: bold;
   font-size: 85px;
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
+    font-size: 50px;
+  }
 `
 
 const StyledTextLineBlack = styled.span`
@@ -37,9 +45,11 @@ const StyledTextLineBlack = styled.span`
   & span {
     font-family: ${props => props.theme.fonts.overpass};
   }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
+    font-size: 50px;
+  }
 `
-
-
 
 const HomePage = () => {
   setTimeout(function() {
