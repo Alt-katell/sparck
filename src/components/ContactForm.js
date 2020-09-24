@@ -22,7 +22,7 @@ const StyledForm = styled.form`
   margin: ${props => props.about ? "100px" : "0"} auto 30px auto;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    margin: 0 auto 30px auto;
+    margin: ${props => props.about ? "100px" : "300px"} auto 30px auto;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {

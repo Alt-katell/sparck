@@ -11,6 +11,10 @@ const StyledWhiteBackground = styled.div`
   top: 0;
   right: 0;
   z-index: -2;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const TeamPage = () => {

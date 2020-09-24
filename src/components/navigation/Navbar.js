@@ -73,6 +73,10 @@ const StyledWhiteNavbarPortion = styled.div`
   min-width: 850px;
   background: ${props => props.theme.colors.white};
   z-index: 2;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const StyledLine1 = styled.div`

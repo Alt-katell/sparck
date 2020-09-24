@@ -14,6 +14,13 @@ const StyledRectangle = styled.div`
     margin: 100px -10px;
   }
 
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    width: 270px;
+    height: 660px;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &:last-of-type {
     margin-bottom: 50px;
   }
@@ -24,6 +31,12 @@ const StyledPhoto = styled.img`
   height: auto;
   margin-right: ${props => props.reverse ? null : "45px"};
   margin-left: ${props => props.reverse ? "45px" : null};
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    width: 200px;
+    height: auto;
+    margin: 0;
+  }
 `
 
 const StyledText = styled.div`
@@ -36,6 +49,15 @@ const StyledName = styled.h2`
   color: ${props => props.theme.colors.blue};
   margin: 25px ${props => props.reverse ? "-60px" : "0"} 0 ${props => props.reverse ? "0" : "-60px"};
   text-align: ${props => props.reverse ? "right" : null};
+
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    margin: 0;
+    text-align: center;
+    margin-top: -325px;
+    margin-bottom: 305px;
+    font-size: 25px;
+  }
 `
 
 const StyledRole = styled.div`
@@ -44,6 +66,11 @@ const StyledRole = styled.div`
   & p {
     margin: 0 9px;
     font-size: 17px;
+  }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    flex-direction: column;
+    align-items: center;
   }
 `
 
@@ -58,6 +85,10 @@ const StyledDots = styled.div`
     background: ${props => props.theme.colors.black};
     margin: 0 2px;
   }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    margin: 8px 0;
+  }
 `
 
 const StyledDescription = styled.p`
@@ -70,6 +101,10 @@ const StyledDescription = styled.p`
   }
   &:last-of-type {
     margin-bottom: 18px;
+  }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    text-align: left;
   }
 `
 
