@@ -41,7 +41,7 @@ const StyledSideDrawer = styled.div`
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
-  margin: 30px 10px 50px 10px;
+  margin: 30px 10px 0 10px;
   align-items: center;
 
   @media (min-width: 668px) {

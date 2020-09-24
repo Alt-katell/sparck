@@ -49,7 +49,7 @@ const Container = styled.div`
   }
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
-    margin: 120px 20px 0 20px;
+    margin: 120px 10px 0 10px;
   }
 `
 
