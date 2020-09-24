@@ -15,7 +15,7 @@ const StyledSlogan = styled.h1`
   color: ${props => props.theme.colors.blue};
   font-weight: normal;
   position: absolute;
-  top: -20px;
+  top: -30px;
 `
 
 const StyledPhoto = styled.img`
@@ -36,7 +36,7 @@ const StyledText = styled.p`
   text-justify: inter-word;
   position: absolute;
   left: 200px;
-  bottom: -425px;
+  bottom: -400px;
 `
 
 const AgencyIntroCard = () => {
