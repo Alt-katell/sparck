@@ -12,6 +12,7 @@ import Backdrop from './Backdrop';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faBehance } from '@fortawesome/free-brands-svg-icons';
@@ -29,6 +30,8 @@ const StyledSideDrawer = styled.div`
   box-sizing: border-box;
   transition: transform 0.3s ease-out;
   transform: ${props => props.show ? "translateX(0)" : "translateX(100%)"};
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: 668px) {
     display: none;
@@ -77,9 +80,13 @@ const SideDrawer = (props) => {
     <div>
       <Backdrop show={props.open ? true : false} clicked={props.closed} />
       <StyledHeader>
-        <Link to="/"><StyledLogo src={logo} alt="Spärck Logo"/></Link>
+        <Link to="/"><StyledLogo src={logo} alt="Spärck Logo" /></Link>
         <StyledBurgerIcon icon={faBars} onClick={props.drawerToggleClicked}/>
         <StyledSideDrawer show={props.open} onClick={props.closed}>
+          <FontAwesomeIcon
+            icon={faTimes}
+            style={{alignSelf: "flex-end", fontSize: "32px"}}
+            onClick={props.closed}/>
           <nav>
             <StyledUl>
               <NavigationItem link="/about">{t.about[currentLang]}</NavigationItem>
@@ -89,9 +96,9 @@ const SideDrawer = (props) => {
               <NavigationItem link="/contact">{t.contact[currentLang]}</NavigationItem>
             </StyledUl>
             <div style={{marginBottom: "23px"}}>
-              <FontAwesomeIcon icon={faInstagram} style={{marginRight: "32px"}} />
-              <FontAwesomeIcon icon={faLinkedin} style={{marginRight: "32px"}} />
-              <FontAwesomeIcon icon={faBehance} />
+              <FontAwesomeIcon icon={faInstagram} style={{marginRight: "32px", fontSize: "24px"}} />
+              <FontAwesomeIcon icon={faLinkedin} style={{marginRight: "32px", fontSize: "24px"}} />
+              <FontAwesomeIcon icon={faBehance} style={{fontSize: "24px"}}/>
             </div>
             <LanguageSwitch />
           </nav>
