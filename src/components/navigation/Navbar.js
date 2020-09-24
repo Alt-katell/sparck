@@ -35,6 +35,10 @@ const StyledUl = styled.ul`
 
   & > * {
     margin: 0 15px;
+
+    @media (min-device-width : 768px) and (max-device-width : 1024px) {
+      margin: 0 7px;
+    }
   }
 
   &:first-of-type {

@@ -49,6 +49,10 @@ const StyledSocialIcons = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    bottom: 280px;
+  }
 `
 
 const ContactPage = () => {

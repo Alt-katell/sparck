@@ -51,7 +51,7 @@ const StyledSocialIcons = styled.div`
   right: 20px;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    bottom: 400px;
+    bottom: 280px;
   }
 `
 

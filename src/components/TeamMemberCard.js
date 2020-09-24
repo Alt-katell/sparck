@@ -10,6 +10,10 @@ const StyledRectangle = styled.div`
   display: flex;
   flex-direction: ${props => props.reverse ? "row-reverse" : null};
 
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    margin: 100px -10px;
+  }
+
   &:last-of-type {
     margin-bottom: 50px;
   }
