@@ -14,6 +14,10 @@ const StyledSocialIcons = styled.div`
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     bottom: 280px;
   }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const SocialIconsHorizontal = () => {

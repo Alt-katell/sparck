@@ -13,6 +13,10 @@ const StyledLine1 = styled.div`
   top: 0;
   left: 25%;
   z-index: 4;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const StyledLine2 = styled.div`
@@ -23,6 +27,10 @@ const StyledLine2 = styled.div`
   top: 0;
   right: 25%;
   z-index: 4;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const StyledCurve1 = styled.img`
@@ -31,6 +39,10 @@ const StyledCurve1 = styled.img`
   top: 0;
   left: 25%;
   z-index: 4;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const StyledCurve2 = styled.img`
@@ -39,6 +51,10 @@ const StyledCurve2 = styled.img`
   top: 0;
   right: 25%;
   z-index: 4;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const ContactPage = () => {

@@ -16,6 +16,10 @@ const StyledText = styled.p`
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     bottom: ${props => props.about ? "-450px" : "calc(((100vh - 92px) / 2) + 20px)"};
   }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const LetsTalk = ({out, about}) => {
