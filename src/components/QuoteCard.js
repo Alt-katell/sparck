@@ -18,7 +18,7 @@ const StyledBackground = styled.div`
   }
 `
 
-const StyledText = styled.p`
+const StyledText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

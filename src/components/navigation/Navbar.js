@@ -19,6 +19,10 @@ const StyledNav = styled.nav`
   width: 100%;
   background: ${props => props.theme.colors.grey};
   z-index: 4;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const StyledUl = styled.ul`

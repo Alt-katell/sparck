@@ -2,13 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from '../Link';
 
+const StyledLi = styled.li`
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    margin-bottom: 16px;
+  }
+`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.colors.black};
   font-size: 16px;
   font-weight: 300;
-  line-height: 19px;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    font-family: ${props => props.theme.fonts.baskerville};
+    font-size: 26px;
+  }
 
   &.active {
     font-weight: bold;
@@ -17,13 +26,13 @@ const StyledLink = styled(Link)`
 
 const NavigationItem = ({link, children}) => {
   return (
-    <li>
+    <StyledLi>
       <StyledLink
         link={link}
         activeClassName="active">
         {children}
       </StyledLink>
-    </li>
+    </StyledLi>
   )
 }
 

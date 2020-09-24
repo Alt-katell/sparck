@@ -15,6 +15,12 @@ const StyledLangSwitch = styled.p`
     margin: 0 30px 0 0;
   }
 
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    position: fixed;
+    margin-top: 100px;
+    font-size: 26px;
+  }
+
   :hover {
     cursor: pointer;
   }

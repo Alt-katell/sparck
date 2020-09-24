@@ -15,6 +15,7 @@ import { usePageContext } from '../context/pageContext';
 
 import Theme from './Theme';
 import Navbar from '../components/navigation/Navbar';
+import SideDrawer from '../components/navigation/SideDrawer';
 import SideNavbar from './navigation/SideNavbar';
 import QuoteCard from './QuoteCard';
 import ContactForm from './ContactForm';
@@ -45,6 +46,10 @@ const Container = styled.div`
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     margin: 120px 30px 0 30px;
+  }
+
+  @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
+    margin: 120px 20px 0 20px;
   }
 `
 
@@ -89,6 +94,14 @@ const Layout = ({ children }) => {
     setContactFormHovered(false)
   };
 
+  const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
+  const sideDrawerClosedHandler = () => {
+    setSideDrawerIsVisible(false);
+  };
+  const sideDrawerToggleHandler = () => {
+    setSideDrawerIsVisible(!sideDrawerIsVisible);
+  };
+
   let line1;
   if (path.slug.includes("team") || path.slug.includes("contact")) {
     line1 = null;
@@ -119,6 +132,10 @@ const Layout = ({ children }) => {
     content = (
       <div>
         <Navbar />
+        <SideDrawer
+          open={sideDrawerIsVisible}
+          closed={sideDrawerClosedHandler}
+          drawerToggleClicked={sideDrawerToggleHandler} />
         {line1}
         {line2}
 
@@ -129,8 +146,8 @@ const Layout = ({ children }) => {
         </Container>
 
         {path.slug.includes("about") ? <QuoteCard /> : null}
-        {path.slug.includes("about") ? <ContactForm about={true} inside={hoveringHandler} outside={notHoveringHandler} /> : null}
-        {path.slug.includes("about") ? <LetsTalk out={contactFormHovered} about={true} /> : null}
+        {path.slug.includes("about") ? <ContactForm about="true" inside={hoveringHandler} outside={notHoveringHandler} /> : null}
+        {path.slug.includes("about") ? <LetsTalk out={contactFormHovered} about="true" /> : null}
       </div>
     );
   } else {

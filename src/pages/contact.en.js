@@ -3,11 +3,7 @@ import styled from 'styled-components';
 
 import LetsTalk from '../components/LetsTalk';
 import ContactForm from '../components/ContactForm';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBehance } from '@fortawesome/free-brands-svg-icons';
+import SocialIconsHorizontal from '../components/SocialIconsHorizontal';
 
 const StyledLine1 = styled.div`
   width: 1px;
@@ -45,16 +41,6 @@ const StyledCurve2 = styled.img`
   z-index: 4;
 `
 
-const StyledSocialIcons = styled.div`
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    bottom: 280px;
-  }
-`
-
 const ContactPage = () => {
   const [contactFormHovered, setContactFormHovered] = useState(false);
 
@@ -75,11 +61,7 @@ const ContactPage = () => {
 
       <ContactForm inside={hoveringHandler} outside={notHoveringHandler} />
 
-      <StyledSocialIcons>
-        <FontAwesomeIcon icon={faInstagram} style={{marginRight: "16px"}} />
-        <FontAwesomeIcon icon={faLinkedin} style={{marginRight: "16px"}} />
-        <FontAwesomeIcon icon={faBehance} />
-      </StyledSocialIcons>
+      <SocialIconsHorizontal />
     </div>
   );
 }

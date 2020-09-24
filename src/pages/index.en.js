@@ -16,7 +16,7 @@ const StyledText = styled.div`
   width: 600px;
   margin: 10%;
 
-  @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
     margin-top: 200px;
   }
 
@@ -31,7 +31,7 @@ const StyledTextLineWhite = styled.span`
   font-weight: bold;
   font-size: 85px;
 
-  @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
     font-size: 50px;
   }
 `
