@@ -20,7 +20,7 @@ const StyledText = styled.p`
   transform: rotate(-90deg);
   color: ${props => props.theme.colors.blue};
   margin: 0;
-  white-space:nowrap;
+  white-space: nowrap;
   position: absolute;
   top: 162px;
   right: 110px;
@@ -28,6 +28,7 @@ const StyledText = styled.p`
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     right: 80px;
+    top: 145px;
   }
 `
 

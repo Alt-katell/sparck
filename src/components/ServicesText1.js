@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { usePageContext } from '../context/pageContext';
 
 const StyledServicesText = styled.div`
-  margin: 550px auto 100px auto;
+  margin: 550px auto 50px auto;
   width: 450px;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
