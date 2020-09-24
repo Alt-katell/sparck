@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import { usePageContext } from '../context/pageContext';
 
-const StyledSericesPhoto = styled.p`
+const StyledServicesPhoto = styled.div`
   margin: 0 auto;
   width: 280px;
   position: relative;
@@ -49,10 +49,10 @@ const ServicesPhoto = () => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-    <StyledSericesPhoto>
-      <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
-      <StyledText>{t.weCode[currentLang]}</StyledText>
-    </StyledSericesPhoto>
+     <StyledServicesPhoto>
+       <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
+       <StyledText>{t.weCode[currentLang]}</StyledText>
+     </StyledServicesPhoto>
   );
 }
 

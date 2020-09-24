@@ -1,8 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+
+import ServicesPhoto from '../components/ServicesPhoto';
+import ServicesText1 from '../components/ServicesText1';
+
+const StyledServicePage = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 const ServicePage = () => {
   return (
-    <p>C'est la page service française</p>
+    <StyledServicePage>
+      <ServicesPhoto />
+      <ServicesText1 />
+    </StyledServicePage>
   );
 }
 
