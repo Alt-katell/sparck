@@ -16,6 +16,12 @@ const StyledBackground = styled.div`
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     height: 600px;
   }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    height: 400px;
+    padding: 50px 0;
+    margin: 100px 0 0 0;
+  }
 `
 
 const StyledText = styled.div`
@@ -23,6 +29,10 @@ const StyledText = styled.div`
   flex-direction: column;
   align-items: center;
   margin: auto auto;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    width: 250px;
+  }
 `
 
 const StyledQuoteGroup = styled.div`
@@ -41,12 +51,20 @@ const StyledQuoteSign = styled.p`
   &:first-of-type {
     top: -35px;
     left: -13px;
+
+    @media (min-device-width : 320px) and (max-device-width : 667px) {
+      top: -42px;
+    }
   }
 
   &:last-of-type {
     bottom: -43px;
     right: -14px;
     transform: rotate(180deg);
+
+    @media (min-device-width : 320px) and (max-device-width : 667px) {
+      right: 77px;
+    }
   }
 `
 

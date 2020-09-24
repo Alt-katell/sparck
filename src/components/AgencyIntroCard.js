@@ -7,6 +7,13 @@ const StyledAgencyIntroCard = styled.div`
   margin: 0 auto;
   width: 730px;
   position: relative;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 270px;
+  }
 `
 
 const StyledSlogan = styled.h1`
@@ -16,6 +23,13 @@ const StyledSlogan = styled.h1`
   font-weight: normal;
   position: absolute;
   top: -30px;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    position: static;
+    font-size: 38px;
+    text-align: center;
+    margin: 0 auto -65px auto;
+  }
 `
 
 const StyledPhoto = styled.img`
@@ -28,6 +42,10 @@ const StyledPhoto = styled.img`
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     right: 60px;
   }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    position: static;
+  }
 `
 
 const StyledText = styled.p`
@@ -37,6 +55,13 @@ const StyledText = styled.p`
   position: absolute;
   left: 200px;
   bottom: -400px;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    position: static;
+    text-align: center;
+    width: 270px;
+    margin-top: -30px;
+  }
 `
 
 const AgencyIntroCard = () => {
