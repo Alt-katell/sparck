@@ -10,18 +10,17 @@ const StyledBackground = styled.div`
   padding: 0;
   background: ${props => props.theme.colors.blue};
   overflow: hidden;
+  position: relative;
 `
 
 const StyledText = styled.div`
   width: 600px;
-  margin: 10%;
+  margin-left: 10%;
+  position: absolute;
+  top: calc((100vh - 330px) /2);
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     margin-top: 200px;
-  }
-
-  & > * {
-    margin-bottom: 50px;
   }
 `
 
@@ -30,6 +29,7 @@ const StyledTextLineWhite = styled.span`
   font-family: ${props => props.theme.fonts.baskerville};
   font-weight: bold;
   font-size: 85px;
+  line-height: 1.3;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     font-size: 50px;
@@ -41,9 +41,11 @@ const StyledTextLineBlack = styled.span`
   font-family: ${props => props.theme.fonts.baskerville};
   font-weight: bold;
   font-size: 85px;
+  line-height: 1.3;
 
   & span {
     font-family: ${props => props.theme.fonts.overpass};
+    line-height: 1.3;
   }
 
   @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
