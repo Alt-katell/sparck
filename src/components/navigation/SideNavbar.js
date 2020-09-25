@@ -13,7 +13,7 @@ const StyledSideNavbar = styled.div`
   width: 60px;
   position: ${props => props.position === "fixed" ? "fixed" : "absolute"};
   bottom: ${props => props.position === "fixed" ? "0" : null};
-  top: ${props => props.position === "fixed" ? null : "130px"};
+  top: ${props => props.position === "fixed" ? null : "266px"};
   right: 0;
   display: flex;
   flex-direction: column;

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { usePageContext } from '../context/pageContext';
 
 const StyledAgencyIntroCard = styled.div`
-  margin: 0 auto;
+  margin: 20px auto;
   width: 730px;
   position: relative;
 
@@ -13,6 +13,7 @@ const StyledAgencyIntroCard = styled.div`
     flex-direction: column;
     align-items: center;
     width: 270px;
+    margin: 0 auto;
   }
 `
 
@@ -33,7 +34,7 @@ const StyledSlogan = styled.h1`
 `
 
 const StyledPhoto = styled.img`
-  width: 270px;
+  width: 340px;
   height: auto;
   position: absolute;
   right: 0;
@@ -45,6 +46,7 @@ const StyledPhoto = styled.img`
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     position: static;
+    width: 270px;
   }
 `
 
