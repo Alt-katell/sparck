@@ -8,11 +8,11 @@ import { faBehance } from '@fortawesome/free-brands-svg-icons';
 
 const StyledSocialIcons = styled.div`
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   right: 20px;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    bottom: 280px;
+    bottom: 270px;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
