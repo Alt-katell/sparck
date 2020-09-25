@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledRectangle = styled.div`
-  width: 710px;
+  width: 800px;
   background: ${props => props.theme.colors.white};
   margin: 130px auto;
   padding: 25px 25px;
@@ -48,9 +48,9 @@ const StyledText = styled.div`
 
 const StyledName = styled.h2`
   font-family: ${props => props.theme.fonts.baskerville};
-  font-size: 40px;
+  font-size: 48px;
   color: ${props => props.theme.colors.blue};
-  margin: 40px ${props => props.reverse ? "-60px" : "0"} 0 ${props => props.reverse ? "0" : "-60px"};
+  margin: 62px ${props => props.reverse ? "-60px" : "0"} 5px ${props => props.reverse ? "0" : "-60px"};
   text-align: ${props => props.reverse ? "right" : null};
 
 
@@ -68,12 +68,16 @@ const StyledRole = styled.div`
 
   & p {
     margin: 0;
-    font-size: 17px;
+    font-size: 22px;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     flex-direction: column;
     align-items: center;
+
+    & p {
+      font-size: 17px;
+    }
   }
 `
 
