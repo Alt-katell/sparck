@@ -22,6 +22,30 @@ const TeamPage = () => {
     <div>
     <StyledWhiteBackground />
       <TeamMemberCard
+        id="vicky"
+        reverse={false}
+        photo="/images/Photo-Vicky.jpg"
+        name="Vicky André"
+        role1="Front-End Developer"
+        role2="Web Designer"
+        description1="Vicky is a passionate multidisciplinary designer. "
+        description2="From Textile Design to Web Design, she strongly believes that every thing must have a purpose. She imagines websites to create unique experiences and make every product stand out, with a minimalistic and modern approach."
+        description3="A teacher and a business owner, Vicky is detail-oriented and avid of new and creative challenges."
+        portfolio="http://noir-de-mars.com/" />
+
+        <TeamMemberCard
+          id="katell"
+          reverse={true}
+          photo="/images/Photo-Katell.png"
+          name="Katell Goaër"
+          role1="Front-End Developer"
+          role2="Brand Builder"
+          description1="Katell is a project oriented web developer."
+          description2="Everything she does is driven by empathy. She can stand in anyone’s shoes. Being able to look at a project from the point of view of a designer, a techy, you or better, your client, gives her a global perspective of a strategy."
+          description3="Katell worked in Marketing, building products, brands and packaging, for more than 5 years before pivoting to web development."
+          portfolio="https://alt-katell.github.io/" />
+
+      <TeamMemberCard
         id="clemence"
         reverse={false}
         photo="/images/Photo-Vicky.jpg"
@@ -44,30 +68,6 @@ const TeamPage = () => {
         description2="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
         description3="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
         portfolio="www.google.com" />
-
-      <TeamMemberCard
-        id="katell"
-        reverse={false}
-        photo="/images/Photo-Katell.png"
-        name="Katell Goaër"
-        role1="Front-End Developer"
-        role2="Brand Builder"
-        description1="Katell is a project oriented web developer."
-        description2="Everything she does is driven by empathy. She can stand in anyone’s shoes. Being able to look at a project from the point of view of a designer, a techy, you or better, your client, gives her a global perspective of a strategy."
-        description3="Katell worked in Marketing, building products, brands and packaging, for more than 5 years before pivoting to web development."
-        portfolio="https://alt-katell.github.io/" />
-
-      <TeamMemberCard
-        id="vicky"
-        reverse={true}
-        photo="/images/Photo-Vicky.jpg"
-        name="Vicky André"
-        role1="Front-End Developer"
-        role2="Web Designer"
-        description1="Vicky is a passionate multidisciplinary designer. "
-        description2="From Textile Design to Web Design, she strongly believes that every thing must have a purpose. She imagines websites to create unique experiences and make every product stand out, with a minimalistic and modern approach."
-        description3="A teacher and a business owner, Vicky is detail-oriented and avid of new and creative challenges."
-        portfolio="http://noir-de-mars.com/" />
     </div>
   );
 }

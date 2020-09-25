@@ -2,13 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledRectangle = styled.div`
-  width: 660px;
-  height: 360px;
+  width: 710px;
   background: ${props => props.theme.colors.white};
-  margin: 100px auto;
+  margin: 130px auto;
   padding: 25px 25px;
   display: flex;
   flex-direction: ${props => props.reverse ? "row-reverse" : null};
+
+  &:last-of-type {
+    margin-bottom: 50px;
+  }
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     margin: 100px -10px;
@@ -19,15 +22,15 @@ const StyledRectangle = styled.div`
     height: 660px;
     flex-direction: column;
     align-items: center;
-  }
 
-  &:last-of-type {
-    margin-bottom: 50px;
+    &:last-of-type {
+      margin-bottom: 100px;
+    }
   }
 `
 
 const StyledPhoto = styled.img`
-  width: 245px;
+  width: 295px;
   height: auto;
   margin-right: ${props => props.reverse ? null : "45px"};
   margin-left: ${props => props.reverse ? "45px" : null};
@@ -47,7 +50,7 @@ const StyledName = styled.h2`
   font-family: ${props => props.theme.fonts.baskerville};
   font-size: 40px;
   color: ${props => props.theme.colors.blue};
-  margin: 25px ${props => props.reverse ? "-60px" : "0"} 0 ${props => props.reverse ? "0" : "-60px"};
+  margin: 40px ${props => props.reverse ? "-60px" : "0"} 0 ${props => props.reverse ? "0" : "-60px"};
   text-align: ${props => props.reverse ? "right" : null};
 
 
@@ -64,7 +67,7 @@ const StyledRole = styled.div`
   display: flex;
 
   & p {
-    margin: 0 9px;
+    margin: 0;
     font-size: 17px;
   }
 
@@ -108,6 +111,14 @@ const StyledDescription = styled.p`
   }
 `
 
+const StyledPortfolio = styled.a`
+  color: #686B72;
+
+  &:hover {
+    font-weight: bold;
+  }
+`
+
 const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, description2, description3, portfolio}) => {
   return (
     <StyledRectangle id={id} reverse={reverse}>
@@ -125,7 +136,7 @@ const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, d
         <StyledDescription>{description1}</StyledDescription>
         <StyledDescription>{description2}</StyledDescription>
         <StyledDescription>{description3}</StyledDescription>
-        <a href={portfolio}>See her portfolio</a>
+        <StyledPortfolio href={portfolio}>See her portfolio</StyledPortfolio>
       </StyledText>
     </StyledRectangle>
   )
