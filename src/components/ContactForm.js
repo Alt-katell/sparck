@@ -19,14 +19,14 @@ const StyledLetsTalk = styled.p`
 
 const StyledForm = styled.form`
   width: 350px;
-  margin: ${props => props.about ? "120px" : "0"} auto 120px auto;
+  margin: ${props => props.about ? "120px" : "150"} auto 120px auto;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     margin: ${props => props.about ? "100px" : "300px"} auto 30px auto;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
-    margin: 0 auto 50px auto;
+    margin: 0 auto 70px auto;
   }
 `
 

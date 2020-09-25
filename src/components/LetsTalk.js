@@ -9,7 +9,7 @@ const StyledText = styled.p`
   transform: rotate(-90deg);
   color: ${props => props.theme.colors.blue};
   position: ${props => props.about ? "absolute" : "fixed"};
-  bottom: ${props => props.about ? "-1065px" : "calc((100vh - 165px) / 2)"};
+  bottom: ${props => props.about ? "-1065px" : "calc((100vh - 92px) / 2)"};
   right: ${props => props.out ? "-120px" : "-175px"};
   z-index: 4;
 
