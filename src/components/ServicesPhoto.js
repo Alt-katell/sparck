@@ -4,8 +4,8 @@ import styled from 'styled-components';
 import { usePageContext } from '../context/pageContext';
 
 const StyledServicesPhoto = styled.div`
-  margin: 0 auto;
-  width: 280px;
+  margin: 30px auto;
+  width: 400px;
   position: relative;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
@@ -22,8 +22,8 @@ const StyledText = styled.p`
   margin: 0;
   white-space: nowrap;
   position: absolute;
-  top: 162px;
-  right: 110px;
+  top: 195px;
+  right: 233px;
   z-index: -1;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
@@ -33,7 +33,7 @@ const StyledText = styled.p`
 `
 
 const StyledPhoto = styled.img`
-  width: 280px;
+  width: 400px;
   height: auto;
   display: block;
   right: -15px;
@@ -51,7 +51,7 @@ const ServicesPhoto = () => {
 
   return (
      <StyledServicesPhoto>
-       <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
+       <StyledPhoto src="/images/clouds.jpg" alt="Clouds" />
        <StyledText>{t.weCode[currentLang]}</StyledText>
      </StyledServicesPhoto>
   );
