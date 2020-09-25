@@ -27,8 +27,9 @@ const StyledText = styled.p`
   z-index: -1;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
-    right: 80px;
+    right: 112px;
     top: 145px;
+    font-size: 60px;
   }
 `
 
