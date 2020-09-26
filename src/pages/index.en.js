@@ -20,7 +20,7 @@ const StyledText = styled.div`
   top: calc((100vh - 330px) /2);
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
-    margin-top: 200px;
+    top: calc((100vh - 195px) /2);
   }
 `
 
@@ -54,9 +54,9 @@ const StyledTextLineBlack = styled.span`
 `
 
 const HomePage = () => {
-  setTimeout(function() {
-      window.location='/about'
-  }, 5000);
+  // setTimeout(function() {
+  //     window.location='/about'
+  // }, 5000);
 
   return (
     <StyledBackground>

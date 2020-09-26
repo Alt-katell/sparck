@@ -109,6 +109,12 @@ const StyledLine2 = styled.div`
 const Navbar = () => {
   const {langKey: currentLang, slug} = usePageContext();
 
+
+  let aboutActive;
+  if (slug.includes("about")) {
+    aboutActive = true;
+  }
+
   let line1;
   if (slug.includes("team") || slug.includes("contact")) {
     line1 = null;
@@ -132,7 +138,7 @@ const Navbar = () => {
         {line1}
         {line2}
         <StyledUl>
-          <NavigationItem link="/about">{t.about[currentLang]}</NavigationItem>
+          <NavigationItem link="/about" isActive={aboutActive}>{t.about[currentLang]}</NavigationItem>
           <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
           <NavigationItem link="/work">{t.work[currentLang]}</NavigationItem>
         </StyledUl>

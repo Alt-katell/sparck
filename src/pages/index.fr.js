@@ -21,6 +21,7 @@ const StyledText = styled.div`
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     margin-top: 200px;
+    top: calc((100vh - 195px) /2);
   }
 `
 

@@ -14,7 +14,7 @@ const StyledText = styled.p`
   z-index: 4;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    bottom: ${props => props.about ? "-450px" : "calc(((100vh - 100px) / 2) + 20px)"};
+    bottom: ${props => props.about ? "-618px" : "calc(((100vh - 100px) / 2) + 20px)"};
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {

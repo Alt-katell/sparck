@@ -15,6 +15,7 @@ const StyledBackground = styled.div`
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     height: 600px;
+    margin: ${props => props.margin === "en" ? "530px" : "537px"} 0 0 0;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
