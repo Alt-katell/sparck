@@ -3,13 +3,16 @@ import styled from 'styled-components';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBehance } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const StyledSocialIcons = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
+
+  & a:hover {
+    color: ${props => props.theme.colors.blue};
+  }
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     bottom: 270px;
@@ -23,9 +26,8 @@ const StyledSocialIcons = styled.div`
 const SocialIconsHorizontal = () => {
   return (
       <StyledSocialIcons>
-        <FontAwesomeIcon icon={faInstagram} style={{marginRight: "16px"}} />
-        <FontAwesomeIcon icon={faLinkedin} style={{marginRight: "16px"}} />
-        <FontAwesomeIcon icon={faBehance} />
+        <a href="https://www.instagram.com/sparck.agency/"><FontAwesomeIcon icon={faInstagram} style={{marginRight: "16px"}} /></a>
+        <a href="https://www.linkedin.com/company/sparckagency/"><FontAwesomeIcon icon={faLinkedinIn} style={{marginRight: "16px"}} /></a>
       </StyledSocialIcons>
   );
 }

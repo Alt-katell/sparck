@@ -6,14 +6,13 @@ import { usePageContext } from '../../context/pageContext';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBehance } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const StyledSideNavbar = styled.div`
   width: 60px;
   position: ${props => props.position === "fixed" ? "fixed" : "absolute"};
   bottom: ${props => props.position === "fixed" ? "0" : null};
-  top: ${props => props.position === "fixed" ? null : "266px"};
+  top: ${props => props.position === "fixed" ? null : "319px"};
   right: 0;
   display: flex;
   flex-direction: column;
@@ -28,7 +27,11 @@ const StyledSocialIcons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
+
+  & a:hover {
+    color: ${props => props.theme.colors.blue};
+  }
 `
 
 const StyledTeamBlock = styled.div`
@@ -124,9 +127,8 @@ const SideNavbar = ({position}) => {
   return (
     <StyledSideNavbar position={position} >
       <StyledSocialIcons>
-        <FontAwesomeIcon icon={faInstagram} style={{marginBottom: "16px"}} />
-        <FontAwesomeIcon icon={faLinkedin} style={{marginBottom: "16px"}} />
-        <FontAwesomeIcon icon={faBehance} />
+        <a href="https://www.instagram.com/sparck.agency/"><FontAwesomeIcon icon={faInstagram} style={{marginBottom: "16px"}} /></a>
+        <a href="https://www.linkedin.com/company/sparckagency/"><FontAwesomeIcon icon={faLinkedinIn} /></a>
       </StyledSocialIcons>
       <StyledTeamBlock
         onMouseEnter={() => setTeamDrawerOpen(true)}

@@ -13,8 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faBehance } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const StyledSideDrawer = styled.div`
   position: fixed;
@@ -95,9 +94,8 @@ const SideDrawer = (props) => {
               <NavigationItem link="/contact">{t.contact[currentLang]}</NavigationItem>
             </StyledUl>
             <div style={{marginBottom: "23px"}}>
-              <FontAwesomeIcon icon={faInstagram} style={{marginRight: "32px", fontSize: "24px"}} />
-              <FontAwesomeIcon icon={faLinkedin} style={{marginRight: "32px", fontSize: "24px"}} />
-              <FontAwesomeIcon icon={faBehance} style={{fontSize: "24px"}}/>
+              <a href="https://www.instagram.com/sparck.agency/"><FontAwesomeIcon icon={faInstagram} style={{marginRight: "32px", fontSize: "24px"}} /></a>
+              <a href="https://www.linkedin.com/company/sparckagency/"><FontAwesomeIcon icon={faLinkedinIn} style={{marginRight: "32px", fontSize: "24px"}} /></a>
             </div>
             <LanguageSwitch />
           </nav>
