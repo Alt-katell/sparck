@@ -12,7 +12,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.colors.black};
   font-size: 16px;
-  font-weight: ${props => props.isActive ? "bold" : "300"};
+  font-weight: ${props => props.isactive ? "bold" : "300"};
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     font-family: ${props => props.theme.fonts.baskerville};
@@ -24,12 +24,12 @@ const StyledLink = styled(Link)`
   }
 `
 
-const NavigationItem = ({link, children, isActive}) => {
+const NavigationItem = ({link, children, isactive}) => {
   return (
     <StyledLi>
       <StyledLink
         link={link}
-        isActive={isActive}
+        isactive={isactive}
         activeClassName="active">
         {children}
       </StyledLink>

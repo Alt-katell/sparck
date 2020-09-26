@@ -140,7 +140,7 @@ const Navbar = () => {
         {line1}
         {line2}
         <StyledUl>
-          <NavigationItem link="/about" isActive={aboutActive}>{t.about[currentLang]}</NavigationItem>
+          <NavigationItem link="/about" isactive={aboutActive}>{t.about[currentLang]}</NavigationItem>
           <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
           <NavigationItem link="/work">{t.work[currentLang]}</NavigationItem>
         </StyledUl>

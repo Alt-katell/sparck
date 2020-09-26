@@ -92,7 +92,7 @@ const SideDrawer = (props) => {
             onClick={props.closed}/>
           <nav>
             <StyledUl>
-              <NavigationItem link="/about" isActive={aboutActive}>{t.about[currentLang]}</NavigationItem>
+              <NavigationItem link="/about" isactive={aboutActive}>{t.about[currentLang]}</NavigationItem>
               <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
               <NavigationItem link="/work">{t.work[currentLang]}</NavigationItem>
               <NavigationItem link="/team">{t.team[currentLang]}</NavigationItem>
