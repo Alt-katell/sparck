@@ -61,6 +61,7 @@ const StyledLine1 = styled.div`
   top: 0;
   left: 25%;
   z-index: -1;
+  opacity: 0.7;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: none;
@@ -75,6 +76,7 @@ const StyledLine2 = styled.div`
   top: 0;
   right: 25%;
   z-index: -1;
+  opacity: 0.7;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: none;
