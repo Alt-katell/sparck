@@ -54,9 +54,9 @@ const StyledTextLineBlack = styled.span`
 `
 
 const HomePage = () => {
-  // setTimeout(function() {
-  //     window.location='/about'
-  // }, 5000);
+  setTimeout(function() {
+      window.location='/about'
+  }, 5000);
 
   return (
     <StyledBackground>
