@@ -72,7 +72,12 @@ const StyledLogo = styled.img`
 `
 
 const SideDrawer = (props) => {
-  const {langKey: currentLang} = usePageContext();
+  const {langKey: currentLang, slug} = usePageContext();
+
+  let aboutActive;
+  if (slug.includes("about")) {
+    aboutActive = true;
+  }
 
   return (
     <div>
@@ -87,7 +92,7 @@ const SideDrawer = (props) => {
             onClick={props.closed}/>
           <nav>
             <StyledUl>
-              <NavigationItem link="/about">{t.about[currentLang]}</NavigationItem>
+              <NavigationItem link="/about" isActive={aboutActive}>{t.about[currentLang]}</NavigationItem>
               <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
               <NavigationItem link="/work">{t.work[currentLang]}</NavigationItem>
               <NavigationItem link="/team">{t.team[currentLang]}</NavigationItem>
