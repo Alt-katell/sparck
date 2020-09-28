@@ -5,6 +5,7 @@ import LetsTalk from '../components/LetsTalk';
 import ContactForm from '../components/ContactForm';
 import SocialIconsHorizontal from '../components/SocialIconsHorizontal';
 import Line from '../components/UI/Line';
+import Container from '../components/UI/Container';
 
 const StyledCurve = styled.img`
   height: 100%;
@@ -32,7 +33,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div>
+    <Container>
       {contactFormHovered ? <StyledCurve src="/images/curve.png" position="right" /> : <Line position="left" />}
       {contactFormHovered ? <StyledCurve src="/images/curve.png" position="left" /> : <Line position="right" />}
 
@@ -41,7 +42,7 @@ const ContactPage = () => {
       <ContactForm inside={hoveringHandler} outside={notHoveringHandler} />
 
       <SocialIconsHorizontal />
-    </div>
+    </Container>
   );
 }
 

@@ -3,8 +3,10 @@ import styled from 'styled-components';
 
 import { usePageContext } from '../context/pageContext';
 
+import Container from './UI/Container';
+
 const StyledAgencyIntroCard = styled.div`
-  margin: 20px auto;
+  margin: 150px auto 20px auto;
   width: 730px;
   position: relative;
 
@@ -70,15 +72,15 @@ const AgencyIntroCard = () => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-    <StyledAgencyIntroCard>
-      <StyledSlogan>
-        {t.sloganFirst[currentLang]}<br />
-        {t.sloganSecond[currentLang]}<br />
-        {t.sloganThird[currentLang]}.
-      </StyledSlogan>
-      <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
-      <StyledText>{t.text[currentLang]}</StyledText>
-    </StyledAgencyIntroCard>
+      <StyledAgencyIntroCard>
+        <StyledSlogan>
+          {t.sloganFirst[currentLang]}<br />
+          {t.sloganSecond[currentLang]}<br />
+          {t.sloganThird[currentLang]}.
+        </StyledSlogan>
+        <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
+        <StyledText>{t.text[currentLang]}</StyledText>
+      </StyledAgencyIntroCard>
   )
 }
 

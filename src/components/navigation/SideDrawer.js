@@ -52,17 +52,18 @@ const StyledBurgerIcon = styled(FontAwesomeIcon)`
   font-size: 32px;
 `
 
-const StyledUl = styled.ul`
-  list-style: none;
+const StyledNavigationGroup = styled.div`
   display: flex;
   flex-direction: column;
   padding-left: 0;
 
-  @media (min-device-width : 320px) and (max-device-width : 667px) {
-    & li:last-of-type {
-      margin-top: 40px;
-      margin-bottom: 40px;
-    }
+  & > * {
+    margin-left: 0;
+  }
+
+  & a:last-of-type {
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 `
 
@@ -91,14 +92,14 @@ const SideDrawer = (props) => {
             style={{alignSelf: "flex-end", fontSize: "32px"}}
             onClick={props.closed}/>
           <nav>
-            <StyledUl>
+            <StyledNavigationGroup>
               <NavigationItem link="/about" isactive={aboutActive}>{t.about[currentLang]}</NavigationItem>
               <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
               <NavigationItem link="/work">{t.work[currentLang]}</NavigationItem>
               <NavigationItem link="/team">{t.team[currentLang]}</NavigationItem>
               <NavigationItem link="/contact">{t.contact[currentLang]}</NavigationItem>
-            </StyledUl>
-            <div style={{marginBottom: "23px"}}>
+            </StyledNavigationGroup>
+            <div>
               <a href="https://www.instagram.com/sparck.agency/"><FontAwesomeIcon icon={faInstagram} style={{marginRight: "32px", fontSize: "24px"}} /></a>
               <a href="https://www.linkedin.com/company/sparckagency/"><FontAwesomeIcon icon={faLinkedinIn} style={{marginRight: "32px", fontSize: "24px"}} /></a>
             </div>

@@ -42,18 +42,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Container = styled.div`
-  margin: 120px 60px 0 60px;
-
-  @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    margin: 120px 30px 0 30px;
-  }
-
-  @media only screen and (min-device-width : 320px) and (max-device-width : 667px) {
-    margin: 60px 10px 0 10px;
-  }
-`
-
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
@@ -66,14 +54,6 @@ const Layout = ({ children }) => {
   // `)
 
   const path = usePageContext();
-
-  const [contactFormHovered, setContactFormHovered] = useState(false);
-  const hoveringHandler = () => {
-    setContactFormHovered(true)
-  };
-  const notHoveringHandler = () => {
-    setContactFormHovered(false)
-  };
 
   const [sideDrawerIsVisible, setSideDrawerIsVisible] = useState(false);
   const sideDrawerClosedHandler = () => {
@@ -122,13 +102,9 @@ const Layout = ({ children }) => {
 
         {sidebar}
 
-        <Container>
-          <main>{children}</main>
-        </Container>
-
-        {path.slug.includes("about") ? <QuoteCard /> : null}
-        {path.slug.includes("about") ? <ContactForm about="true" inside={hoveringHandler} outside={notHoveringHandler} /> : null}
-        {path.slug.includes("about") ? <LetsTalk out={contactFormHovered} about="true" /> : null}
+        <main>
+          {children}
+        </main>
       </div>
     );
   } else {

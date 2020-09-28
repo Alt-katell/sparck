@@ -12,6 +12,7 @@ const StyledBackground = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  box-shadow:  0 0 35px rgba(0, 0, 0, 0.7);
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     height: 600px;

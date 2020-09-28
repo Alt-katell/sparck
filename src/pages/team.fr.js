@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Container from '../components/UI/Container';
 import TeamMemberCard from '../components/TeamMemberCard';
 
 const StyledWhiteBackground = styled.div`
@@ -19,8 +20,8 @@ const StyledWhiteBackground = styled.div`
 
 const TeamPage = () => {
   return (
-    <div>
-    <StyledWhiteBackground />
+    <Container>
+      <StyledWhiteBackground />
       <TeamMemberCard
         reverse={false}
         photo="/images/Photo-Vicky.jpg"
@@ -64,7 +65,7 @@ const TeamPage = () => {
         description2="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
         description3="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
         portfolio="www.google.com" />
-    </div>
+    </Container>
   );
 }
 
