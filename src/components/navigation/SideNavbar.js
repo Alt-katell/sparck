@@ -19,7 +19,7 @@ const StyledSideNavbar = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 3;
+  z-index: 10;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: none;
@@ -72,7 +72,7 @@ const StyledTeamDrawerOpen = styled.div`
   align-items: center;
   position: relative;
   margin-right: 250px;
-  z-index: 3;
+  z-index: 10;
 `
 
 const StyledTeamMembers = styled.div`

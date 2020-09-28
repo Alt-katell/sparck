@@ -15,7 +15,7 @@ const StyledNav = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 4;
+  z-index: 10;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: none;
@@ -26,7 +26,6 @@ const StyledNavigationGroup = styled.div`
   display: flex;
   margin: 0 55px;
   padding: 0;
-  z-index: 4;
 
   &:first-of-type {
     flex-basis: 30%;
@@ -42,28 +41,9 @@ const StyledNavigationGroup = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
-  z-index: 4;
-`
-
 const StyledLogo = styled.img`
   height: 40px;
   width: auto;
-  z-index: 4;
-`
-
-const StyledWhiteNavbarPortion = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 74px;
-  min-width: 850px;
-  background: ${props => props.theme.colors.white};
-  z-index: 2;
-
-  @media (min-device-width : 320px) and (max-device-width : 667px) {
-    display: none;
-  }
 `
 
 const Navbar = () => {
@@ -72,18 +52,17 @@ const Navbar = () => {
 
   let aboutActive;
   if (slug.includes("about")) {
-    aboutActive = true;
+    aboutActive = "yes";
   }
 
   return (
     <header>
       <StyledNav>
-        {slug.includes("team") ? <StyledWhiteNavbarPortion /> : null}
         <StyledNavigationGroup>
           <NavigationItem link="/about" isactive={aboutActive}>{t.about[currentLang]}</NavigationItem>
           <NavigationItem link="/services">{t.services[currentLang]}</NavigationItem>
         </StyledNavigationGroup>
-        <StyledLink to="/"><StyledLogo src={logo} alt="Spärck Logo"/></StyledLink>
+        <Link to="/"><StyledLogo src={logo} alt="Spärck Logo"/></Link>
         <StyledNavigationGroup>
           <NavigationItem link="/work">{t.work[currentLang]}</NavigationItem>
           <NavigationItem link="/contact">{t.contact[currentLang]}</NavigationItem>

@@ -6,7 +6,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.colors.black};
   font-size: 16px;
-  font-weight: ${props => props.isactive ? "bold" : "300"};
+  font-weight: ${props => props.isactive === "yes" ? "bold" : "300"};
   margin: 0 15px;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {

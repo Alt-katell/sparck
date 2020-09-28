@@ -76,7 +76,7 @@ const SideDrawer = (props) => {
 
   let aboutActive;
   if (slug.includes("about")) {
-    aboutActive = true;
+    aboutActive = "yes";
   }
 
   return (

@@ -20,6 +20,7 @@ import SideNavbar from './navigation/SideNavbar';
 import QuoteCard from './QuoteCard';
 import ContactForm from './ContactForm';
 import LetsTalk from './LetsTalk';
+import Line from './UI/Line';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -53,36 +54,6 @@ const Container = styled.div`
   }
 `
 
-const StyledLine1 = styled.div`
-  width: 1px;
-  height: 100%;
-  border-left: 1px solid ${props => props.theme.colors.white};
-  position: fixed;
-  top: 0;
-  left: 25%;
-  z-index: -1;
-  opacity: 0.7;
-
-  @media (min-device-width : 320px) and (max-device-width : 667px) {
-    display: none;
-  }
-`
-
-const StyledLine2 = styled.div`
-  width: 1px;
-  height: 100%;
-  border-left: 1px solid ${props => props.color === "black" ? props.theme.colors.black : props.theme.colors.white};
-  position: fixed;
-  top: 0;
-  right: 25%;
-  z-index: -1;
-  opacity: 0.7;
-
-  @media (min-device-width : 320px) and (max-device-width : 667px) {
-    display: none;
-  }
-`
-
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
@@ -112,20 +83,20 @@ const Layout = ({ children }) => {
     setSideDrawerIsVisible(!sideDrawerIsVisible);
   };
 
-  let line1;
+  let lineLeft;
   if (path.slug.includes("team") || path.slug.includes("contact")) {
-    line1 = null;
+    lineLeft = null;
   } else {
-    line1 = <StyledLine1 />;
+    lineLeft = <Line position="left" />;
   }
 
-  let line2;
+  let lineRight;
   if (path.slug.includes("team")) {
-    line2 = <StyledLine2 color="black"/>;
+    lineRight = <Line color="black" position="right" />;
   } else if (path.slug.includes("contact")) {
-    line2 = null
+    lineRight = null
   } else {
-    line2 = <StyledLine2 />;
+    lineRight = <Line position="right" />;
   }
 
   let sidebar;
@@ -146,8 +117,8 @@ const Layout = ({ children }) => {
           open={sideDrawerIsVisible}
           closed={sideDrawerClosedHandler}
           drawerToggleClicked={sideDrawerToggleHandler} />
-        {line1}
-        {line2}
+        {lineLeft}
+        {lineRight}
 
         {sidebar}
 
