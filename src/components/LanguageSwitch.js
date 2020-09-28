@@ -8,12 +8,8 @@ import { navigateToPageByLanguage } from '../utils/navigateToPageByLanguage';
 const StyledLangSwitch = styled.p`
   font-size: 16px;
   font-weight: 300;
-  margin: 0 21px 0 0;
+  margin-bottom: 100px;
   z-index: 4;
-
-  @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    margin: 0 30px 0 0;
-  }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     position: fixed;

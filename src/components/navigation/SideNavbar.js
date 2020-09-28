@@ -4,6 +4,8 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 import { usePageContext } from '../../context/pageContext';
 
+import LanguageSwitch from '../LanguageSwitch';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
@@ -16,6 +18,7 @@ const StyledSideNavbar = styled.div`
   right: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   z-index: 3;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
@@ -126,6 +129,7 @@ const SideNavbar = ({position}) => {
 
   return (
     <StyledSideNavbar position={position} >
+      <LanguageSwitch />
       <StyledSocialIcons>
         <a href="https://www.instagram.com/sparck.agency/"><FontAwesomeIcon icon={faInstagram} style={{marginBottom: "16px"}} /></a>
         <a href="https://www.linkedin.com/company/sparckagency/"><FontAwesomeIcon icon={faLinkedinIn} /></a>
