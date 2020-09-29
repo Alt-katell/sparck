@@ -5,9 +5,12 @@ import { usePageContext } from '../context/pageContext';
 
 import Container from './UI/Container';
 
+// 215px = height of navbar + margin top of container
+
 const StyledAgencyIntroCard = styled.div`
   margin: 150px auto 20px auto;
   width: 730px;
+  height: calc(100vh - 150px);
   position: relative;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
@@ -58,7 +61,7 @@ const StyledText = styled.p`
   text-justify: inter-word;
   position: absolute;
   left: 200px;
-  bottom: -400px;
+  bottom: 150px;
   z-index: 2;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {

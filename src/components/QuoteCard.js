@@ -6,8 +6,6 @@ import { usePageContext } from '../context/pageContext';
 const StyledBackground = styled.div`
   width: 100vw;
   height: 100vh;
-  margin: ${props => props.margin === "en" ? "530px" : "537px"} 0 0 0;
-  padding: 0;
   background: ${props => props.theme.colors.blue};
   overflow: hidden;
   display: flex;
