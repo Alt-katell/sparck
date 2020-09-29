@@ -17,12 +17,36 @@ const StyledLetsTalk = styled.p`
   }
 `
 
+const StyledEmailText = styled.p`
+  margin: ${props => props.about ? "180px" : "150px"} auto 50px auto;
+  width: 350px;
+
+  & a {
+    font-family: ${props => props.theme.fonts.baskerville};
+    color: ${props => props.theme.colors.blue};
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    margin-top: 0;
+    width: 320px;
+    text-align: center;
+  }
+`
+
 const StyledForm = styled.form`
   width: 350px;
-  margin: ${props => props.about ? "180px" : "150px"} auto 100px auto;
+  margin: 0 auto 100px auto;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    margin: ${props => props.about ? "100px" : "300px"} auto 30px auto;
+    margin: 100px auto 30px auto;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
@@ -97,6 +121,11 @@ const ContactForm = ({inside, outside, about}) => {
   return (
     <div>
       <StyledLetsTalk about={about}>Let's Talk</StyledLetsTalk>
+      <StyledEmailText>
+        Tell us what you have in mind at<br/>
+        <a href="mailto:hello@sparck.ca" target="_blank" rel="noopener noreferrer">hello@sparck.ca</a><br/>
+        or use the form below.
+      </StyledEmailText>
       <StyledForm
         autoComplete="off"
         onMouseEnter={inside}
