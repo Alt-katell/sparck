@@ -26,6 +26,7 @@ const StyledSlogan = styled.h1`
   font-weight: normal;
   position: absolute;
   top: -30px;
+  z-index: 2;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     position: static;
@@ -40,7 +41,6 @@ const StyledPhoto = styled.img`
   height: auto;
   position: absolute;
   right: 0;
-  z-index: -1;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     right: 60px;
@@ -59,6 +59,7 @@ const StyledText = styled.p`
   position: absolute;
   left: 200px;
   bottom: -400px;
+  z-index: 2;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     position: static;
