@@ -67,6 +67,9 @@ const StyledTextarea = styled.textarea`
   font-family: ${props => props.theme.fonts.roboto};
   font-weight: 300;
   font-size: 12px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
 `
 
 const StyledUnderline = styled.div`
