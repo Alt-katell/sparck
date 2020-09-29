@@ -29,15 +29,21 @@ const StyledRectangle = styled.div`
   }
 `
 
+const StyledPhotoContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+`
+
 const StyledPhoto = styled.img`
   width: 295px;
   height: auto;
   margin-right: ${props => props.reverse ? null : "45px"};
   margin-left: ${props => props.reverse ? "45px" : null};
+  display: flex;
+  align-items: flex-start;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 200px;
-    height: auto;
     margin: 0;
   }
 `
@@ -126,7 +132,9 @@ const StyledPortfolio = styled.a`
 const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, description2, description3, portfolio}) => {
   return (
     <StyledRectangle id={id} reverse={reverse}>
-      <StyledPhoto src={photo} alt={name} reverse={reverse} />
+      <StyledPhotoContainer>
+        <StyledPhoto src={photo} alt={name} reverse={reverse} />
+      </StyledPhotoContainer>
       <StyledText>
         <StyledName reverse={reverse}>{name}</StyledName>
         <StyledRole>
