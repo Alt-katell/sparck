@@ -134,7 +134,8 @@ const ContactForm = ({inside, outside, about}) => {
         name="contact"
         method="POST"
         data-netlify="true"
-        action="/">
+        action="/about">
+        <input type="hidden" name="form-name" value="contact" />
 
         <StyledNameGroup>
           <StyledItem>
