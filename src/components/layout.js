@@ -25,7 +25,6 @@ import Line from './UI/Line';
 const GlobalStyle = createGlobalStyle`
   html {
     margin: 0;
-    height: 100%;
     max-width: 100%;
     overflow-x: hidden;
   }
@@ -35,8 +34,6 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: ${props => props.theme.fonts.roboto};
     font-weight: 300;
-    height: 100%;
-
   }
 
   a {

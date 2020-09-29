@@ -25,7 +25,6 @@ const StyledWhiteBackground = styled.div`
 const TeamPage = () => {
   return (
     <Container>
-      <StyledWhiteBackground />
       <TeamMemberCard
         id="vicky"
         reverse={false}
@@ -73,6 +72,8 @@ const TeamPage = () => {
         description2="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
         description3="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
         portfolio="www.google.com" />
+      <StyledWhiteBackground />
+
     </Container>
   );
 }
