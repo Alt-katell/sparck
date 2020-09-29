@@ -29,6 +29,7 @@ const StyledRectangle = styled.div`
   }
 `
 
+// this is to correct bug of safari, img stretching when in flexbox
 const StyledPhotoContainer = styled.div`
   display: flex;
   align-items: flex-start;
@@ -165,7 +166,12 @@ const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, d
         <StyledDescription>{description1}</StyledDescription>
         <StyledDescription>{description2}</StyledDescription>
         <StyledDescription>{description3}</StyledDescription>
-        <StyledPortfolio href={portfolio}>See her portfolio</StyledPortfolio>
+        <StyledPortfolio
+          href={portfolio}
+          target="_blank"
+          rel="noopener noreferrer">
+          See her portfolio
+        </StyledPortfolio>
       </StyledText>
     </StyledRectangle>
   )

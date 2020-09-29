@@ -26,8 +26,18 @@ const StyledSocialIcons = styled.div`
 const SocialIconsHorizontal = () => {
   return (
       <StyledSocialIcons>
-        <a href="https://www.instagram.com/sparck.agency/"><FontAwesomeIcon icon={faInstagram} style={{marginRight: "16px"}} /></a>
-        <a href="https://www.linkedin.com/company/sparckagency/"><FontAwesomeIcon icon={faLinkedinIn} style={{marginRight: "16px"}} /></a>
+        <a
+          href="https://www.instagram.com/sparck.agency/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faInstagram} style={{marginRight: "16px"}} />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/sparckagency/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faLinkedinIn} style={{marginRight: "16px"}} />
+        </a>
       </StyledSocialIcons>
   );
 }

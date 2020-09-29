@@ -131,8 +131,18 @@ const SideNavbar = ({position}) => {
     <StyledSideNavbar position={position} >
       <LanguageSwitch />
       <StyledSocialIcons>
-        <a href="https://www.instagram.com/sparck.agency/"><FontAwesomeIcon icon={faInstagram} style={{marginBottom: "16px"}} /></a>
-        <a href="https://www.linkedin.com/company/sparckagency/"><FontAwesomeIcon icon={faLinkedinIn} /></a>
+        <a
+          href="https://www.instagram.com/sparck.agency/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faInstagram} style={{marginBottom: "16px"}} />
+        </a>
+        <a
+          href="https://www.linkedin.com/company/sparckagency/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <FontAwesomeIcon icon={faLinkedinIn} />
+        </a>
       </StyledSocialIcons>
       <StyledTeamBlock
         onMouseEnter={() => setTeamDrawerOpen(true)}
