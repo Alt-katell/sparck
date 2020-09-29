@@ -15,11 +15,11 @@ const StyledRectangle = styled.div`
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     margin: 100px -10px;
+    width: 650px;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 270px;
-    height: 660px;
     flex-direction: column;
     align-items: center;
 
@@ -42,6 +42,10 @@ const StyledPhoto = styled.img`
   display: flex;
   align-items: flex-start;
 
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    width: 250px;
+  }
+
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 200px;
     margin: 0;
@@ -59,6 +63,10 @@ const StyledName = styled.h2`
   margin: 62px ${props => props.reverse ? "-60px" : "0"} 5px ${props => props.reverse ? "0" : "-60px"};
   text-align: ${props => props.reverse ? "right" : null};
 
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    margin-top: 0;
+    font-size: 38px;
+  }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     margin: 0;
@@ -75,6 +83,15 @@ const StyledRole = styled.div`
   & p {
     margin: 0;
     font-size: 22px;
+  }
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+      font-size: 24px;
+    }
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {

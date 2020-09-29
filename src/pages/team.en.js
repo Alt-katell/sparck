@@ -13,6 +13,10 @@ const StyledWhiteBackground = styled.div`
   right: 0;
   z-index: -2;
 
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    min-width: 600px;
+  }
+
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: none;
   }
