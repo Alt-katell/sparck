@@ -9,7 +9,6 @@ import React, { useState } from 'react';
 // import { useStaticQuery, graphql } from 'gatsby';
 
 import { createGlobalStyle } from 'styled-components';
-import styled from 'styled-components';
 
 import { usePageContext } from '../context/pageContext';
 
@@ -17,9 +16,6 @@ import Theme from './Theme';
 import Navbar from '../components/navigation/Navbar';
 import SideDrawer from '../components/navigation/SideDrawer';
 import SideNavbar from './navigation/SideNavbar';
-import QuoteCard from './QuoteCard';
-import ContactForm from './ContactForm';
-import LetsTalk from './LetsTalk';
 import Line from './UI/Line';
 
 const GlobalStyle = createGlobalStyle`

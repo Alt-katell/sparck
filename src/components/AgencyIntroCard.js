@@ -3,8 +3,6 @@ import styled from 'styled-components';
 
 import { usePageContext } from '../context/pageContext';
 
-import Container from './UI/Container';
-
 // 215px = height of navbar + margin top of container
 
 const StyledAgencyIntroCard = styled.div`
@@ -12,6 +10,11 @@ const StyledAgencyIntroCard = styled.div`
   width: 730px;
   height: 500px;
   position: relative;
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    width: 570px;
+    margin: 120px auto;
+  }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: flex;
@@ -31,6 +34,10 @@ const StyledSlogan = styled.h1`
   top: -30px;
   z-index: 2;
 
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    font-size: 52px;
+  }
+
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     position: static;
     font-size: 38px;
@@ -46,6 +53,7 @@ const StyledPhoto = styled.img`
   right: 0;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    width: 320px;
     right: 60px;
   }
 
@@ -64,7 +72,9 @@ const StyledText = styled.p`
   z-index: 2;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    bottom: 105px;
+    width: 250px;
+    bottom: 155px;
+    left: 65px;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {

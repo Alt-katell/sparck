@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 
-import Container from '../components/UI/Container';
 import AgencyIntroCard from '../components/AgencyIntroCard';
 import QuoteCard from '../components/QuoteCard';
 import ContactForm from '../components/ContactForm';

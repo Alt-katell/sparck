@@ -130,7 +130,11 @@ const ContactForm = ({inside, outside, about}) => {
         autoComplete="off"
         onMouseEnter={inside}
         onMouseLeave={outside}
-        about={about}>
+        about={about}
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action="/">
 
         <StyledNameGroup>
           <StyledItem>
