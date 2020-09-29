@@ -26,6 +26,7 @@ const StyledForm = styled.form`
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
+    width: 320px;
     margin: 0 auto 70px auto;
   }
 `

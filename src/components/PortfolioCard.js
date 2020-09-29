@@ -17,7 +17,7 @@ const StyledRectangle = styled.div`
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
-    width: 335px;
+    width: 320px;
     height: 250px;
     margin: 20px auto 80px auto;
   }
@@ -36,7 +36,7 @@ const StyledPhoto = styled.img`
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
-    width: 295px;
+    width: 280px;
   }
 `
 const StyledA = styled.a`

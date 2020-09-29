@@ -8,9 +8,9 @@ import Container from './UI/Container';
 // 215px = height of navbar + margin top of container
 
 const StyledAgencyIntroCard = styled.div`
-  margin: 150px auto 20px auto;
+  margin: 150px auto;
   width: 730px;
-  height: calc(100vh - 150px);
+  height: 500px;
   position: relative;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
@@ -18,7 +18,7 @@ const StyledAgencyIntroCard = styled.div`
     flex-direction: column;
     align-items: center;
     width: 270px;
-    margin: 0 auto;
+    margin: 50px auto;
   }
 `
 
@@ -58,11 +58,14 @@ const StyledPhoto = styled.img`
 const StyledText = styled.p`
   width: 340px;
   text-align: justify;
-  text-justify: inter-word;
   position: absolute;
   left: 200px;
-  bottom: 150px;
+  bottom: 105px;
   z-index: 2;
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    bottom: 105px;
+  }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     position: static;
@@ -76,15 +79,15 @@ const AgencyIntroCard = () => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-      <StyledAgencyIntroCard>
-        <StyledSlogan>
-          {t.sloganFirst[currentLang]}<br />
-          {t.sloganSecond[currentLang]}<br />
-          {t.sloganThird[currentLang]}.
-        </StyledSlogan>
-        <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
-        <StyledText>{t.text[currentLang]}</StyledText>
-      </StyledAgencyIntroCard>
+    <StyledAgencyIntroCard>
+      <StyledSlogan>
+        {t.sloganFirst[currentLang]}<br />
+        {t.sloganSecond[currentLang]}<br />
+        {t.sloganThird[currentLang]}.
+      </StyledSlogan>
+      <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
+      <StyledText>{t.text[currentLang]}</StyledText>
+    </StyledAgencyIntroCard>
   )
 }
 
