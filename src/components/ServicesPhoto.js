@@ -7,6 +7,7 @@ const StyledServicesPhoto = styled.div`
   margin: 30px auto;
   width: 400px;
   position: relative;
+  z-index: 2;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 250px;
@@ -24,7 +25,7 @@ const StyledText = styled.p`
   position: absolute;
   top: 195px;
   right: 233px;
-  z-index: -1;
+  z-index: 1;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     right: 112px;
