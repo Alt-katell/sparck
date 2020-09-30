@@ -47,12 +47,12 @@ const TeamPage = () => {
       <TeamMemberCard
         reverse={false}
         photo="/images/Photo-Vicky.jpg"
-        name="Clémence Paiement"
+        name="Clemence Paiement"
         role1="Développeuse Full-Stack"
-        role2="Designer UX"
-        description1="Lorem ipsum dolor sit amet"
-        description2="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
-        description3="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
+        role2="Stratège Produit"
+        description1="Clemence est une développeuse et une designer UI/UX orientée produit."
+        description2="Elle est passionnée par la construction d’applications web et de connexions émotionnelles digitales avec leurs utilisateurs. En tant qu’entrepreneure et développeuse, elle comprend la stratégie et les fonctionnalités d’un produit au niveau budget, délais et besoins marketing."
+        description3="Clemence a travaillé dans le merchandising de la mode avant de se tourner vers le design et développement web."
         portfolio="www.google.com" />
 
       <TeamMemberCard
@@ -61,9 +61,9 @@ const TeamPage = () => {
         name="Nour Souid"
         role1="Développeuse Full-Stack"
         role2="Stratège Affaires"
-        description1="Lorem ipsum dolor sit amet"
-        description2="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
-        description3="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
+        description1="Nour est une développeuse audacieuse."
+        description2="Sa mission est de donner vie à des visions. Ce qui la motive est de partir d’une idée et d’aller jusqu’au prototypage du produit. Elle sait comprendre votre stratégie et vos valeurs pour créer un produit minimum viable capable de croître."
+        description3="Ayant grandi dans un esprit start-up et commencé à coder en autodidacte à l’âge de 16 ans, Nour a une bonne compréhension des produits digitaux."
         portfolio="www.google.com" />
     </Container>
   );

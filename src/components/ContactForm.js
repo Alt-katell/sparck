@@ -139,13 +139,13 @@ const ContactForm = ({inside, outside, about}) => {
 
         <StyledNameGroup>
           <StyledItem>
-            <StyledLabel htmlFor="firstName">{t.firstName[currentLang]}</StyledLabel>
+            <StyledLabel>{t.firstName[currentLang]}</StyledLabel>
             <StyledInput type="text" name="firstName" />
             <StyledUnderline />
           </StyledItem>
 
           <StyledItem>
-            <StyledLabel htmlFor="lastName">{t.lastName[currentLang]}</StyledLabel>
+            <StyledLabel>{t.lastName[currentLang]}</StyledLabel>
             <StyledInput type="text" name="lastName" />
             <StyledUnderline />
           </StyledItem>
@@ -153,13 +153,13 @@ const ContactForm = ({inside, outside, about}) => {
 
 
         <StyledItem>
-          <StyledLabel htmlFor="email">{t.email[currentLang]}</StyledLabel>
+          <StyledLabel>{t.email[currentLang]}</StyledLabel>
           <StyledInput type="email" name="email" />
           <StyledUnderline />
         </StyledItem>
 
         <StyledItem>
-          <StyledLabel htmlFor="message">{t.message[currentLang]}</StyledLabel>
+          <StyledLabel>{t.message[currentLang]}</StyledLabel>
           <StyledTextarea name="message" rows="7"/>
           <StyledUnderline />
         </StyledItem>

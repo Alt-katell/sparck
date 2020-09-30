@@ -53,12 +53,12 @@ const TeamPage = () => {
         id="clemence"
         reverse={false}
         photo="/images/Photo-Vicky.jpg"
-        name="Clémence Paiement"
+        name="Clemence Paiement"
         role1="Full-Stack Developer"
-        role2="UX Designer"
-        description1="Lorem ipsum dolor sit amet"
-        description2="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
-        description3="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
+        role2="Product Owner"
+        description1="Clemence is a product-oriented developer and UI/UX designer."
+        description2="She is passionate about building meaningful web apps and an emotional digital connection with their users. As an entrepreneur and a developer, she understands the strategy and features behind any product from budget, timelines and marketing needs."
+        description3="Clemence worked in Fashion Merchandising before switching to web design and development."
         portfolio="www.google.com" />
 
       <TeamMemberCard
@@ -68,9 +68,9 @@ const TeamPage = () => {
         name="Nour Souid"
         role1="Full-Stack Developer"
         role2="Business Strategist"
-        description1="Lorem ipsum dolor sit amet"
-        description2="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
-        description3="bla bla bla bla bla bla bla Lorem ipsum dolor sit amet, bla bla bla bla bla bla bla Lorem ipsum dolor sit amet"
+        description1="Nour is a bold developer."
+        description2="Her mission is to give life to visions. She is driven by going from an idea to prototyping a product.  She is able to understand your business mission and values to create a minimum valuable product that is able to grow organically."
+        description3="Growing up in a startup environment and starting as a self-learning coder at the age of 16 enabled her to have a better understanding of tech products."
         portfolio="www.google.com" />
       <StyledWhiteBackground />
 
