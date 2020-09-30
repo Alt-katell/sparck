@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { usePageContext } from '../context/pageContext';
+
 const StyledRectangle = styled.div`
   width: 800px;
   background: ${props => props.theme.colors.white};
@@ -157,6 +159,8 @@ const StyledPortfolio = styled.a`
 `
 
 const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, description2, description3, portfolio}) => {
+  const {langKey: currentLang} = usePageContext();
+
   return (
     <StyledRectangle id={id} reverse={reverse}>
       <StyledPhotoContainer>
@@ -179,7 +183,7 @@ const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, d
           href={portfolio}
           target="_blank"
           rel="noopener noreferrer">
-          See her portfolio
+          {currentLang === "en" ? "See her portfolio" : "Voir son portfolio"}
         </StyledPortfolio>
       </StyledText>
     </StyledRectangle>
