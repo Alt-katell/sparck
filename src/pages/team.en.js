@@ -52,19 +52,19 @@ const TeamPage = () => {
       <TeamMemberCard
         id="clemence"
         reverse={false}
-        photo="/images/Photo-Vicky.jpg"
+        photo="/images/Photo-Clemence.png"
         name="Clemence Paiement"
         role1="Full-Stack Developer"
-        role2="Product Owner"
+        role2="UX Designer"
         description1="Clemence is a product-oriented developer and UI/UX designer."
         description2="She is passionate about building meaningful web apps and an emotional digital connection with their users. As an entrepreneur and a developer, she understands the strategy and features behind any product from budget, timelines and marketing needs."
         description3="Clemence worked in Fashion Merchandising before switching to web design and development."
-        portfolio="www.google.com" />
+        portfolio="https://icportfolio.ca/" />
 
       <TeamMemberCard
         id="nour"
         reverse={true}
-        photo="/images/Photo-Katell.png"
+        photo="/images/Photo-Nour.png"
         name="Nour Souid"
         role1="Full-Stack Developer"
         role2="Business Strategist"

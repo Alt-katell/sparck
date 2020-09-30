@@ -80,6 +80,7 @@ const StyledName = styled.h2`
 
 const StyledRole = styled.div`
   display: flex;
+  align-items: center;
 
   & p {
     margin: 0;
@@ -107,7 +108,7 @@ const StyledRole = styled.div`
 
 const StyledDots = styled.div`
   display: flex;
-  margin-top: 8px;
+  margin: 0 4px;
 
   & div {
     width: 5px;
@@ -115,6 +116,10 @@ const StyledDots = styled.div`
     border-radius: 50%;
     background: ${props => props.theme.colors.black};
     margin: 0 2px;
+  }
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    margin: 4px 0;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
@@ -132,6 +137,10 @@ const StyledDescription = styled.p`
   }
   &:last-of-type {
     margin-bottom: 18px;
+  }
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    text-align: left;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {

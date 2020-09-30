@@ -46,18 +46,18 @@ const TeamPage = () => {
 
       <TeamMemberCard
         reverse={false}
-        photo="/images/Photo-Vicky.jpg"
+        photo="/images/Photo-Clemence.png"
         name="Clemence Paiement"
         role1="Développeuse Full-Stack"
-        role2="Stratège Produit"
+        role2="Designer UX"
         description1="Clemence est une développeuse et une designer UI/UX orientée produit."
         description2="Elle est passionnée par la construction d’applications web et de connexions émotionnelles digitales avec leurs utilisateurs. En tant qu’entrepreneure et développeuse, elle comprend la stratégie et les fonctionnalités d’un produit au niveau budget, délais et besoins marketing."
         description3="Clemence a travaillé dans le merchandising de la mode avant de se tourner vers le design et développement web."
-        portfolio="www.google.com" />
+        portfolio="https://icportfolio.ca/" />
 
       <TeamMemberCard
         reverse={true}
-        photo="/images/Photo-Katell.png"
+        photo="/images/Photo-Nour.png"
         name="Nour Souid"
         role1="Développeuse Full-Stack"
         role2="Stratège Affaires"
