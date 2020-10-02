@@ -1,14 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { usePageContext } from '../context/pageContext';
-
 const StyledText = styled.div`
   width: 500px;
-  margin: 260px auto;
+  margin: 180px auto 0 auto;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    width: 300px;
+    margin: 150px auto;
+  }
+`
+
+const StyledSubText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
 
   & h1 {
     font-size: 80px;
@@ -33,30 +40,21 @@ const StyledText = styled.div`
 
 
 const MessageSent = () => {
-  const {langKey: currentLang} = usePageContext();
-
   return (
     <StyledText>
-      <h1>{t.thankYou[currentLang]}</h1>
-      <p>{t.firstLine[currentLang]}</p>
-      <p>{t.secondLine[currentLang]}</p>
+      <StyledSubText>
+        <h1>Thank you</h1>
+        <p>for your message.</p>
+        <p>Let's create magic together.</p>
+      </StyledSubText>
+
+      <StyledSubText>
+        <h1>Merci</h1>
+        <p>pour votre message.</p>
+        <p>Créons la magie ensemble.</p>
+      </StyledSubText>
     </StyledText>
   );
 }
 
 export default MessageSent;
-
-const t = {
-  thankYou: {
-    en: "Thank you",
-    fr: "Merci"
-  },
-  firstLine: {
-    en: "for your message.",
-    fr: "pour votre message."
-  },
-  secondLine: {
-    en: "Let's create magic together.",
-    fr: "Créons de la magie ensemble."
-  },
-}
