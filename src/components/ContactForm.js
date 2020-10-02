@@ -20,6 +20,7 @@ const StyledLetsTalk = styled.p`
 const StyledEmailText = styled.p`
   margin: ${props => props.about ? "180px" : "150px"} auto 50px auto;
   width: 350px;
+  text-align: center;
 
   & a {
     font-family: ${props => props.theme.fonts.baskerville};
