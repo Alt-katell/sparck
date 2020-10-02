@@ -13,6 +13,10 @@ const StyledWhiteBackground = styled.div`
   right: 0;
   z-index: -2;
 
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    min-width: 600px;
+  }
+
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: none;
   }
@@ -21,8 +25,8 @@ const StyledWhiteBackground = styled.div`
 const TeamPage = () => {
   return (
     <Container>
-      <StyledWhiteBackground />
       <TeamMemberCard
+        id="vicky"
         reverse={false}
         photo="/images/Photo-Vicky.jpg"
         name="Vicky André"
@@ -34,6 +38,7 @@ const TeamPage = () => {
         portfolio="http://noir-de-mars.com/" />
 
       <TeamMemberCard
+        id="katell"
         reverse={true}
         photo="/images/Photo-Katell.png"
         name="Katell Goaër"
@@ -45,6 +50,7 @@ const TeamPage = () => {
         portfolio="https://alt-katell.github.io/" />
 
       <TeamMemberCard
+        id="clemence"
         reverse={false}
         photo="/images/Photo-Clemence.png"
         name="Clemence Paiement"
@@ -56,6 +62,7 @@ const TeamPage = () => {
         portfolio="https://icportfolio.ca/" />
 
       <TeamMemberCard
+        id="nour"
         reverse={true}
         photo="/images/Photo-Nour.png"
         name="Nour Souid"
@@ -65,6 +72,7 @@ const TeamPage = () => {
         description2="Sa mission est de donner vie à des visions. Ce qui la motive est de partir d’une idée et d’aller jusqu’au prototypage du produit. Elle sait comprendre votre stratégie et vos valeurs pour créer un produit minimum viable capable de croître."
         description3="Ayant grandi dans un esprit start-up et commencé à coder en autodidacte à l’âge de 16 ans, Nour a une bonne compréhension des produits digitaux."
         portfolio="" />
+      <StyledWhiteBackground />
     </Container>
   );
 }

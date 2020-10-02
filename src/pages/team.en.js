@@ -73,7 +73,6 @@ const TeamPage = () => {
         description3="Growing up in a startup environment and starting as a self-learning coder at the age of 16 enabled her to have a better understanding of tech products."
         portfolio="" />
       <StyledWhiteBackground />
-
     </Container>
   );
 }

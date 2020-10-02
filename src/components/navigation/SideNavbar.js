@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
+import AnchorLink from '../AnchorLink';
 
 import { usePageContext } from '../../context/pageContext';
 
@@ -116,12 +116,12 @@ const SideNavbar = ({position}) => {
         </StyledRectangle>
         <StyledTeamMembers>
           <StyledTeamMemberGroup>
-            <AnchorLink to="/team#clemence">Clémence</AnchorLink>
-            <AnchorLink to="/team#nour">Nour</AnchorLink>
+            <AnchorLink link="/team#clemence">Clemence</AnchorLink>
+            <AnchorLink link="/team#nour">Nour</AnchorLink>
           </StyledTeamMemberGroup>
           <StyledTeamMemberGroup>
-            <AnchorLink to="/team#katell">Katell</AnchorLink>
-            <AnchorLink to="/team#vicky">Vicky</AnchorLink>
+            <AnchorLink link="/team#katell">Katell</AnchorLink>
+            <AnchorLink link="/team#vicky">Vicky</AnchorLink>
           </StyledTeamMemberGroup>
         </StyledTeamMembers>
       </StyledTeamDrawerOpen>
