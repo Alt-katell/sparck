@@ -9,6 +9,7 @@ const StyledSocialIcons = styled.div`
   position: fixed;
   bottom: 20px;
   right: 20px;
+  font-size: 24px;
 
   & a:hover {
     color: ${props => props.theme.colors.blue};

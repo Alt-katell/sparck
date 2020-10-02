@@ -78,14 +78,14 @@ const Layout = ({ children }) => {
   let sidebar;
   if (path.slug.includes("about")) {
     sidebar = <SideNavbar position="sticky" />;
-  } else if (path.slug.includes("contact")) {
+  } else if (path.slug.includes("contact") || path.slug.includes("thank-you")) {
     sidebar = null;
   } else {
     sidebar = <SideNavbar position="fixed" />
   }
 
   let content;
-  if (path.slug.includes("about") || path.slug.includes("services") || path.slug.includes("work") || path.slug.includes( "contact") || path.slug.includes("team")) {
+  if (path.slug.includes("about") || path.slug.includes("services") || path.slug.includes("work") || path.slug.includes( "contact") || path.slug.includes("team") || path.slug.includes("thank-you")) {
     content = (
       <div>
         <Navbar />

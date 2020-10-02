@@ -135,7 +135,7 @@ const ContactForm = ({inside, outside, about}) => {
         name="contact"
         method="POST"
         data-netlify="true"
-        action="/about">
+        action={currentLang === "en" ? "/thank-you" : "/fr/thank-you"}>
         <input type="hidden" name="form-name" value="contact" />
 
         <StyledNameGroup>
