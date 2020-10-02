@@ -119,6 +119,14 @@ const StyledSendButton = styled.button`
 const ContactForm = ({inside, outside, about}) => {
   const {langKey: currentLang} = usePageContext();
 
+  let thankYouPagePath;
+
+  if (currentLang === "en") {
+    thankYouPagePath = "/thank-you";
+  } else {
+    thankYouPagePath = "/fr/thank-you";
+  }
+
   return (
     <div>
       <StyledLetsTalk about={about}>Let's Talk</StyledLetsTalk>
@@ -135,7 +143,7 @@ const ContactForm = ({inside, outside, about}) => {
         name="contact"
         method="POST"
         data-netlify="true"
-        action={currentLang === "en" ? "/thank-you" : "/fr/thank-you"}>
+        action={thankYouPagePath}>
         <input type="hidden" name="form-name" value="contact" />
 
         <StyledNameGroup>

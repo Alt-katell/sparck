@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 import MessageSent from '../components/MessageSent';
 import SocialIconsHorizontal from '../components/SocialIconsHorizontal';
