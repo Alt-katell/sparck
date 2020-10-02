@@ -97,7 +97,7 @@ const AgencyIntroCard = () => {
         {t.sloganSecond[currentLang]}<br />
         {t.sloganThird[currentLang]}.
       </StyledSlogan>
-      <StyledPhoto src="/images/pink-balloun.jpg" alt="Picture by Florian Klauer" />
+      <StyledPhoto src="/images/sparck-pink-balloun.jpg" alt="Picture by Florian Klauer" />
       <StyledText>{t.text[currentLang]}</StyledText>
     </StyledAgencyIntroCard>
   )

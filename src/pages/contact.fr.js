@@ -38,8 +38,8 @@ const ContactPage = () => {
     <>
       <SEO title="Contact" />
       <Container>
-        {contactFormHovered ? <StyledCurve src="/images/curve.png" position="right" /> : <Line position="left" />}
-        {contactFormHovered ? <StyledCurve src="/images/curve.png" position="left" /> : <Line position="right" />}
+        {contactFormHovered ? <StyledCurve src="/images/sparck-curved-line.png" position="right" /> : <Line position="left" />}
+        {contactFormHovered ? <StyledCurve src="/images/sparck-curved-line.png" position="left" /> : <Line position="right" />}
 
         <LetsTalk out={contactFormHovered} />
 

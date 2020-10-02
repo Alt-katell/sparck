@@ -40,7 +40,7 @@ const StyledPhoto = styled.img`
   display: block;
   right: -15px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 250px;
@@ -53,7 +53,7 @@ const ServicesPhoto = () => {
 
   return (
      <StyledServicesPhoto>
-       <StyledPhoto src="/images/clouds.jpg" alt="Clouds" />
+       <StyledPhoto src="/images/sparck-clouds.jpg" alt="Clouds" />
        <StyledText>{t.weCode[currentLang]}</StyledText>
      </StyledServicesPhoto>
   );

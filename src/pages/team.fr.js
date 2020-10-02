@@ -32,7 +32,7 @@ const TeamPage = () => {
         <TeamMemberCard
           id="vicky"
           reverse={false}
-          photo="/images/Photo-Vicky.jpg"
+          photo="/images/sparck-vicky.jpg"
           name="Vicky André"
           role1="Développeuse Front-End"
           role2="Designer Web"
@@ -44,7 +44,7 @@ const TeamPage = () => {
         <TeamMemberCard
           id="katell"
           reverse={true}
-          photo="/images/Photo-Katell.png"
+          photo="/images/sparck-katell.png"
           name="Katell Goaër"
           role1="Développeuse Front-End"
           role2="Stratège Marque"
@@ -56,7 +56,7 @@ const TeamPage = () => {
         <TeamMemberCard
           id="clemence"
           reverse={false}
-          photo="/images/Photo-Clemence.png"
+          photo="/images/sparck-clemence.png"
           name="Clemence Paiement"
           role1="Développeuse Full-Stack"
           role2="Designer UX"
@@ -68,7 +68,7 @@ const TeamPage = () => {
         <TeamMemberCard
           id="nour"
           reverse={true}
-          photo="/images/Photo-Nour.png"
+          photo="/images/sparck-nour.png"
           name="Nour Souid"
           role1="Développeuse Full-Stack"
           role2="Stratège Affaires"
