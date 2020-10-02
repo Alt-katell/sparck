@@ -5,6 +5,7 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { usePageContext } from '../../context/pageContext';
 
 import LanguageSwitch from '../LanguageSwitch';
+import Link from '../Link';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -147,7 +148,7 @@ const SideNavbar = ({position}) => {
       <StyledTeamBlock
         onMouseEnter={() => setTeamDrawerOpen(true)}
         onMouseLeave={() => setTeamDrawerOpen(false)}>
-        <p style={{writingMode: "vertical-rl"}}>{t.team[currentLang]}</p>
+        <Link link="/team" style={{writingMode: "vertical-rl"}}>{t.team[currentLang]}</Link>
         <StyledLine />
         {teamDrawer}
       </StyledTeamBlock>
