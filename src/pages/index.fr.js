@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SEO from "../components/seo";
+
 import Typing from 'react-typing-animation';
 
 const StyledBackground = styled.div`
@@ -60,15 +62,18 @@ const HomePage = () => {
   }, 5000);
 
   return (
-    <StyledBackground>
-      <StyledText>
-        <Typing speed={90}>
-          <StyledTextLineWhite>We dream.</StyledTextLineWhite><br />
-          <StyledTextLineWhite>We code.</StyledTextLineWhite><br />
-          <StyledTextLineBlack>We <span>spärck</span>.</StyledTextLineBlack>
-        </Typing>
-      </StyledText>
-    </StyledBackground>
+    <>
+      <SEO title="Bienvenue" />
+      <StyledBackground>
+        <StyledText>
+          <Typing speed={90}>
+            <StyledTextLineWhite>We dream.</StyledTextLineWhite><br />
+            <StyledTextLineWhite>We code.</StyledTextLineWhite><br />
+            <StyledTextLineBlack>We <span>spärck</span>.</StyledTextLineBlack>
+          </Typing>
+        </StyledText>
+      </StyledBackground>
+    </>
   )
 }
 
