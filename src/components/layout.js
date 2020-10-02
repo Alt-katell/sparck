@@ -78,7 +78,7 @@ const Layout = ({ children }) => {
   let sidebar;
   if (path.slug.includes("about")) {
     sidebar = <SideNavbar position="sticky" />;
-  } else if (path.slug.includes("contact") || path.slug.includes("thank-you")) {
+  } else if (path.slug.includes("contact")) {
     sidebar = null;
   } else {
     sidebar = <SideNavbar position="fixed" />
