@@ -161,6 +161,11 @@ const StyledPortfolio = styled.a`
 const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, description2, description3, portfolio}) => {
   const {langKey: currentLang} = usePageContext();
 
+  let seePortfolio;
+  if (portfolio !== "") {
+    seePortfolio = currentLang === "en" ? "See her portfolio" : "Voir son portfolio";
+  }
+
   return (
     <StyledRectangle id={id} reverse={reverse}>
       <StyledPhotoContainer>
@@ -183,7 +188,7 @@ const TeamMemberCard = ({reverse, id, photo, name, role1, role2, description1, d
           href={portfolio}
           target="_blank"
           rel="noopener noreferrer">
-          {currentLang === "en" ? "See her portfolio" : "Voir son portfolio"}
+          {seePortfolio}
         </StyledPortfolio>
       </StyledText>
     </StyledRectangle>

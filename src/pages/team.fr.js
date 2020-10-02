@@ -64,7 +64,7 @@ const TeamPage = () => {
         description1="Nour est une développeuse audacieuse."
         description2="Sa mission est de donner vie à des visions. Ce qui la motive est de partir d’une idée et d’aller jusqu’au prototypage du produit. Elle sait comprendre votre stratégie et vos valeurs pour créer un produit minimum viable capable de croître."
         description3="Ayant grandi dans un esprit start-up et commencé à coder en autodidacte à l’âge de 16 ans, Nour a une bonne compréhension des produits digitaux."
-        portfolio="www.google.com" />
+        portfolio="" />
     </Container>
   );
 }
