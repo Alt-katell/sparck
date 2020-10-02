@@ -6,7 +6,7 @@ import { usePageContext } from '../context/pageContext';
 // 215px = height of navbar + margin top of container
 
 const StyledAgencyIntroCard = styled.div`
-  margin: 150px auto;
+  margin: 150px 0 150px 200px;
   width: 730px;
   height: 500px;
   position: relative;
@@ -27,11 +27,12 @@ const StyledAgencyIntroCard = styled.div`
 
 const StyledSlogan = styled.h1`
   font-family: ${props => props.theme.fonts.baskerville};
-  font-size: 75px;
+  font-size: 80px;
   color: ${props => props.theme.colors.blue};
   font-weight: normal;
   position: absolute;
-  top: -30px;
+  top: 20px;
+  left: 70px;
   z-index: 2;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
@@ -67,14 +68,15 @@ const StyledText = styled.p`
   width: 340px;
   text-align: justify;
   position: absolute;
-  left: 200px;
-  bottom: 105px;
+  font-size: 20px;
+  left: 285px;
+  bottom: -25px;
   z-index: 2;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     width: 250px;
-    bottom: 155px;
-    left: 65px;
+    bottom: 10px;
+    left: 130px;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
