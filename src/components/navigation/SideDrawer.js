@@ -50,6 +50,10 @@ const StyledHeader = styled.header`
 const StyledBurgerIcon = styled(FontAwesomeIcon)`
   color: ${props => props.theme.colors.green};
   font-size: 32px;
+  position: fixed;
+  top: 30px;
+  right: 10px;
+  z-index: 5;
 `
 
 const StyledNavigationGroup = styled.div`
@@ -70,6 +74,8 @@ const StyledNavigationGroup = styled.div`
 const StyledLogo = styled.img`
   width: 128px;
   height: auto;
+  position: fixed;
+  z-index: 5;
 `
 
 const SideDrawer = (props) => {
