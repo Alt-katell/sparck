@@ -119,21 +119,13 @@ const StyledSendButton = styled.button`
 const ContactForm = ({inside, outside, about}) => {
   const {langKey: currentLang} = usePageContext();
 
-  let thankYouPagePath;
-
-  if (currentLang === "en") {
-    thankYouPagePath = "/thank-you";
-  } else {
-    thankYouPagePath = "/fr/thank-you";
-  }
-
   return (
     <div>
       <StyledLetsTalk about={about}>Let's Talk</StyledLetsTalk>
       <StyledEmailText>
-        Tell us what you have in mind at<br/>
+        {t.tellUs[currentLang]}<br/>
         <a href="mailto:hello@sparck.ca" target="_blank" rel="noopener noreferrer">hello@sparck.ca</a><br/>
-        or use the form below.
+        {t.orUseForm[currentLang]}
       </StyledEmailText>
       <StyledForm
         autoComplete="off"
@@ -143,7 +135,7 @@ const ContactForm = ({inside, outside, about}) => {
         name="contact"
         method="POST"
         data-netlify="true"
-        action={thankYouPagePath}>
+        action="/thank-you" >
         <input type="hidden" name="form-name" value="contact" />
 
         <StyledNameGroup>
@@ -183,6 +175,14 @@ const ContactForm = ({inside, outside, about}) => {
 export default ContactForm;
 
 const t = {
+  tellUs: {
+    en: "Tell us what you have in mind at",
+    fr: "Parlez-nous de votre idée à"
+  },
+  orUseForm: {
+    en: "or use the form below.",
+    fr: "ou remplissez le formulaire ci-dessous."
+  },
   firstName: {
     en: "First name",
     fr: "Prénom"

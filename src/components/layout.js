@@ -85,7 +85,9 @@ const Layout = ({ children }) => {
   }
 
   let content;
-  if (path.slug.includes("about") || path.slug.includes("services") || path.slug.includes("work") || path.slug.includes( "contact") || path.slug.includes("team") || path.slug.includes("thank-you")) {
+  if (path.slug === "/") {
+    content = [children];
+  } else {
     content = (
       <div>
         <Navbar />
@@ -103,8 +105,6 @@ const Layout = ({ children }) => {
         </main>
       </div>
     );
-  } else {
-    content = [children]
   }
 
   return (

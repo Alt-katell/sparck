@@ -10,15 +10,24 @@ const StyledText = styled.div`
   flex-direction: column;
   align-items: center;
 
-  & h2 {
+  & h1 {
     font-size: 80px;
     font-family: ${props => props.theme.fonts.baskerville};
     color: ${props => props.theme.colors.blue};
     margin: 12px;
+
+    @media (min-device-width : 320px) and (max-device-width : 667px) {
+      text-align: center;
+    }
   }
 
   & p {
     margin: 6px;
+  }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    width: 300px;
+    margin: 150px auto;
   }
 `
 
@@ -28,7 +37,7 @@ const MessageSent = () => {
 
   return (
     <StyledText>
-      <h2>{t.thankYou[currentLang]}</h2>
+      <h1>{t.thankYou[currentLang]}</h1>
       <p>{t.firstLine[currentLang]}</p>
       <p>{t.secondLine[currentLang]}</p>
     </StyledText>
