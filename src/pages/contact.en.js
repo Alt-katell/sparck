@@ -1,6 +1,8 @@
 import React, { useState }  from 'react';
 import styled from 'styled-components';
 
+import SEO from "../components/seo";
+
 import LetsTalk from '../components/LetsTalk';
 import ContactForm from '../components/ContactForm';
 import SocialIconsHorizontal from '../components/SocialIconsHorizontal';
@@ -33,16 +35,19 @@ const ContactPage = () => {
   };
 
   return (
-    <Container>
-      {contactFormHovered ? <StyledCurve src="/images/curve.png" position="right" /> : <Line position="left" />}
-      {contactFormHovered ? <StyledCurve src="/images/curve.png" position="left" /> : <Line position="right" />}
+    <>
+      <SEO title="Contact" />
+      <Container>
+        {contactFormHovered ? <StyledCurve src="/images/curve.png" position="right" /> : <Line position="left" />}
+        {contactFormHovered ? <StyledCurve src="/images/curve.png" position="left" /> : <Line position="right" />}
 
-      <LetsTalk out={contactFormHovered} />
+        <LetsTalk out={contactFormHovered} />
 
-      <ContactForm inside={hoveringHandler} outside={notHoveringHandler} />
+        <ContactForm inside={hoveringHandler} outside={notHoveringHandler} />
 
-      <SocialIconsHorizontal />
-    </Container>
+        <SocialIconsHorizontal />
+      </Container>
+    </>
   );
 }
 

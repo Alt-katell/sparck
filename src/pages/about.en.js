@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 
+import SEO from "../components/seo";
+
 import AgencyIntroCard from '../components/AgencyIntroCard';
 import QuoteCard from '../components/QuoteCard';
 import ContactForm from '../components/ContactForm';
@@ -23,12 +25,15 @@ const AboutPage = () => {
   };
 
   return (
-    <StyledAboutPage>
-      <AgencyIntroCard />
-      <QuoteCard />
-      <ContactForm about="true" inside={hoveringHandler} outside={notHoveringHandler} />
-      <LetsTalk out={contactFormHovered} about="true" />
-    </StyledAboutPage>
+    <>
+      <SEO title="About" />
+      <StyledAboutPage>
+        <AgencyIntroCard />
+        <QuoteCard />
+        <ContactForm about="true" inside={hoveringHandler} outside={notHoveringHandler} />
+        <LetsTalk out={contactFormHovered} about="true" />
+      </StyledAboutPage>
+    </>
   )
 }
 

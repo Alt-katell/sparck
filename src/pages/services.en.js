@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SEO from "../components/seo";
+
 import Container from '../components/UI/Container';
 import ServicesPhoto from '../components/ServicesPhoto';
 import ServicesText1 from '../components/ServicesText1';
@@ -13,13 +15,16 @@ const StyledServicePage = styled.div`
 
 const ServicePage = () => {
   return (
-    <Container>
-      <StyledServicePage>
-        <ServicesPhoto />
-        <ServicesText1 />
-        <ServicesText2 />
-      </StyledServicePage>
-    </Container>
+    <>
+      <SEO title="Services" />
+      <Container>
+        <StyledServicePage>
+          <ServicesPhoto />
+          <ServicesText1 />
+          <ServicesText2 />
+        </StyledServicePage>
+      </Container>
+    </>
   );
 }
 
