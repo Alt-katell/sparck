@@ -19,13 +19,29 @@ const StyledText = styled.p`
   font-weight: bold;
   font-size: 75px;
   transform: rotate(-90deg);
-  color: ${props => props.theme.colors.blue};
   margin: 0;
   white-space: nowrap;
   position: absolute;
   top: 195px;
   right: 233px;
   z-index: 1;
+  animation: animate 3s linear infinite;
+  overflow: hidden;
+  background: linear-gradient(90deg, ${props => props.theme.colors.blue}, ${props => props.theme.colors.blue}, ${props => props.theme.colors.blue});
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     right: 112px;
