@@ -52,7 +52,7 @@ const ServicesPhoto = () => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-     <StyledServicesPhoto>
+     <StyledServicesPhoto data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
        <StyledPhoto src="/images/sparck-clouds.jpg" alt="Clouds" />
        <StyledText>{t.weCode[currentLang]}</StyledText>
      </StyledServicesPhoto>

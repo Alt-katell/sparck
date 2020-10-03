@@ -36,19 +36,19 @@ const ServicesPhoto = () => {
 
   return (
     <StyledServicesText>
-      <StyledSection>
+      <StyledSection data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
         <StyledTitle>{t.weDream.title[currentLang]}</StyledTitle>
         <StyledParagraph>{t.weDream.contentFirst[currentLang]}</StyledParagraph>
         <StyledParagraph>{t.weDream.contentLast[currentLang]}</StyledParagraph>
       </StyledSection>
 
-      <StyledSection>
+      <StyledSection data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
         <StyledTitle>{t.weCode.title[currentLang]}</StyledTitle>
         <StyledParagraph>{t.weCode.contentFirst[currentLang]}</StyledParagraph>
         <StyledParagraph>{t.weCode.contentLast[currentLang]}</StyledParagraph>
       </StyledSection>
 
-      <StyledSection>
+      <StyledSection data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
         <StyledTitle>{t.weSparck.title[currentLang]}</StyledTitle>
         <StyledParagraph>{t.weSparck.contentFirst[currentLang]}</StyledParagraph>
         <StyledParagraph>{t.weSparck.contentLast[currentLang]}</StyledParagraph>

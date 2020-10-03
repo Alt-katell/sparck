@@ -65,7 +65,7 @@ const ServicesPhoto = () => {
 
   return (
     <StyledServicesText>
-      <StyledSection>
+      <StyledSection data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
         <StyledTitle>{t.webDevelopment.title[currentLang]}</StyledTitle>
         <StyledItems>
           <p>HTML</p>
@@ -97,7 +97,7 @@ const ServicesPhoto = () => {
         </StyledItems>
       </StyledSection>
 
-      <StyledSection>
+      <StyledSection data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
         <StyledTitle>{t.webDesign.title[currentLang]}</StyledTitle>
         <StyledItems>
           <p>UI</p>

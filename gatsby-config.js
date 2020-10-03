@@ -18,6 +18,7 @@ module.exports = {
         component: require.resolve(`./src/components/layout`),
       },
     },
+    `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -90,7 +90,7 @@ const AgencyIntroCard = () => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-    <StyledAgencyIntroCard>
+    <StyledAgencyIntroCard data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
       <StyledSlogan>
         {t.sloganFirst[currentLang]}<br />
         {t.sloganSecond[currentLang]}<br />
