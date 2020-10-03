@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { usePageContext } from '../context/pageContext';
-
 const StyledCard = styled.div`
   width: 720px;
   height: 450px;
@@ -27,9 +25,11 @@ const StyledPhoto = styled.img`
   border: 5px solid ${props => props.theme.colors.white};
   left: ${props => props.reverse ? "null" : "20px"};
   right: ${props => props.reverse ? "20px" : "null"};
+
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     width: 450px;
   }
+
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 280px;
   }
@@ -42,9 +42,17 @@ const StyledA = styled.a`
   font-weight: bold;
   color: ${props => props.theme.colors.blue};
   font-size: 28px;
+
   &:hover {
     color: ${props => props.theme.colors.black};
   }
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+    right: ${props => props.reverse ? "null" : "40px"};
+    left: ${props => props.reverse ? "40px" : "null"};
+    bottom: 35px;
+  }
+
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     right: ${props => props.reverse ? "null" : "20px"};
     left: ${props => props.reverse ? "20px" : "null"};
@@ -54,9 +62,8 @@ const StyledA = styled.a`
 `
 
 const PortfolioCard = ({reverse, photo, link, websiteName}) => {
-  const {langKey: currentLang} = usePageContext();
-
   let clientLink;
+
   if (link === "") {
     clientLink = <StyledA href={""} reverse={reverse}>Coming soon</StyledA>;
   } else {
@@ -66,7 +73,7 @@ const PortfolioCard = ({reverse, photo, link, websiteName}) => {
         reverse={reverse}
         target="_blank"
         rel="noopener noreferrer">
-        {t.visit[currentLang]} {websiteName}
+        {websiteName}
       </StyledA>
     );
   }
@@ -80,10 +87,3 @@ const PortfolioCard = ({reverse, photo, link, websiteName}) => {
 }
 
 export default PortfolioCard;
-
-const t = {
-  visit: {
-    en: "Visit",
-    fr: "Visiter"
-  },
-}
