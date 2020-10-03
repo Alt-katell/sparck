@@ -66,7 +66,6 @@ const StyledPhoto = styled.img`
 
 const StyledText = styled.p`
   width: 340px;
-  text-align: justify;
   position: absolute;
   font-size: 20px;
   left: 285px;

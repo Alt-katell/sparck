@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link as GatsbyLink } from 'gatsby';
 import { AnchorLink as GatsbyAnchorLink } from 'gatsby-plugin-anchor-links';
 
 import { usePageContext } from '../context/pageContext';

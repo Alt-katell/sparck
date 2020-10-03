@@ -23,19 +23,19 @@ const WorkPage = () => {
             reverse={false}
             photo="/images/sparck-ctstudio.jpg"
             link="https://ctstudio.ca/"
-            websiteName="ct.studio" />
+            websiteName="ct.studio.ca" />
 
           <PortfolioCard
             reverse={true}
             photo={rubstixGif}
             link=""
-            websiteName="Rubstix" />
+            websiteName="coming soon" />
 
           <PortfolioCard
             reverse={false}
             photo="/images/sparck-newcomerwork.jpg"
             link="https://newcomerwerk.herokuapp.com/"
-            websiteName="NewComer Work" />
+            websiteName="newcomerwork.com" />
         </StyledWorkPage>
       </Container>
     </>
