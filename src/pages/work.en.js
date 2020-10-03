@@ -19,27 +19,21 @@ const WorkPage = () => {
         <StyledWorkPage>
           <PortfolioCard
             reverse={false}
-            photo="/images/client-website-1.png"
-            link="www.google.com"
-            websiteName="First Client" />
+            photo="/images/sparck-ctstudio.jpg"
+            link="https://ctstudio.ca/"
+            websiteName="ct.studio" />
 
           <PortfolioCard
             reverse={true}
-            photo="/images/client-website-2.png"
-            link="www.google.com"
-            websiteName="Second Client" />
+            photo="/images/sparck-rubstix.gif"
+            link=""
+            websiteName="Rubstix" />
 
           <PortfolioCard
             reverse={false}
-            photo="/images/client-website-1.png"
-            link="www.google.com"
-            websiteName="Third Client" />
-
-          <PortfolioCard
-            reverse={true}
-            photo="/images/client-website-2.png"
-            link="www.google.com"
-            websiteName="Fourth Client" />
+            photo="/images/sparck-newcomerwork.jpg"
+            link="https://newcomerwerk.herokuapp.com/"
+            websiteName="NewComer Work" />
         </StyledWorkPage>
       </Container>
     </>

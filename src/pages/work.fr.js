@@ -14,32 +14,26 @@ const StyledWorkPage = styled.div`
 const WorkPage = () => {
   return (
     <>
-      <SEO title="Portfolio" />
+      <SEO title="Work" />
       <Container>
         <StyledWorkPage>
           <PortfolioCard
             reverse={false}
-            photo="/images/client-website-1.png"
-            link="www.google.com"
-            websiteName="Premier Client" />
+            photo="/images/sparck-ctstudio.jpg"
+            link="https://ctstudio.ca/"
+            websiteName="ct.studio" />
 
           <PortfolioCard
             reverse={true}
-            photo="/images/client-website-2.png"
-            link="www.google.com"
-            websiteName="Deuxième Client" />
+            photo="/images/sparck-rubstix.gif"
+            link=""
+            websiteName="Rubstix" />
 
           <PortfolioCard
             reverse={false}
-            photo="/images/client-website-1.png"
-            link="www.google.com"
-            websiteName="Troisième Client" />
-
-          <PortfolioCard
-            reverse={true}
-            photo="/images/client-website-2.png"
-            link="www.google.com"
-            websiteName="Quatrième Client" />
+            photo="/images/sparck-newcomerwork.jpg"
+            link="https://newcomerwerk.herokuapp.com/"
+            websiteName="NewComer Work" />
         </StyledWorkPage>
       </Container>
     </>
