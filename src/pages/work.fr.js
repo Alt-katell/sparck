@@ -6,6 +6,8 @@ import SEO from "../components/seo";
 import Container from '../components/UI/Container';
 import PortfolioCard from '../components/PortfolioCard';
 
+import rubstixGif from '../../static/images/sparck-rubstix.gif';
+
 const StyledWorkPage = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,7 +27,7 @@ const WorkPage = () => {
 
           <PortfolioCard
             reverse={true}
-            photo="/images/sparck-rubstix.gif"
+            photo={rubstixGif}
             link=""
             websiteName="Rubstix" />
 
