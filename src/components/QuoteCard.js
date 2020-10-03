@@ -19,7 +19,7 @@ const StyledBackground = styled.div`
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     height: 400px;
     padding: 50px 0;
-    margin: 100px 0 0 0;
+    margin: 200px 0 0 0;
   }
 `
 
