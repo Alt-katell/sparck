@@ -17,20 +17,7 @@ const StyledCard = styled.div`
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 320px;
     margin: 20px auto 50px auto;
-  }
-`
-
-const StyledWhiteBackground = styled.div`
-  display: none;
-
-  @media (min-device-width : 320px) and (max-device-width : 667px) {
-    display: ${props => props.reverse ? "none" : "block"};
-    background: ${props => props.theme.colors.white};
-    width: 100vw;
-    height: 480px;
-    position: absolute;
-    top: -20px;
-    left: -25vw;
+    background: ${props => props.reverse ? "null" : props => props.theme.colors.white}};
   }
 `
 
@@ -161,7 +148,6 @@ const PortfolioCard = ({reverse, photo, link, websiteName, description}) => {
 
   return (
     <StyledCard reverse={reverse} data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
-      <StyledWhiteBackground reverse={reverse} />
       <StyledPhoto src={photo} alt={websiteName} reverse={reverse} />
       <StyledDescription reverse={reverse}>
         {projectDescription}
