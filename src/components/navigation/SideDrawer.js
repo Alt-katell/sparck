@@ -40,7 +40,8 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   margin: 30px 10px 0 10px;
-  align-items: center;
+  align-content: center;
+  height: 80px;
 
   @media (min-width: 668px) {
     display: none;
