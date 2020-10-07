@@ -39,9 +39,12 @@ const StyledSideDrawer = styled.div`
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
-  margin: 30px 10px 0 10px;
   align-content: center;
   height: 80px;
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
 
   @media (min-width: 668px) {
     display: none;
@@ -51,9 +54,15 @@ const StyledHeader = styled.header`
 const StyledBurgerIcon = styled(FontAwesomeIcon)`
   color: ${props => props.theme.colors.green};
   font-size: 32px;
-  position: fixed;
-  top: 30px;
-  right: 10px;
+  padding-right: 20px;
+  z-index: 5;
+`
+
+const StyledLogo = styled.img`
+  width: 128px;
+  height: auto;
+  padding-left: 20px;
+
   z-index: 5;
 `
 
@@ -70,13 +79,6 @@ const StyledNavigationGroup = styled.div`
     margin-top: 40px;
     margin-bottom: 40px;
   }
-`
-
-const StyledLogo = styled.img`
-  width: 128px;
-  height: auto;
-  position: fixed;
-  z-index: 5;
 `
 
 const SideDrawer = (props) => {
