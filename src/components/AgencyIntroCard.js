@@ -107,7 +107,7 @@ const AgencyIntroCard = () => {
 
   return (
     <>
-      <StyledAgencyIntroCardBig >
+      <StyledAgencyIntroCardBig data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
         <StyledText>
           <h1>
             {t.sloganFirst[currentLang]}<br />
@@ -121,7 +121,7 @@ const AgencyIntroCard = () => {
         </StyledPhotoContainer>
       </StyledAgencyIntroCardBig>
 
-      <StyledAgencyIntroCardSmall >
+      <StyledAgencyIntroCardSmall data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
         <StyledText>
           <h1>
             {t.sloganFirst[currentLang]}<br />
