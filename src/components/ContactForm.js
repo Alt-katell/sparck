@@ -43,7 +43,7 @@ const StyledEmailText = styled.p`
 `
 
 const StyledForm = styled.form`
-  width: 350px;
+  max-width: 550px;
   margin: 0 auto 100px auto;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
