@@ -1,9 +1,8 @@
-import React, { useState }  from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 
 import SEO from "../components/seo";
 
-import LetsTalk from '../components/LetsTalk';
 import ContactForm from '../components/ContactForm';
 import SocialIconsHorizontal from '../components/SocialIconsHorizontal';
 import Line from '../components/UI/Line';
@@ -37,16 +36,12 @@ const ContactPage = () => {
   return (
     <>
       <SEO title="Contact" />
-      <Container>
-        {contactFormHovered ? <StyledCurve src="/images/sparck-curved-line.png" position="right" /> : <Line position="left" />}
-        {contactFormHovered ? <StyledCurve src="/images/sparck-curved-line.png" position="left" /> : <Line position="right" />}
+      {contactFormHovered ? <StyledCurve src="/images/sparck-curved-line.png" position="right" /> : <Line position="left" />}
+      {contactFormHovered ? <StyledCurve src="/images/sparck-curved-line.png" position="left" /> : <Line position="right" />}
 
-        <LetsTalk out={contactFormHovered} />
+      <ContactForm />
 
-        <ContactForm inside={hoveringHandler} outside={notHoveringHandler} />
-
-        <SocialIconsHorizontal />
-      </Container>
+      <SocialIconsHorizontal />
     </>
   );
 }

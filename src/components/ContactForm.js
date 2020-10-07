@@ -1,7 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 
 import { usePageContext } from '../context/pageContext';
+
+import LetsTalk from './LetsTalk';
+
+const StyledContactForm = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+`
+
+const StyledEmpty = styled.div`
+  width: 10%;
+`
+
+const StyledText = styled.div`
+  margin-right: ${props => props.out ? "-6%" : "null"};
+  margin-left: -6%;
+
+  @media (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  }
+`
 
 const StyledLetsTalk = styled.p`
   display: none;
@@ -45,10 +66,6 @@ const StyledEmailText = styled.p`
 const StyledForm = styled.form`
   max-width: 550px;
   margin: 0 auto 100px auto;
-
-  @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    margin: 100px auto 30px auto;
-  }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 320px;
@@ -116,59 +133,76 @@ const StyledSendButton = styled.button`
   }
 `
 
-const ContactForm = ({inside, outside, about}) => {
+const ContactForm = ({about}) => {
   const {langKey: currentLang} = usePageContext();
 
+  const [contactFormHovered, setContactFormHovered] = useState(false);
+
+  const hoveringHandler = () => {
+    setContactFormHovered(true)
+  };
+
+  const notHoveringHandler = () => {
+    setContactFormHovered(false)
+  };
+
   return (
-    <div>
-      <StyledLetsTalk about={about}>Let's Talk</StyledLetsTalk>
-      <StyledEmailText>
-        {t.tellUs[currentLang]}<br/>
-        <a href="mailto:hello@sparck.ca" target="_blank" rel="noopener noreferrer">hello@sparck.ca</a><br/>
-        {t.orUseForm[currentLang]}
-      </StyledEmailText>
-      <StyledForm
-        autoComplete="off"
-        onMouseEnter={inside}
-        onMouseLeave={outside}
-        about={about}
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        action="/thank-you" >
-        <input type="hidden" name="form-name" value="contact" />
+    <StyledContactForm>
+      <StyledEmpty></StyledEmpty>
+      <StyledText out={contactFormHovered}>
+        <StyledLetsTalk>Let's Talk</StyledLetsTalk>
+        <StyledEmailText>
+          {t.tellUs[currentLang]}<br/>
+          <a href="mailto:hello@sparck.ca" target="_blank" rel="noopener noreferrer">hello@sparck.ca</a><br/>
+          {t.orUseForm[currentLang]}
+        </StyledEmailText>
+        <StyledForm
+          autoComplete="off"
+          onMouseEnter={hoveringHandler}
+          onMouseLeave={notHoveringHandler}
+          inside={hoveringHandler}
+          outside={notHoveringHandler}
+          about={about}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          action="/thank-you" >
+          <input type="hidden" name="form-name" value="contact" />
 
-        <StyledNameGroup>
+          <StyledNameGroup>
+            <StyledItem>
+              <StyledLabel>{t.firstName[currentLang]}</StyledLabel>
+              <StyledInput type="text" name="firstName" />
+              <StyledUnderline />
+            </StyledItem>
+
+            <StyledItem>
+              <StyledLabel>{t.lastName[currentLang]}</StyledLabel>
+              <StyledInput type="text" name="lastName" />
+              <StyledUnderline />
+            </StyledItem>
+          </StyledNameGroup>
+
+
           <StyledItem>
-            <StyledLabel>{t.firstName[currentLang]}</StyledLabel>
-            <StyledInput type="text" name="firstName" />
+            <StyledLabel>{t.email[currentLang]}</StyledLabel>
+            <StyledInput type="email" name="email" />
             <StyledUnderline />
           </StyledItem>
 
           <StyledItem>
-            <StyledLabel>{t.lastName[currentLang]}</StyledLabel>
-            <StyledInput type="text" name="lastName" />
+            <StyledLabel>{t.message[currentLang]}</StyledLabel>
+            <StyledTextarea name="message" rows="7"/>
             <StyledUnderline />
           </StyledItem>
-        </StyledNameGroup>
 
+          <StyledSendButton type="submit">{t.send[currentLang]}</StyledSendButton>
 
-        <StyledItem>
-          <StyledLabel>{t.email[currentLang]}</StyledLabel>
-          <StyledInput type="email" name="email" />
-          <StyledUnderline />
-        </StyledItem>
+        </StyledForm>
+      </StyledText>
 
-        <StyledItem>
-          <StyledLabel>{t.message[currentLang]}</StyledLabel>
-          <StyledTextarea name="message" rows="7"/>
-          <StyledUnderline />
-        </StyledItem>
-
-        <StyledSendButton type="submit">{t.send[currentLang]}</StyledSendButton>
-
-      </StyledForm>
-    </div>
+      <LetsTalk out={contactFormHovered} />
+    </StyledContactForm>
   );
 }
 
