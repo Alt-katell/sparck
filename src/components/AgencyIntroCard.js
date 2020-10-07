@@ -3,86 +3,102 @@ import styled from 'styled-components';
 
 import { usePageContext } from '../context/pageContext';
 
-// 215px = height of navbar + margin top of container
+const StyledAgencyIntroCardBig = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  height: calc(100vh - 150px);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding-top: 150px;
 
-const StyledAgencyIntroCard = styled.div`
-  margin: 150px 0 150px 200px;
-  width: 730px;
-  height: 500px;
-  position: relative;
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
+`
+
+const StyledAgencyIntroCardSmall = styled.div`
+  display: none;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 80px;
+  }
+`
+
+const StyledPhotoContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  height: 100%;
+
+
+  & img {
+    max-width: 800px;
+    max-height: 90%;
+    margin-left: -85%;
+
+    @media (min-device-width : 768px) and (max-device-width : 1024px) {
+      max-height: 70%;
+      margin-left: -35%;
+      align-self: center;
+    }
+
+    @media (min-device-width : 320px) and (max-device-width : 667px) {
+      margin: -18% auto -10% auto;
+      max-width: 80%;
+    }
+  }
+`
+
+const StyledText = styled.div`
+  flex-basis: 50%;
+  z-index: 2;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    width: 570px;
-    margin: 120px auto;
+    align-self: center;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 270px;
-    margin: 50px auto;
+    align-content: space-between;
   }
-`
 
-const StyledSlogan = styled.h1`
+  & h1 {
   font-family: ${props => props.theme.fonts.baskerville};
   font-size: 80px;
   color: ${props => props.theme.colors.blue};
   font-weight: normal;
-  position: absolute;
-  top: 20px;
-  left: 70px;
-  z-index: 2;
+  margin-left: 12%;
+  margin-bottom: 0;
 
-  @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    font-size: 52px;
+    @media (min-device-width : 768px) and (max-device-width : 1024px) {
+      font-size: 52px;
+      margin-left: 15%;
+    }
+
+    @media (min-device-width : 320px) and (max-device-width : 667px) {
+      font-size: 38px;
+      text-align: center;
+      margin: 0;
+    }
   }
 
-  @media (min-device-width : 320px) and (max-device-width : 667px) {
-    position: static;
-    font-size: 38px;
-    text-align: center;
-    margin: 0 auto -65px auto;
-  }
-`
-
-const StyledPhoto = styled.img`
-  width: 340px;
-  height: auto;
-  position: absolute;
-  right: 0;
-
-  @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    width: 320px;
-    right: 60px;
-  }
-
-  @media (min-device-width : 320px) and (max-device-width : 667px) {
-    position: static;
-    width: 270px;
-  }
-`
-
-const StyledText = styled.p`
-  width: 340px;
-  position: absolute;
+  & p {
   font-size: 20px;
-  left: 285px;
-  bottom: -25px;
-  z-index: 2;
+  margin: 10px 15% 0 40%;
 
-  @media (min-device-width : 768px) and (max-device-width : 1024px) {
-    width: 250px;
-    bottom: 10px;
-    left: 130px;
-  }
+    @media (min-device-width : 768px) and (max-device-width : 1024px) {
+      margin: 10px 15% 0 30%;
+    }
 
-  @media (min-device-width : 320px) and (max-device-width : 667px) {
-    position: static;
-    text-align: center;
-    width: 270px;
-    margin-top: -30px;
+    @media (min-device-width : 320px) and (max-device-width : 667px) {
+      text-align: center;
+      margin: 0;
+      padding: 0 10%;
+    }
   }
 `
 
@@ -90,15 +106,37 @@ const AgencyIntroCard = () => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-    <StyledAgencyIntroCard data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
-      <StyledSlogan>
-        {t.sloganFirst[currentLang]}<br />
-        {t.sloganSecond[currentLang]}<br />
-        {t.sloganThird[currentLang]}.
-      </StyledSlogan>
-      <StyledPhoto src="/images/sparck-pink-balloun.jpg" alt="Picture by Florian Klauer" />
-      <StyledText>{t.text[currentLang]}</StyledText>
-    </StyledAgencyIntroCard>
+    <>
+      <StyledAgencyIntroCardBig >
+        <StyledText>
+          <h1>
+            {t.sloganFirst[currentLang]}<br />
+            {t.sloganSecond[currentLang]}<br />
+            {t.sloganThird[currentLang]}.
+          </h1>
+          <p>{t.text[currentLang]}</p>
+        </StyledText>
+        <StyledPhotoContainer>
+          <img src="/images/sparck-pink-balloun.jpg" alt="Picture by Florian Klauer" />
+        </StyledPhotoContainer>
+      </StyledAgencyIntroCardBig>
+
+      <StyledAgencyIntroCardSmall >
+        <StyledText>
+          <h1>
+            {t.sloganFirst[currentLang]}<br />
+            {t.sloganSecond[currentLang]}<br />
+            {t.sloganThird[currentLang]}.
+          </h1>
+        </StyledText>
+        <StyledPhotoContainer>
+          <img src="/images/sparck-pink-balloun.jpg" alt="Picture by Florian Klauer" />
+        </StyledPhotoContainer>
+        <StyledText>
+          <p>{t.text[currentLang]}</p>
+        </StyledText>
+      </StyledAgencyIntroCardSmall>
+    </>
   )
 }
 
