@@ -38,7 +38,7 @@ const TeamPage = () => {
           role2="Web Designer"
           description1="Vicky is a passionate multidisciplinary designer. "
           description2="From Textile Design to Web Design, she strongly believes that every thing must have a purpose. She imagines websites to create unique experiences and make every product stand out, with a minimalistic and modern approach."
-          description3="A teacher and a business owner, Vicky is detail-oriented and avid of new and creative challenges."
+          description3="A teacher and an entrepreneur, Vicky is detail-oriented and avid of new and creative challenges."
           portfolio="http://noir-de-mars.com/" />
 
           <TeamMemberCard

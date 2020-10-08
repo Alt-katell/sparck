@@ -38,7 +38,7 @@ const TeamPage = () => {
           role2="Designer Web"
           description1="Vicky est une designer multidisciplinaire passionnée."
           description2="Du Design Textile à la conception Web, elle croit que chaque élément graphique se doit d’être utile et réfléchi. Elle imagine des sites Web pour créer des univers uniques et mettre en valeur chaque produit, avec une approche minimaliste et moderne."
-          description3="Enseignante et chef d'entreprise, Vicky a le sens du détail et est avide de défis créatifs et mémorables."
+          description3="Enseignante et entrepreneure, Vicky a le sens du détail et est avide de défis créatifs et mémorables."
           portfolio="http://noir-de-mars.com/" />
 
         <TeamMemberCard
