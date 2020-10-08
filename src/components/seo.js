@@ -41,7 +41,7 @@ function SEO({ description, lang, meta, title, siteUrl }) {
           content: metaDescription,
         },
         {
-          property: `og:image`,
+          property: `image`,
           content: socialImage,
         },
         {
