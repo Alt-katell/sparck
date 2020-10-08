@@ -9,7 +9,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title, image: metaImage }) {
+function SEO({ description, lang, meta, title, siteUrl }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,17 +18,15 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
             title
             description
             siteUrl
+            image
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const image =
-      metaImage && metaImage.src
-        ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-        : null
+  const metaDescription = description || site.siteMetadata.description;
+  const socialImage = site.siteMetadata.image;
 
   return (
     <Helmet
@@ -44,7 +42,7 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: socialImage,
         },
         {
           property: `og:title`,
@@ -75,33 +73,6 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
           content: metaDescription,
         },
       ]
-      .concat(
-          metaImage
-            ? [
-                {
-                  property: "og:image",
-                  content: image,
-                },
-                {
-                  property: "og:image:width",
-                  content: metaImage.width,
-                },
-                {
-                  property: "og:image:height",
-                  content: metaImage.height,
-                },
-                {
-                  name: "twitter:card",
-                  content: "summary_large_image",
-                },
-              ]
-            : [
-                {
-                  name: "twitter:card",
-                  content: "summary",
-                },
-              ]
-        )
       .concat(meta)}
     />
   )
