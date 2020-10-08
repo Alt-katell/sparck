@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
-  width: 720px;
+  max-width: 720px;
   height: 450px;
   margin: 20px 40px 250px 40px;
   position: relative;
@@ -15,8 +15,11 @@ const StyledCard = styled.div`
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
-    width: 320px;
-    margin: 20px auto 50px auto;
+    position: static;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 0 100px 0;
+    padding: 5%;
     background: ${props => props.reverse ? "null" : props => props.theme.colors.white}};
   }
 `
@@ -25,7 +28,7 @@ const StyledPhoto = styled.img`
   width: 720px;
   height: auto;
   position: absolute;
-  border: 5px solid ${props => props.theme.colors.white};
+  border: 5px solid white;
   left: ${props => props.reverse ? "null" : "20px"};
   right: ${props => props.reverse ? "20px" : "null"};
 
@@ -34,7 +37,9 @@ const StyledPhoto = styled.img`
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
-    width: 280px;
+    position: static;
+    max-width: ${props => props.reverse ? "97%" : "100%"};
+    border: ${props => props.reverse ? "5px solid white" : "none"};
   }
 `
 
@@ -51,9 +56,9 @@ const StyledDescription = styled.div`
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
+    position: static;
+    width: 100%;
     flex-direction: column;
-    left: 15px;
-    top: 215px;
   }
 `
 
@@ -122,9 +127,11 @@ const StyledA = styled.a`
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
-    right: ${props => props.reverse ? "null" : "20px"};
-    left: ${props => props.reverse ? "20px" : "null"};
-    top: 180px;
+    position: relative;
+    float: ${props => props.reverse ? "right" : "left"};
+    left: 0;
+    margin: 0 20px;
+    top: -20px;
     font-size: 24px;
     writing-mode: horizontal-tb;
   }
@@ -147,11 +154,8 @@ const PortfolioCard = ({reverse, photo, link, websiteName, description}) => {
   })
 
   return (
-    <StyledCard reverse={reverse} data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000">
+    <StyledCard reverse={reverse} >
       <StyledPhoto src={photo} alt={websiteName} reverse={reverse} />
-      <StyledDescription reverse={reverse}>
-        {projectDescription}
-      </StyledDescription>
       <StyledA
         href={link}
         reverse={reverse}
@@ -159,6 +163,9 @@ const PortfolioCard = ({reverse, photo, link, websiteName, description}) => {
         rel="noopener noreferrer">
         {websiteName}
       </StyledA>
+      <StyledDescription reverse={reverse}>
+        {projectDescription}
+      </StyledDescription>
     </StyledCard>
   )
 }

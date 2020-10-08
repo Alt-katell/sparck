@@ -9,6 +9,11 @@ import PortfolioCard from '../components/PortfolioCard';
 const StyledWorkPage = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 100px;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: block;
+  }
 `
 
 const WorkPage = () => {
@@ -60,30 +65,28 @@ const WorkPage = () => {
   return (
     <>
       <SEO title="Work" />
-      <Container>
-        <StyledWorkPage>
-          <PortfolioCard
-            reverse={false}
-            photo="/images/sparck-ctstudio.jpg"
-            link="https://ctstudio.ca/"
-            websiteName="ct.studio.ca"
-            description={ctstudioDescription} />
+      <StyledWorkPage>
+        <PortfolioCard
+          reverse={false}
+          photo="/images/sparck-ctstudio.jpg"
+          link="https://ctstudio.ca/"
+          websiteName="ct.studio.ca"
+          description={ctstudioDescription} />
 
-          <PortfolioCard
-            reverse={true}
-            photo="/images/sparck-rubstix.gif"
-            link=""
-            websiteName="comming soon"
-            description={rubstixDescription} />
+        <PortfolioCard
+          reverse={true}
+          photo="/images/sparck-rubstix.gif"
+          link=""
+          websiteName="coming soon"
+          description={rubstixDescription} />
 
-          <PortfolioCard
-            reverse={false}
-            photo="/images/sparck-newcomerwork.jpg"
-            link="https://newcomerwerk.herokuapp.com/"
-            websiteName="newcomerwork.com"
-            description={newcomerworkDescription} />
-        </StyledWorkPage>
-      </Container>
+        <PortfolioCard
+          reverse={false}
+          photo="/images/sparck-newcomerwork.jpg"
+          link="https://newcomerwerk.herokuapp.com/"
+          websiteName="newcomerwork.com"
+          description={newcomerworkDescription} />
+      </StyledWorkPage>
     </>
   );
 }
