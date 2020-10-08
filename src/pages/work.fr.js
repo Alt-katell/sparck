@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import SEO from "../components/seo";
 
-import Container from '../components/UI/Container';
 import PortfolioCard from '../components/PortfolioCard';
 
 import rubstixGif from '../../static/images/sparck-rubstix.gif';

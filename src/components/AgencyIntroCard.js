@@ -117,7 +117,7 @@ const AgencyIntroCard = () => {
           <p>{t.text[currentLang]}</p>
         </StyledText>
         <StyledPhotoContainer>
-          <img src="/images/sparck-pink-balloun.jpg" alt="Picture by Florian Klauer" />
+          <img src="/images/sparck-pink-balloun.jpg" alt="By Florian Klauer" />
         </StyledPhotoContainer>
       </StyledAgencyIntroCardBig>
 
@@ -130,7 +130,7 @@ const AgencyIntroCard = () => {
           </h1>
         </StyledText>
         <StyledPhotoContainer>
-          <img src="/images/sparck-pink-balloun.jpg" alt="Picture by Florian Klauer" />
+          <img src="/images/sparck-pink-balloun.jpg" alt="By Florian Klauer" />
         </StyledPhotoContainer>
         <StyledText>
           <p>{t.text[currentLang]}</p>
