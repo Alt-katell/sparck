@@ -8,9 +8,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import image from "../../static/images/sparck-screenshot.jpg";
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {

@@ -62,7 +62,7 @@ const HomePage = () => {
 
   return (
     <>
-      <SEO title="Welcome" />
+      <SEO title="Welcome" image="/images/sparck-screenshot.jpg" />
       <StyledBackground>
         <StyledText>
           <Typing speed={90}>
