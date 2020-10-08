@@ -15,7 +15,7 @@ const StyledNav = styled.nav`
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 6;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: none;

@@ -45,6 +45,7 @@ const StyledHeader = styled.header`
   top: 30px;
   left: 0;
   width: 100%;
+  z-index: 5;
 
   @media (min-width: 668px) {
     display: none;
@@ -55,15 +56,12 @@ const StyledBurgerIcon = styled(FontAwesomeIcon)`
   color: ${props => props.theme.colors.green};
   font-size: 32px;
   padding-right: 20px;
-  z-index: 5;
 `
 
 const StyledLogo = styled.img`
   width: 128px;
   height: auto;
   padding-left: 20px;
-
-  z-index: 5;
 `
 
 const StyledNavigationGroup = styled.div`
