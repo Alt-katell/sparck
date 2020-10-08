@@ -9,7 +9,7 @@ import PortfolioCard from '../components/PortfolioCard';
 const StyledWorkPage = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
+  margin: 150px 100px 0 100px;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: block;

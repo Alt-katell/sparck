@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
-  max-width: 720px;
+  width: 720px;
   height: 450px;
   margin: 20px 40px 250px 40px;
   position: relative;
