@@ -13,6 +13,10 @@ const StyledContactForm = styled.div`
 
 const StyledEmpty = styled.div`
   width: 10%;
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    display: none;
+  }
 `
 
 const StyledText = styled.div`
@@ -22,6 +26,10 @@ const StyledText = styled.div`
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     margin-left: 2%;
   }
+
+  @media (min-device-width : 320px) and (max-device-width : 667px) {
+    margin: 0 auto;
+  }
 `
 
 const StyledLetsTalk = styled.p`
@@ -30,7 +38,7 @@ const StyledLetsTalk = styled.p`
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: block;
     text-align: center;
-    margin-top: ${props => props.about ? "100px" : "0"};
+    margin-top: 100px;
     font-family: ${props => props.theme.fonts.baskerville};
     font-weight: bold;
     font-size: 50px;
