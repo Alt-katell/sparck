@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `spärck`,
     description: `spärck is a collaborative web agency. We connect talents to make the world wide web a better and more beautiful place.`,
-    image: `static/images/sparck-screenshot.jpg`,
+    image: `https://sparck.ca/images/sparck-screenshot.jpg`,
     siteUrl: `https://www.sparck.ca`,
   },
   plugins: [
