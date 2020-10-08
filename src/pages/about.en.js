@@ -15,7 +15,7 @@ const StyledAboutPage = styled.div`
 const AboutPage = () => {
   return (
     <>
-      <SEO title="About" image="/images/sparck-screenshot.jpg" />
+      <SEO title="About" />
       <StyledAboutPage>
         <AgencyIntroCard />
         <QuoteCard />
