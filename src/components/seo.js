@@ -8,6 +8,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import socialImage from "../images/sparck-screenshot.jpg";
 
 function SEO({ description, lang, meta, title, siteUrl }) {
   const { site } = useStaticQuery(
@@ -18,7 +19,6 @@ function SEO({ description, lang, meta, title, siteUrl }) {
             title
             description
             siteUrl
-            image
           }
         }
       }
@@ -42,11 +42,11 @@ function SEO({ description, lang, meta, title, siteUrl }) {
         },
         {
           name: `image`,
-          content: socialImage,
+          content: `${site.siteMetadata.siteUrl}${socialImage}`,
         },
         {
           property: `og:image`,
-          content: socialImage,
+          content: `${site.siteMetadata.siteUrl}${socialImage}`,
         },
         {
           property: `og:title`,
