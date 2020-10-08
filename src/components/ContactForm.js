@@ -20,7 +20,7 @@ const StyledText = styled.div`
   margin-left: -6%;
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
-
+    margin-left: 2%;
   }
 `
 
