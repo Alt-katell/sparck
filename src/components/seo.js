@@ -9,7 +9,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title, image }) {
+function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -17,7 +17,6 @@ function SEO({ description, lang, meta, title, image }) {
           siteMetadata {
             title
             description
-            image
           }
         }
       }
@@ -40,7 +39,7 @@ function SEO({ description, lang, meta, title, image }) {
         },
         {
           property: `image`,
-          content: image,
+          content: `images/sparck-screenshot.jpg`,
         },
         {
           property: `og:title`,
