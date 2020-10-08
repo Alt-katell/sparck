@@ -8,9 +8,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
-import socialImage from "../images/sparck-screenshot.jpg";
+import sparckScreenshot from "../images/sparck-screenshot.jpg";
 
-function SEO({ description, lang, meta, title, siteUrl }) {
+function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -18,7 +18,7 @@ function SEO({ description, lang, meta, title, siteUrl }) {
           siteMetadata {
             title
             description
-            siteUrl
+            url
           }
         }
       }
@@ -26,7 +26,6 @@ function SEO({ description, lang, meta, title, siteUrl }) {
   )
 
   const metaDescription = description || site.siteMetadata.description;
-  const socialImage = site.siteMetadata.image;
 
   return (
     <Helmet
@@ -41,12 +40,8 @@ function SEO({ description, lang, meta, title, siteUrl }) {
           content: metaDescription,
         },
         {
-          name: `image`,
-          content: `${site.siteMetadata.siteUrl}${socialImage}`,
-        },
-        {
           property: `og:image`,
-          content: `${site.siteMetadata.siteUrl}${socialImage}`,
+          content: `${site.siteMetadata.url}${sparckScreenshot}`,
         },
         {
           property: `og:title`,
