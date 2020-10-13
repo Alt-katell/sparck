@@ -24,7 +24,7 @@ const StyledAgencyIntroCardSmall = styled.div`
     display: flex;
     flex-direction: column;
     align-content: center;
-    padding-top: 80px;
+    padding-top: 150px;
   }
 `
 

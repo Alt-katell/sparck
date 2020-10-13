@@ -154,7 +154,7 @@ const PortfolioCard = ({reverse, photo, link, websiteName, description}) => {
   })
 
   return (
-    <StyledCard reverse={reverse}  >
+    <StyledCard reverse={reverse} data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000" >
       <StyledPhoto src={photo} alt={websiteName} reverse={reverse} />
       <StyledA
         href={link}

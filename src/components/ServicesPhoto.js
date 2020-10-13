@@ -11,6 +11,7 @@ const StyledServicesPhoto = styled.div`
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     width: 250px;
+    margin-top: 90px;
   }
 `
 
@@ -29,8 +30,7 @@ const StyledText = styled.p`
   overflow: hidden;
   background: linear-gradient(90deg, ${props => props.theme.colors.blue}, ${props => props.theme.colors.blue}, ${props => props.theme.colors.blue});
   background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 3s linear infinite;
+  background-size: 81%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(255, 255, 255, 0);
 
