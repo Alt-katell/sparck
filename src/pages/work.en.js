@@ -12,6 +12,7 @@ const StyledWorkPage = styled.div`
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: block;
+    margin: 150px 0 100px 0;
   }
 `
 

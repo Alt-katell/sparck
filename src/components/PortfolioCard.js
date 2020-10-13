@@ -20,7 +20,7 @@ const StyledCard = styled.div`
     height: 100%;
     margin: 0 0 100px 0;
     padding: 5%;
-    background: ${props => props.reverse ? "null" : props => props.theme.colors.white}};
+    background: ${props => props.reverse ? "null" : props => props.theme.colors.white};
   }
 `
 

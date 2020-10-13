@@ -10,10 +10,11 @@ import rubstixGif from '../../static/images/sparck-rubstix.gif';
 const StyledWorkPage = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 150px 100px 0 100px;
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     display: block;
-    margin-top: 100px;
+    margin: 150px 0 100px 0;
   }
 `
 
