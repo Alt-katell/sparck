@@ -79,7 +79,7 @@ const WorkPage = () => {
           reverse={true}
           photo={rubstixGif}
           link=""
-          websiteName="coming soon"
+          websiteName="à venir"
           description={rubstixDescription} />
 
         <PortfolioCard

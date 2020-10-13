@@ -16,7 +16,7 @@ const StyledCard = styled.div`
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
     position: static;
-    width: 100vw;
+    width: 90%;
     height: 100%;
     margin: 0 0 100px 0;
     padding: 5%;
