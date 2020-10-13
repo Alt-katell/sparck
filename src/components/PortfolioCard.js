@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCard = styled.div`
-  width: 720px;
+  max-width: 720px;
   height: 450px;
   margin: 20px 40px 250px 40px;
   position: relative;
@@ -154,7 +154,7 @@ const PortfolioCard = ({reverse, photo, link, websiteName, description}) => {
   })
 
   return (
-    <StyledCard reverse={reverse} data-sal="slide-up" data-sal-delay="100" data-sal-easing="ease" data-sal-duration="1000" >
+    <StyledCard reverse={reverse}  >
       <StyledPhoto src={photo} alt={websiteName} reverse={reverse} />
       <StyledA
         href={link}
