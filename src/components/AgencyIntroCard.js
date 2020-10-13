@@ -69,6 +69,7 @@ const StyledText = styled.div`
   & h1 {
   font-family: ${props => props.theme.fonts.baskerville};
   font-size: 80px;
+  white-space: nowrap;
   color: ${props => props.theme.colors.blue};
   font-weight: normal;
   margin-left: 12%;

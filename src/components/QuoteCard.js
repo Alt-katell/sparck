@@ -88,7 +88,7 @@ const AgencyIntroCard = () => {
   const {langKey: currentLang} = usePageContext();
 
   return (
-    <StyledBackground margin={currentLang}>
+    <StyledBackground>
       <StyledText>
         <StyledQuoteGroup>
           <StyledQuoteSign>“</StyledQuoteSign>

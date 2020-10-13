@@ -14,8 +14,7 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 const StyledSideNavbar = styled.div`
   width: 60px;
   position: ${props => props.position === "fixed" ? "fixed" : "absolute"};
-  bottom: ${props => props.position === "fixed" ? "0" : null};
-  top: ${props => props.position === "fixed" ? null : "194px"};
+  bottom: 0;
   right: 0;
   display: flex;
   flex-direction: column;
