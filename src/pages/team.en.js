@@ -51,7 +51,7 @@ const TeamPage = () => {
             description1="Katell is a project oriented web developer."
             description2="Everything she does is driven by empathy. She can stand in anyone’s shoes. Being able to look at a project from the point of view of a designer, a techy, you or better, your client, gives her a global perspective of a strategy."
             description3="Katell worked in Marketing, building products, brands and packaging, for more than 5 years before pivoting to web development."
-            portfolio="http://www.katellgoaer.com/" />
+            portfolio="https://www.katellgoaer.com/" />
 
         <TeamMemberCard
           id="clemence"
