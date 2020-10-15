@@ -70,8 +70,8 @@ const t = {
       fr: "Nous adorons créer des sites Web qui fonctionnent. Mais ce que nous aimons encore plus, c'est la création de sites Web qui vous ressemble, vous et votre marque. Avec notre équipe complémentaire de designers Web et UI / UX, nous travaillons avec vous pour promouvoir qui vous êtes et ce que vous représentez. Pour vous, nous imaginons des expériences digitales avec un sens aigu du design et une attention particulière pour la praticité et l'efficacité."
     },
     contentLast: {
-      en: "Spärck is here to make you shine.",
-      fr: "Spärck est là pour vous faire briller."
+      en: "spärck is here to make you shine.",
+      fr: "spärck est là pour vous faire briller."
     }
   },
   weCode: {
@@ -84,8 +84,8 @@ const t = {
       fr: "Nous fabriquons des produits qui répondent à vos besoins. De la conception au déploiement en ligne. Avec un CMS ou de zéro. Nous construisons la plateforme dont vous avez besoin pour gérer facilement votre entreprise ou mettre en valeur vos nombreux talents."
     },
     contentLast: {
-      en: "Spärck is here to make everything real.",
-      fr: "Spärck est là pour faire de vos envies une réalité."
+      en: "spärck is here to make everything real.",
+      fr: "spärck est là pour faire de vos envies une réalité."
     }
   },
   weSparck: {
@@ -98,8 +98,8 @@ const t = {
       fr: "A partir de vos idées spécifiques ou d'un simple concept, nous travaillons avec vous pour trouver la solution qui vous convient le mieux. Du prototypage, au test et au déploiement, nous vous accompagnons pour donner vie à votre produit."
     },
     contentLast: {
-      en: "Spärck is here to help you grow.",
-      fr: "Spärck est là pour vous aider à grandir."
+      en: "spärck is here to help you grow.",
+      fr: "spärck est là pour vous aider à grandir."
     }
   },
 }
