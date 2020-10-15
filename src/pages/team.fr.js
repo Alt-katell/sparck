@@ -8,7 +8,7 @@ import TeamMemberCard from '../components/TeamMemberCard';
 
 const StyledWhiteBackground = styled.div`
   background: ${props => props.theme.colors.white};
-  min-width: 850px;
+  min-width: 1000px;
   height: 100%;
   position: fixed;
   top: 0;
