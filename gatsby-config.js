@@ -53,5 +53,11 @@ module.exports = {
         prefixDefault: false,
       }
     },
+    {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `UA-180910848-1`,
+      },
+    },
   ],
 }
