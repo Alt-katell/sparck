@@ -72,7 +72,7 @@ const TeamPage = () => {
           name="Nour Souid"
           role1="Full-Stack Developer"
           role2="Business Strategist"
-          description1="Nour is a bold developer."
+          description1="Nour is a forward-thinker  developer."
           description2="Her mission is to give life to visions. She is driven by going from an idea to prototyping a product.  She is able to understand your business mission and values to create a minimum valuable product that is able to grow organically."
           description3="Growing up in a startup environment and starting as a self-learning coder at the age of 16 enabled her to have a better understanding of tech products."
           portfolio="" />
