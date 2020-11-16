@@ -61,14 +61,14 @@ const StyledText = styled.div`
 
 const StyledName = styled.h2`
   font-family: ${props => props.theme.fonts.baskerville};
-  font-size: 48px;
+  font-size: 43px;
   color: ${props => props.theme.colors.blue};
   margin: 62px ${props => props.reverse ? "-60px" : "0"} 5px ${props => props.reverse ? "0" : "-60px"};
   text-align: ${props => props.reverse ? "right" : null};
 
   @media (min-device-width : 768px) and (max-device-width : 1024px) {
     margin-top: 0;
-    font-size: 38px;
+    font-size: 34px;
   }
 
   @media (min-device-width : 320px) and (max-device-width : 667px) {
@@ -76,7 +76,7 @@ const StyledName = styled.h2`
     text-align: center;
     margin-top: -325px;
     margin-bottom: 305px;
-    font-size: 25px;
+    font-size: 22px;
   }
 `
 
