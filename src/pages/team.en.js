@@ -66,15 +66,15 @@ const TeamPage = () => {
           portfolio="https://icportfolio.ca/" />
 
         <TeamMemberCard
-          id="nour"
+          id="laurence"
           reverse={true}
-          photo="/images/sparck-nour.png"
-          name="Nour Souid"
-          role1="Full-Stack Developer"
-          role2="Business Strategist"
-          description1="Nour is a forward-thinker  developer."
-          description2="Her mission is to give life to visions. She is driven by going from an idea to prototyping a product.  She is able to understand your business mission and values to create a minimum valuable product that is able to grow organically."
-          description3="Growing up in a startup environment and starting as a self-learning coder at the age of 16 enabled her to have a better understanding of tech products."
+          photo="/images/sparck-laurence.png"
+          name="Laurence Bérubé-Côté"
+          role1="Front-End Developer"
+          role2="Digital Marketing"
+          description1="Laurence is a web developer captivated by digital marketing."
+          description2="She is passionate about conceiving and designing websites. She seeks to provide an unparalleled experience for users. She has a keen interest for digital marketing and is focused on web strategies that would increase traffic and your site's conversion rate."
+          description3="Laurence worked for several years in marketing, developing advertising plans and campaigns. She then turned to web development to be able to offer integrated solutions to her future clients."
           portfolio="" />
         <StyledWhiteBackground />
       </Container>

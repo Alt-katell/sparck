@@ -66,15 +66,15 @@ const TeamPage = () => {
           portfolio="https://icportfolio.ca/" />
 
         <TeamMemberCard
-          id="nour"
+          id="laurence"
           reverse={true}
-          photo="/images/sparck-nour.png"
-          name="Nour Souid"
-          role1="Développeuse Full-Stack"
-          role2="Stratège Affaires"
-          description1="Nour est une développeuse avant-gardiste."
-          description2="Sa mission est de donner vie à des visions. Ce qui la motive est de partir d’une idée et d’aller jusqu’au prototypage du produit. Elle sait comprendre votre stratégie et vos valeurs pour créer un produit minimum viable capable de croître."
-          description3="Ayant grandi dans un esprit start-up et commencé à coder en autodidacte à l’âge de 16 ans, Nour a une bonne compréhension des produits digitaux."
+          photo="/images/sparck-laurence.png"
+          name="Laurence Bérubé-Côté"
+          role1="Développeuse Front-End"
+          role2="Marketing Digital"
+          description1="Laurence est une développeuse web captivée par le marketing digital."
+          description2="Elle se passionne pour la conception et le design de site web. À travers ceux-ci, elle cherche à procurer une expérience inégalée aux utilisateurs. Ayant un intérêt marqué pour le marketing digital, elle s’intéresse aux stratégies web qui augmenterait le trafic et le taux de conversion de votre site."
+          description3="Laurence a travaillé plusieurs années en marketing, à élaborer des plans de publicités et des campagnes. Elle s’est ensuite orientée vers le développement web afin de pouvoir offrir des solutions intégrées à ses futurs clients."
           portfolio="" />
         <StyledWhiteBackground />
       </Container>

@@ -116,7 +116,7 @@ const SideNavbar = ({position}) => {
         <StyledTeamMembers>
           <StyledTeamMemberGroup>
             <AnchorLink link="/team#clemence">Clemence</AnchorLink>
-            <AnchorLink link="/team#nour">Nour</AnchorLink>
+            <AnchorLink link="/team#laurence">Laurence</AnchorLink>
           </StyledTeamMemberGroup>
           <StyledTeamMemberGroup>
             <AnchorLink link="/team#katell">Katell</AnchorLink>
