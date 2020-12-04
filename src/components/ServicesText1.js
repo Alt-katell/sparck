@@ -67,7 +67,7 @@ const t = {
     },
     contentFirst: {
       en: "We love building websites that work. But what we love even more is building websites that best represent you and your brand. With our complementary team of Web and UI/UX designers, we work with you to promote who you are and what you stand for. For you, we imagine digital experiences with a strong sense of design and a specific attention for practicality and effectiveness.",
-      fr: "Nous adorons créer des sites Web qui fonctionnent. Mais ce que nous aimons encore plus, c'est la création de sites Web qui vous ressemble, vous et votre marque. Avec notre équipe complémentaire de designers Web et UI / UX, nous travaillons avec vous pour promouvoir qui vous êtes et ce que vous représentez. Pour vous, nous imaginons des expériences digitales avec un sens aigu du design et une attention particulière pour la praticité et l'efficacité."
+      fr: "Nous adorons créer des sites Web qui fonctionnent. Mais ce que nous aimons encore plus, c'est la création de sites Web qui vous ressemblent, vous et votre marque. Avec notre équipe complémentaire de designers Web et UI / UX, nous travaillons avec vous pour promouvoir qui vous êtes et ce que vous représentez. Pour vous, nous imaginons des expériences digitales avec un sens aigu du design et une attention particulière pour la praticité et l'efficacité."
     },
     contentLast: {
       en: "spärck is here to make you shine.",
